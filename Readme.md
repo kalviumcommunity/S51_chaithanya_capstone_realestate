@@ -10,6 +10,7 @@ This is a real estate website where users can browse properties for sale or rent
 - Contact the owner of the property through email or phone number
 - Add/remove favorite properties
 - Sort properties by price
+- upload image and search similar imagae 
 - Property listings with images and details
 - User accounts
 - Contact forms for inquiries
