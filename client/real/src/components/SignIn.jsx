@@ -1,10 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import './SignIn.css'; 
 
 const SignIn = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleSignIn = (e) => {
+    e.preventDefault();
+    console.log('Signing in...');
+  };
+
   return (
-    <div>
-      <h1>Sign In Page</h1>
-      <p>Please sign in...</p>
+    <div className="signin-container">
+      <h2 className="signin-title">Sign In</h2>
+      <form onSubmit={handleSignIn}>
+        <div className="signin-form-group">
+          <label className="signin-label" htmlFor="email">Email:</label>
+          <input
+            type="email"
+            className="signin-input"
+            id="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+        </div>
+        <div className="signin-form-group">
+          <label className="signin-label" htmlFor="password">Password:</label>
+          <input
+            type="password"
+            className="signin-input"
+            id="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+        </div>
+        <button type="submit" className="signin-submit">Sign In</button>
+      </form>
+      <div className="signin-message">
+        <p>Don't have an account? <Link className="signin-link" to="/signup">Create Account</Link></p>
+      </div>
     </div>
   );
 };

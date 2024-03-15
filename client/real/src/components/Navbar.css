@@ -1,6 +1,20 @@
 /* Navbar Custom Styles */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #00224D;
+}
+
 .navbar {
-    background-color: aquamarine;
+    background-image: url('../asserts/bg.jpeg'); /* Adjust the path as per your directory structure */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: aquamarine; /* Fallback color in case the image is not available or loaded */
+    background-attachment: fixed; /* Fix the background image */
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 10px 0;
@@ -9,58 +23,80 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: column; /* Change flex direction to column */
-  }
-  
-  .brand {
+}
+
+.brand {
     color: #333333;
     font-weight: bold;
     font-size: 1.5rem;
     text-decoration: none;
     margin-bottom: 20px; /* Add margin below brand */
-  }
-  
-  .toggler {
+}
+
+.toggler {
     background-color: transparent;
     border: none;
-  }
-  
-  .toggler-icon {
+}
+
+.toggler-icon {
     color: #333333;
-  }
-  
-  .navbar-nav {
+}
+
+.navbar-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Add margin below navbar header */
+}
+
+.navbar-title {
+    color: #333333;
+    font-size: 2rem; /* Adjust font size of website name */
+    margin-right: 20px; /* Add margin to separate name from buttons */
+}
+
+.navbar-nav {
     list-style-type: none;
     display: flex;
     align-items: center;
-  }
-  
-  .nav-item {
+    margin-right: auto; /* Move navbar items to the left */
+}
+
+.nav-item {
     margin-right: 20px; /* Increased margin for spacing */
-  }
-  
-  .nav-link {
+}
+
+.nav-link {
     color: #ffffff; /* White color for button text */
     font-weight: 600; /* Increased font weight */
-   margin-top: 10px;
-   text-decoration: none;
-    padding: 12px 70px; /* Larger padding for bigger buttons */
+    margin-top: 10px;
+    text-decoration: none;
+    padding: 15px 60px; /* Larger padding for bigger buttons */
     border-radius: 25px; /* Rounded corners for buttons */
     background-color: #007bff; /* Blue background color */
     transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition on hover */
-  }
-  
-  .nav-link:hover {
+}
+
+.nav-link:hover {
     background-color: #0056b3; /* Darker blue on hover */
     color: #ffffff; /* White text on hover */
-  }
-  
-  .nav-item.active .nav-link {
+}
+
+.nav-item.active .nav-link {
     background-color: #0056b3; /* Active button color */
-  }
-  
-  .navbar-description {
-    margin-bottom: 20px; /* Margin below description */
+}
+
+.navbar-description {
+    margin-top: 20px; /* Margin below description */
     max-width: 600px; /* Limit width of description */
-    font-size:large /* Increase font size */
-  }
-  
+    font-size: medium; /* Increase font size */
+    font-weight: bold;
+}
+
+p {
+    color: sienna;
+    font-size: large;
+}
+
+.title{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
