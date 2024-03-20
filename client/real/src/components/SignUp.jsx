@@ -18,7 +18,7 @@ const SignUp = () => {
       <h2 className="signup-title">Sign Up</h2>
       <form onSubmit={handleSignUp}>
         <div className="signup-form-group">
-          <label className="signup-label" htmlFor="email">Email:</label>
+          <label className="signup-label" htmlFor="email">Username:</label>
           <input
             type="email"
             className="signup-input"

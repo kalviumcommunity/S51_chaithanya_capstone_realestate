@@ -2,18 +2,20 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import backgroundImage from "../asserts/bg.jpeg"
+import logo from '../asserts/logo.jpg'; 
 
 
-const Navbar = () => {
+const Navbar = () => {  
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light" style={{ backgroundImage: 'url("/src/asserts/bg.jpeg")' }}>
       <div className="container">
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span className="n avbar-toggler-icon"></span>
         </button>
-        <div className="navbar-header">
-    <h1 className="title">DreamHome Discoveries</h1>
-</div>
+        <li className="navbar-brand" to="/">
+  <img src={logo} alt="Logo" className="navbar-logo" />
+  DreamHouse
+</li>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
@@ -36,9 +38,6 @@ const Navbar = () => {
             </li> */}
           </ul>
         </div>
-      </div>
-      <div className="navbar-description">
-        <p>Welcome to your ultimate real estate destination🤝! Explore curated listings, personalized service, and expert guidance. Find your dream home with us</p>
       </div>
     </nav>
   );
