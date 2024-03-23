@@ -1,16 +1,21 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import "./SignUp.css"
 
-const SignUp = () => {
+
+const SignUp = ({setIsLoggedIn}) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const navigate = useNavigate()
 
   const handleSignUp = (e) => {
     e.preventDefault();
     // Add your signup logic here, such as sending the form data to the server
     console.log('Signing up...');
+    setIsLoggedIn(true);
+    navigate("/")
+    
   };
 
   return (
@@ -18,7 +23,7 @@ const SignUp = () => {
       <h2 className="signup-title">Sign Up</h2>
       <form onSubmit={handleSignUp}>
         <div className="signup-form-group">
-          <label className="signup-label" htmlFor="email">Email:</label>
+          <label className="signup-label" htmlFor="email">Email</label>
           <input
             type="email"
             className="signup-input"

@@ -1,102 +1,84 @@
-/* Navbar Custom Styles */
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    background-color: #00224D;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color:white;
 }
 
+/* Navbar Styles */
 .navbar {
-    background-image: url('../asserts/bg.jpeg'); /* Adjust the path as per your directory structure */
+    background-image: url('../asserts/bg.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: aquamarine; /* Fallback color in case the image is not available or loaded */
-    background-attachment: fixed; /* Fix the background image */
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #3498db;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 10px 0;
-    height: 150px; /* Increased height to accommodate space for description */
+    padding: 10px 20px; /* Adjust padding */
+    height: 80px; /* Adjust height */
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start; /* Align navbar to the left */
     align-items: center;
-    flex-direction: column; /* Change flex direction to column */
+    animation: fadeIn 0.5s ease-in-out; 
 }
 
-.brand {
-    color: #333333;
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    color:black;
     font-weight: bold;
     font-size: 1.5rem;
+    margin-top: 20px;
     text-decoration: none;
-    margin-bottom: 20px; /* Add margin below brand */
 }
 
-.toggler {
-    background-color: transparent;
-    border: none;
-}
-
-.toggler-icon {
-    color: #333333;
-}
-
-.navbar-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px; /* Add margin below navbar header */
-}
-
-.navbar-title {
-    color: #333333;
-    font-size: 2rem; /* Adjust font size of website name */
-    margin-right: 20px; /* Add margin to separate name from buttons */
+.navbar-logo {
+    height: 60px; /* Adjust height */
+    width: auto; /* Ensure responsive scaling */
+    margin-right: 10px; /* Adjust margin-right */
 }
 
 .navbar-nav {
-    list-style-type: none;
     display: flex;
     align-items: center;
-    margin-right: auto; /* Move navbar items to the left */
+    margin-left: 400px;/* Remove margin-left to align buttons to the left */
+    list-style-type: none; /* Remove bullet points */
+    margin-bottom: 60px;
 }
 
 .nav-item {
-    margin-right: 20px; /* Increased margin for spacing */
+    margin-right: 10px; /* Adjust margin-right for buttons */
 }
 
 .nav-link {
-    color: #ffffff; /* White color for button text */
-    font-weight: 600; /* Increased font weight */
-    margin-top: 10px;
+    color: #fff; /* White text color */
+    font-weight: 600;
     text-decoration: none;
-    padding: 15px 60px; /* Larger padding for bigger buttons */
-    border-radius: 25px; /* Rounded corners for buttons */
-    background-color: #007bff; /* Blue background color */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition on hover */
+    padding: 10px 10px; /* Adjust padding for buttons */
+    border-radius: 20px;
+    background-color: #2980b9; /* Dark blue background color */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .nav-link:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-    color: #ffffff; /* White text on hover */
+    background-color: #1e619b; /* Darker blue on hover */
 }
 
 .nav-item.active .nav-link {
-    background-color: #0056b3; /* Active button color */
+    background-color: #1e619b; /* Active button color */
 }
-
-.navbar-description {
-    margin-top: 20px; /* Margin below description */
-    max-width: 600px; /* Limit width of description */
-    font-size: medium; /* Increase font size */
-    font-weight: bold;
-}
-
-p {
-    color: sienna;
-    font-size: large;
-}
-
-.title{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+/* Navbar Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }

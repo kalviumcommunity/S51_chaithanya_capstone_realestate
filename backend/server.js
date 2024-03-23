@@ -1,12 +1,20 @@
 const express = require("express");
+require('dotenv').config()
+const {startDatabase,isConnected} = require('./db')
 const app = express();
 const port = 3000
 
 
-app.get("/", (res, req) => {
-  req.send({ message: "Hello World!" });
-})
+app.get('/', (req, res) => {
+  res.json({
+    message: 'o_O',
+    database: isConnected() ? 'connected' : 'disconnected'
+  })
+});
+
 
 app.listen(port, async () => {
-  console.log(` server running on PORT: ${port}`);
+  await startDatabase();
+
+  console.log(`🚀 Server running on : 💻✨ ${port}`);
 });

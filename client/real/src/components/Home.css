@@ -1,0 +1,93 @@
+.description {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding around the content */
+    margin-top: 20px; /* Space between the description and other elements */
+    background-color: #f8f9fa; /* Light gray background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    transform: translateY(0); /* Initial position for animation */
+    opacity: 1; /* Initial opacity */
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Animation transition */
+  }
+  .home-image {
+    width: 400px; /* Set the desired width for the image */
+    height:200px; /* Maintain aspect ratio */
+    float: left; /* Float the image to the left */
+    margin-left: 900px; /* Add margin to separate from text */
+    margin-bottom: 100px; /* Adjust margin-bottom as needed */
+    animation: moveUp 1s ease-in-out infinite alternate;
+  }
+  .image-container {
+    justify-content: center; /* Center the image horizontally */
+    margin-top: 1000px; /* Adjust margin-top as needed */
+  }
+  
+  .image {
+    width: 400px; /* Set the desired width for the image */
+    height: 200px; /* Maintain aspect ratio */
+    margin-bottom:500px; /* Adjust margin-bottom as needed */
+    animation: moveUp 1s ease-in-out infinite alternate;
+  }
+  .images{
+    width: 400px; /* Set the desired width for the image */
+    height:200px; /* Maintain aspect ratio */
+    float: left; /* Float the image to the left */
+    margin-left: 900px; /* Add margin to separate from text */
+    margin-bottom: 100px; /* Adjust margin-bottom as needed */
+    animation: moveUp 1s ease-in-out infinite alternate;
+  }
+  
+
+  h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: black;
+    text-align: center; /* Align text to the center */
+    margin-top: 50px;
+    animation: fadeInAndScale 1.5s ease-out;
+  }
+  
+  @keyframes fadeInAndScale {
+    0% {
+      opacity: 0;
+      transform: scale(0.5); /* Start from smaller size */
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1); /* Scale to full size */
+    }
+  }
+
+
+  @keyframes moveUp {
+    0% {
+      transform: translateY(0); /* Initial position */
+    }
+    100% {
+      transform: translateY(-20px); /* Move up by 20 pixels */
+    }
+  }
+  
+  .description p {
+    color: #333; /* Dark text color */
+    font-size: large;/* Font size */
+    line-height: 1.5; /* Line height for better readability */
+  }
+  
+  /* Hover effect for the description */
+  .description:hover {
+    transform: translateY(-5px); /* Move up slightly on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+  }
+  
+  /* Animation on page load */
+  .description-enter {
+    transform: translateY(100px); /* Initial position for animation */
+    opacity: 0; /* Initial opacity */
+  }
+  
+  .description-enter-active {
+    transform: translateY(0); /* Move to final position */
+    opacity: 1; /* Fade in */
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Animation transition */
+  }

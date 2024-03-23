@@ -1,44 +1,53 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom'; // Use NavLink instead of Link
 import './Navbar.css';
-import backgroundImage from "../asserts/bg.jpeg"
+import backgroundImage from "../asserts/bg.jpeg"; // Correct import path for the background image
+import logo from '../asserts/logo.jpg';
+
+const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
 
 
-const Navbar = () => {
+  const handleLogout = () => {
+    // Perform logout logic here
+    setIsLoggedIn(false);
+  };
+
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light" style={{ backgroundImage: 'url("/src/asserts/bg.jpeg")' }}>
+    <nav className="navbar navbar-expand-lg navbar-light bg-light" style={{ backgroundImage: `url(${backgroundImage})` }}>
       <div className="container">
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="n avbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="navbar-header">
-    <h1 className="title">DreamHome Discoveries</h1>
-</div>
+        <NavLink className="navbar-brand" to="/">
+          <img src={logo} alt="Logo" className="navbar-logo" />
+          DreamHouse
+        </NavLink>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
-              <Link className="nav-link btn btn-link" to="/" onClick={() => console.log('Home clicked')}>Home</Link>
+              <NavLink className="nav-link btn btn-link" exact to="/" activeClassName="active" onClick={() => console.log('Home clicked')}>Home</NavLink>
             </li>
             <li className="nav-item">
-              <Link className="nav-link btn btn-link" to="/about" onClick={() => console.log('About clicked')}>About</Link>
+              <NavLink className="nav-link btn btn-link" to="/about" activeClassName="active" onClick={() => console.log('About clicked')}>About</NavLink>
             </li>
             <li className="nav-item">
-              <Link className="nav-link btn btn-link" to="/features" onClick={() => console.log('Features clicked')}>Property</Link>
+              <NavLink className="nav-link btn btn-link" to="/features" activeClassName="active" onClick={() => console.log('Features clicked')}>Property</NavLink>
             </li>
             <li className="nav-item">
-              <Link className="nav-link btn btn-link" to="/contact" onClick={() => console.log('Contact clicked')}>Contact</Link>
+              <NavLink className="nav-link btn btn-link" to="/contact" activeClassName="active" onClick={() => console.log('Contact clicked')}>Contact</NavLink>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link btn btn-primary" to="/signin" onClick={() => console.log('Sign In clicked')}>Sign In</Link>
-            </li>
-            {/* <li className="nav-item">
-              <Link className="nav-link btn btn-success" to="/signup" onClick={() => console.log('Sign Up clicked')}>Sign Up</Link>
-            </li> */}
+            {isLoggedIn ? (
+              <li className="nav-item">
+                <button className="nav-link btn btn-primary" onClick={handleLogout}>Logout</button>
+              </li>
+            ) : (
+              <li className="nav-item">
+                <NavLink className="nav-link btn btn-primary" to="/signin" onClick={() => console.log('Sign In clicked')}>Sign In</NavLink>
+              </li>
+            )}
+
           </ul>
         </div>
-      </div>
-      <div className="navbar-description">
-        <p>Welcome to your ultimate real estate destination🤝! Explore curated listings, personalized service, and expert guidance. Find your dream home with us</p>
       </div>
     </nav>
   );
