@@ -16,16 +16,17 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: #3498db; /* Blue background color */
+    background-color: #3498db;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 10px 20px; /* Adjust padding */
     height: 80px; /* Adjust height */
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start; /* Align navbar to the left */
     align-items: center;
-    animation: fadeIn 0.5s ease-in-out; /* Add animation */
+    animation: fadeIn 0.5s ease-in-out; 
 }
+
 
 .navbar-brand {
     display: flex;
@@ -46,7 +47,7 @@ body {
 .navbar-nav {
     display: flex;
     align-items: center;
-    margin-left: 800px;/* Remove margin-left to align buttons to the left */
+    margin-left: 400px;/* Remove margin-left to align buttons to the left */
     list-style-type: none; /* Remove bullet points */
     margin-bottom: 60px;
 }

@@ -1,15 +1,18 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './SignIn.css';
-import Home from './Home';
+// import Home from './Home';
 
-const SignIn = () => {
+const SignIn = ({setIsLoggedIn}) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate()
 
   const handleSignIn = (e) => {
     e.preventDefault();
     console.log('Signing in...');
+    setIsLoggedIn(true);
+    navigate("/")
     // Add code to handle signing in logic
   };
 
@@ -18,7 +21,7 @@ const SignIn = () => {
       <h2 className="signin-title">Sign In</h2>
       <form onSubmit={handleSignIn}>
         <div className="signin-form-group">
-          <label className="signin-label" htmlFor="email">Username:</label>
+          <label className="signin-label" htmlFor="email">Email:</label>
           <input
             type="email"
             className="signin-input"

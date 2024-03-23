@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
@@ -10,6 +10,7 @@ import SignUp from './components/SignUp';
 
 
 const App = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   return (
     <Router>
       <Navbar />
@@ -18,8 +19,8 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/features" element={<Features />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/signin" element={<SignIn />} />
-        <Route path="/signup" element={<SignUp/>}/>
+        <Route path="/signin" element={<SignIn setIsLoggedIn={setIsLoggedIn}  />} />
+        <Route path="/signup" element={<SignUp setIsLoggedIn={setIsLoggedIn}  />}/>
       </Routes>
     </Router>
   );
