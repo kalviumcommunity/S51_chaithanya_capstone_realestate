@@ -3,17 +3,23 @@ import { Link, useNavigate } from 'react-router-dom';
 import './SignIn.css';
 // import Home from './Home';
 
-const SignIn = ({setIsLoggedIn}) => {
+const SignIn = ({ setIsLoggedIn }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleSignIn = (e) => {
     e.preventDefault();
     console.log('Signing in...');
-    setIsLoggedIn(true);
-    navigate("/")
-    // Add code to handle signing in logic
+    // Check if email and password are not empty (basic validation)
+    if (email.trim() === '' || password.trim() === '') {
+      alert('Please enter your email and password.');
+    } else {
+      // Perform actual sign-in logic here (not implemented in this example)
+      
+      setIsLoggedIn(true);
+      navigate("/");
+    }
   };
 
   return (
@@ -42,7 +48,7 @@ const SignIn = ({setIsLoggedIn}) => {
             required
           />
         </div>
-        <Link to="/Home" className="signin-submit" onClick={handleSignIn}>Sign In</Link> {/* Changed "Home" to "home" */}
+        <button type="submit" className="signin-submit">Sign In</button> {/* Changed "Link" to "button" */}
       </form>
       <div className="signin-message">
         <p>Don't have an account? <Link className="signin-link" to="/signup">Create Account</Link></p>
