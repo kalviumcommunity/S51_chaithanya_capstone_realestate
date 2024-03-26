@@ -1,3 +1,6 @@
+body{
+    background-color:;
+}
 .description {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     border-radius: 10px; /* Rounded corners */
@@ -23,9 +26,9 @@
   }
   
   .image {
-    width: 400px; /* Set the desired width for the image */
-    height: 200px; /* Maintain aspect ratio */
-    margin-bottom:500px; /* Adjust margin-bottom as needed */
+    width: 400px;
+    height: 200px; 
+    margin-bottom:2000px; 
     animation: moveUp 1s ease-in-out infinite alternate;
   }
   .images{
