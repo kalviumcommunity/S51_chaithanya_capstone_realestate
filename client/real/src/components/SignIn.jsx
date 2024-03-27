@@ -1,24 +1,20 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './SignIn.css';
-// import Home from './Home';
 
 const SignIn = ({ setIsLoggedIn }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const navigate = useNavigate();
+  const navigate = useNavigate(); // Correctly declare navigate using const
 
   const handleSignIn = (e) => {
     e.preventDefault();
     console.log('Signing in...');
-    // Check if email and password are not empty (basic validation)
     if (email.trim() === '' || password.trim() === '') {
       alert('Please enter your email and password.');
     } else {
-      // Perform actual sign-in logic here (not implemented in this example)
-      
       setIsLoggedIn(true);
-      navigate("/");
+      navigate('/');
     }
   };
 
@@ -48,7 +44,7 @@ const SignIn = ({ setIsLoggedIn }) => {
             required
           />
         </div>
-        <button type="submit" className="signin-submit">Sign In</button> {/* Changed "Link" to "button" */}
+        <button type="submit" className="signin-submit">Sign In</button>
       </form>
       <div className="signin-message">
         <p>Don't have an account? <Link className="signin-link" to="/signup">Create Account</Link></p>
