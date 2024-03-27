@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import "./SignUp.css"
 
 
-const SignUp = ({setIsLoggedIn}) => {
+const SignUp = ({ }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
