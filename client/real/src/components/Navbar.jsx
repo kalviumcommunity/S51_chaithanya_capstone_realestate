@@ -1,19 +1,17 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom'; // Use NavLink instead of Link
+import { NavLink } from 'react-router-dom'; // Correct import for NavLink
 import './Navbar.css';
-import backgroundImage from "../asserts/bg.jpeg"; // Correct import path for the background image
 import logo from '../asserts/logo.jpg';
 
 const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
 
-
-  const handleLogout = () => {
+  const handleLogout = () => { 
     // Perform logout logic here
     setIsLoggedIn(false);
   };
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light" style={{ backgroundImage: `url(${backgroundImage})` }}>
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container">
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
@@ -45,7 +43,6 @@ const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
                 <NavLink className="nav-link btn btn-primary" to="/signin" onClick={() => console.log('Sign In clicked')}>Sign In</NavLink>
               </li>
             )}
-
           </ul>
         </div>
       </div>

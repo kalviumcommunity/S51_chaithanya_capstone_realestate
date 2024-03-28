@@ -1,8 +1,10 @@
 import React from 'react';
 import "./Home.css"; 
+import footer from "./Footer"
 import homeImage from "../asserts/app.jpg";
 import image from "../asserts/building.jpeg"
 // import images from "../asserts/one.jpeg"
+import Footer from "../components/Footer"
 
 const Home = () => {
   return (
@@ -14,6 +16,7 @@ const Home = () => {
       <img src={homeImage} alt="Home Image" className="home-image" />
        <img src={image} alt="image" className='image'/>
      {/*} <img src={images} alt="images" className='images' /> */}
+     <Footer/>
     </div>
   );
 };
