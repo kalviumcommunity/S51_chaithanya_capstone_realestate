@@ -7,6 +7,7 @@ import Features from './components/Features';
 import Contact from './components/Contact';
 import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
+import Footer from './components/Footer';
 
 
 const App = () => {
