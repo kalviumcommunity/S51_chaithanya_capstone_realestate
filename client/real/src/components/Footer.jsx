@@ -1,5 +1,7 @@
 import React from 'react';
 import "./Footer.css"
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 const Footer = () => {
   return (
     <footer className="footer-container">
@@ -29,6 +31,14 @@ const Footer = () => {
             Phone: 7010965635 / 044-22234138<br />
             Email:dreamhouserealty@gamil.com
           </p>
+        </div>
+        <div className="footer-social">
+          <h3>Follow Us</h3>
+          <ul className="social-icons">
+            <li><a href="https://www.facebook.com/dreamhouserealty" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook"></i></a></li>
+            <li><a href="https://twitter.com/dreamhouserealty" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter"></i></a></li>
+            <li><a href="https://www.instagram.com/dreamhouserealty/" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a></li>
+          </ul>
         </div>
       </div>
       <div className="footer-bottom">

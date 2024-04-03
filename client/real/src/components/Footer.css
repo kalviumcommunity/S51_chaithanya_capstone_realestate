@@ -1,66 +1,94 @@
 /* Footer.css */
 
 .footer-container {
-    background-color: #333;
-    color: #fff;
-    padding: 50px 0;
-  }
-  
-  .footer-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .footer-info,
-  .footer-links,
-  .footer-contact {
-    flex: 1;
-    margin: 0 20px;
-  }
-  
-  .footer-info h3,
-  .footer-links h3,
-  .footer-contact h3 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    color: #fff;
-  }
-  
-  .footer-info p,
-  .footer-links p,
-  .footer-contact p {
-    color: #ccc;
-  }
-  
-  .footer-nav-list {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .footer-nav-list li {
-    margin-bottom: 10px;
-  }
-  
-  .footer-nav-list li a {
-    color: #ccc;
-    text-decoration: none;
-  }
-  
-  .footer-nav-list li a:hover {
-    color: #fff;
-  }
-  
-  .footer-bottom {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 0.9rem;
-  }
-  
-  .footer-bottom p {
-    color: #ccc;
-  }
-  
-  
+  background-color: #333;
+  color: #fff;
+  padding: 50px 0;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-info,
+.footer-links,
+.footer-contact,
+.footer-social { /* Added .footer-social */
+  flex: 1;
+  margin: 0 20px;
+}
+
+.footer-info h3,
+.footer-links h3,
+.footer-contact h3,
+.footer-social h3 { /* Added .footer-social h3 */
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.footer-info p,
+.footer-links p,
+.footer-contact p,
+.footer-social p { /* Added .footer-social p */
+  color: #ccc;
+}
+
+.footer-nav-list {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-nav-list li {
+  margin-bottom: 10px;
+}
+
+.footer-nav-list li a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-nav-list li a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+.footer-bottom p {
+  color: #ccc;
+}
+
+.social-icons {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-right: 0px;
+}
+
+.social-icons li {
+  margin: 0 10px;
+}
+
+.social-icons li a {
+  color: #fff;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons li a:hover {
+  color: #007bff; /* Change to your desired hover color */
+}
+ 
+h3{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
