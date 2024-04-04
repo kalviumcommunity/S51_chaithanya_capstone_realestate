@@ -74,3 +74,48 @@
 p{
     color: black;
 }
+
+/* SignIn.css */
+
+.forgot-password {
+    margin-top: 20px;
+  }
+  
+  .forgot-password label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .forgot-password input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .forgot-password button {
+    background-color: black;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .forgot-password button:hover {
+    background-color: black;
+  }
+  
+  .forgot-password-link {
+    margin-top: 10px;
+    cursor: pointer;
+    color: black;
+    text-decoration: underline;
+  }
+  
+  .forgot-password-link:hover {
+    color: black;
+  }
+  
