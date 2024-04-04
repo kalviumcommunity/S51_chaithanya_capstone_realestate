@@ -18,4 +18,26 @@ Authcontrollers.post("/register",async (req,res)=>{
         }
     })
 
+    Authcontrollers.post('/login' , async(req,res)=>{
+        try{
+            const user = await User.findOne({email:req.body.email})
+            if (!user) {
+                throw new Error ("wrong credentials");
+       }
+
+       const comparePass = await bcrypt.compare(req.body.password , user.password) 
+       if(!comparePass){
+        throw new error("wrong credentials")
+       }
+
+    const token = jwt.sign({id:user._id} , process.env.JWT_SECRET , {expiresIn:'4h'})
+    const {password,...others} = user._doc
+
+    return res.status(200).json({others ,token})
+        }catch(error){
+            return res.status(500).json(error.message)
+
+        }
+    })
+
     module.exports=Authcontrollers 
