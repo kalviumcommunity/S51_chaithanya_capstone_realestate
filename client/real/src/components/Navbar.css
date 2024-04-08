@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color:white;
+    background-color: white;
 }
 
 /* Navbar Styles */
@@ -19,21 +19,17 @@ body {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 10px 20px; /* Adjust padding */
-    height: 80px; /* Adjust height */
+    height: 100px; /* Adjust height */
     display: flex;
-    justify-content: flex-start; /* Align navbar to the left */
+    justify-content: space-between; /* Adjust to evenly space elements */
     align-items: center;
     animation: fadeIn 0.5s ease-in-out; 
 }
 
-
 .navbar-brand {
-    display: flex;
-    align-items: center;
-    color:black;
+    color: black;
     font-weight: bold;
     font-size: 1.5rem;
-    margin-top: 20px;
     text-decoration: none;
 }
 
@@ -41,37 +37,37 @@ body {
     height: 60px; /* Adjust height */
     width: auto; /* Ensure responsive scaling */
     margin-right: 10px; /* Adjust margin-right */
+    margin-top: 10px; /* Add margin-top to move the image down */
 }
-
 .navbar-nav {
     display: flex;
     align-items: center;
-    margin-left: 400px;/* Remove margin-left to align buttons to the left */
+    justify-content: center; /* Center align the buttons */
     list-style-type: none; /* Remove bullet points */
-    margin-bottom: 60px;
+    flex: 1; /* Allow the buttons to take up remaining space */
 }
 
 .nav-item {
-    margin-right: 10px; /* Adjust margin-right for buttons */
+    margin-right: 20px; /* Adjust margin-right for buttons */
 }
 
 .nav-link {
     color: black; /* White text color */
     font-weight: 600;
     text-decoration: none;
-    padding: 10px 10px; /* Adjust padding for buttons */
-    border-radius: 20px;
-    /* background-color: #2980b9;  */
+    padding: 10px 15px; /* Adjust padding for buttons */
+    border-radius: 60px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .nav-link:hover {
-    background-color:aquamarine; /* Darker blue on hover */
+    background-color: aquamarine; /* Darker blue on hover */
 }
 
 .nav-item.active .nav-link {
     background-color: #1e619b; /* Active button color */
 }
+
 /* Navbar Animation */
 @keyframes fadeIn {
     0% {
@@ -81,20 +77,27 @@ body {
         opacity: 1;
     }
 }
+
+/* Navbar Icon Styles */
 .navbar-icons-container {
-    display: inline-block; /* Ensure container is displayed inline */
-    margin-right: 20px; /* Adjust margin as needed */
-  }
-  
-  .nav-item img.navbar-icon {
-    width: 60px; /* Adjust width as needed */
-    height: 60px; /* Adjust height as needed */
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Move icons to the right by aligning them to the end */
+}
+
+.nav-item {
+    margin-left: 80px; /* Adjust margin-right for buttons */
+}
+
+.nav-item img.navbar-icon {
+    width: 60px; /* Adjust width of icons */
+    height: 60px; /* Adjust height of icons */
     cursor: pointer; /* Change cursor to pointer on hover */
     transition: transform 0.3s ease; /* Add smooth transition for transform property */
-  }
-  
-  /* Hover effect */
-  .nav-item img.navbar-icon:hover {
+}
+
+/* Hover effect */
+.nav-item img.navbar-icon:hover {
     transform: scale(1.2); /* Scale up the icon on hover */
-  }
-  
+}
+
