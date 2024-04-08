@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom'; // Correct import for NavLink
 import './Navbar.css';
 import logo from '../asserts/logo.jpg';
 import favorite from "../asserts/favourite.png"; // Import favorite icon
+import cart from "../asserts/cart new.png"; // Import cart icon
 
 const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
 
@@ -44,12 +45,16 @@ const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
                 <NavLink className="nav-link btn btn-primary" to="/signin" onClick={() => console.log('Sign In clicked')}>Sign In</NavLink>
               </li>
             )}
-          <li className="nav-item">
-  <div className="navbar-icons-container">
-    <img src={favorite} alt="Favorite" className="nav-link btn btn-link navbar-icon" /> {/* Favorite button */}
-
-  </div>
-</li>
+            <li className="nav-item">
+              <div className="navbar-icons-container">
+                <NavLink to="/favourite">
+                  <img src={favorite} alt="Favorite" className="nav-link btn btn-link navbar-icon" />
+                </NavLink>
+                <NavLink to = "/Cart">
+                <img src={cart} alt="Cart" className="nav-link btn btn-link navbar-icon" />
+                </NavLink>
+              </div>
+            </li>
           </ul>
         </div>
       </div>
