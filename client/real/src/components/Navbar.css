@@ -56,17 +56,17 @@ body {
 }
 
 .nav-link {
-    color: #fff; /* White text color */
+    color: black; /* White text color */
     font-weight: 600;
     text-decoration: none;
     padding: 10px 10px; /* Adjust padding for buttons */
     border-radius: 20px;
-    background-color: #2980b9; /* Dark blue background color */
+    /* background-color: #2980b9;  */
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .nav-link:hover {
-    background-color: #1e619b; /* Darker blue on hover */
+    background-color:aquamarine; /* Darker blue on hover */
 }
 
 .nav-item.active .nav-link {
@@ -81,3 +81,20 @@ body {
         opacity: 1;
     }
 }
+.navbar-icons-container {
+    display: inline-block; /* Ensure container is displayed inline */
+    margin-right: 20px; /* Adjust margin as needed */
+  }
+  
+  .nav-item img.navbar-icon {
+    width: 60px; /* Adjust width as needed */
+    height: 60px; /* Adjust height as needed */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: transform 0.3s ease; /* Add smooth transition for transform property */
+  }
+  
+  /* Hover effect */
+  .nav-item img.navbar-icon:hover {
+    transform: scale(1.2); /* Scale up the icon on hover */
+  }
+  
