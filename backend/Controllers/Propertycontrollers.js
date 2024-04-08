@@ -116,4 +116,4 @@ Propertycontroller.get('/find/featured' , async(req,res)=>{
     }
  })
 
- module exports=Propertycontroller
+ module.exports=Propertycontroller;
