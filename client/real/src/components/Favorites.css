@@ -1,0 +1,61 @@
+/* Favorites.css */
+
+.favorites-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .favorites-heading {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .properties-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .property-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .property-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .property-details {
+    padding: 20px;
+  }
+  
+  .property-name {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .property-location {
+    font-size: 16px;
+    color: #888;
+  }
+  
+  .property-price {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #27ae60; /* Green color */
+  }
+  
+  .property-description {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .property-features p {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+  
