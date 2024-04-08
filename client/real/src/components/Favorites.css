@@ -19,7 +19,7 @@
   }
   
   .property-card {
-    border: 1px solid #ccc;
+    border: 1px solid black;
     border-radius: 5px;
     overflow: hidden;
     transition: transform 0.3s ease;
@@ -40,13 +40,13 @@
   
   .property-location {
     font-size: 16px;
-    color: #888;
+    color:black;
   }
   
   .property-price {
     font-size: 20px;
     margin: 10px 0;
-    color: #27ae60; /* Green color */
+    color:chocolate; /* Green color */
   }
   
   .property-description {

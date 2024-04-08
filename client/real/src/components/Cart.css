@@ -13,13 +13,13 @@
   }
   
   .cart-items {
-    border: 1px solid #ccc;
+    border: 1px solid black;
     border-radius: 5px;
     overflow: hidden;
   }
   
   .cart-item {
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid black;
     padding: 20px;
   }
   
@@ -39,6 +39,6 @@
   
   .item-quantity {
     font-size: 16px;
-    color: #888;
+    color:black;
   }
   
