@@ -1,10 +1,6 @@
 import React from 'react';
-import "./Home.css"; 
-import footer from "./Footer"
-import homeImage from "../asserts/app.jpg";
-import image from "../asserts/building.jpeg"
-import Footer from "../components/Footer"
-
+import "./Home.css";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
@@ -13,10 +9,33 @@ const Home = () => {
         with prices starting from 50L🏚️⚡!<br />
         Don't miss out on our exclusive offers<br />
         for premium apartments</h1>
-      <img src={homeImage} alt="Home Image" className="home-image" />
-       <img src={image} alt="image" className='image'/>
-     {/*} <img src={images} alt="images" className='images' /> */}
-     <Footer/>
+
+      <div className="search-box-container">
+        <div className="search-box">
+          <select>
+            <option value="">Select Price Range</option>
+            <option value="50L">50L-100L</option>
+            <option value="100L">300L-600L</option>
+            <option value="150L">800L-1CR</option>
+            <option value="150L">800L-1CR</option>
+            <option value="150L">2CR-7CR</option>
+            <option value="150L">10CR-20CR</option>
+            <option value="150L">20CR above</option>
+            {/* Add more options as needed */}
+          </select>
+        </div>
+        <div className="search-box">
+          <select>
+            <option value="">Select Location</option>
+            <option value="Beach">Beach</option>
+            <option value="Mountain">Mountain</option>
+            <option value="Village">Village</option>
+            {/* Add more options as needed */}
+          </select>
+        </div>
+      </div>
+        
+      <Footer />
     </div>
   );
 };

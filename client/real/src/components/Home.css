@@ -94,3 +94,57 @@ body{
     opacity: 1; /* Fade in */
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Animation transition */
   }
+  
+.home-container h1 {
+  text-align: center; /* Center align the text */
+  color: #333; /* Dark text color */
+  margin-bottom: 40px; /* Add space below the heading */
+}
+
+/* CSS for Search Box Container */
+.search-box-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px; /* Adjust margin as needed */
+}
+
+/* CSS for Search Box */
+.search-box {
+  position: relative;
+}
+
+/* CSS for Select Dropdown */
+.search-box select {
+  width: 200px; /* Adjust the width as needed */
+  height: 50px; /* Adjust the height as needed */
+  padding: 10px; /* Add padding to input */
+  border: none; /* Remove input border */
+  outline: none; /* Remove input focus outline */
+  background-color: #f4f4f4; /* Light gray background */
+  border-radius: 25px; /* Rounded corners */
+  appearance: none; /* Remove default appearance */
+  -webkit-appearance: none; /* Remove default appearance for Safari */
+}
+
+.search-box select::placeholder {
+  color: #999; /* Placeholder color */
+}
+
+/* CSS for Search Button */
+.search-box button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50px; /* Adjust button width as needed */
+  height: 100%; /* Match input height */
+  background-color: #4caf50; /* Green button background */
+  color: white; /* White text color */
+  border: none; /* Remove button border */
+  border-radius: 0 25px 25px 0; /* Rounded corners */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.search-box button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
