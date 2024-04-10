@@ -1,15 +1,22 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom'; // Correct import for NavLink
+import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import './Navbar.css';
 import logo from '../asserts/logo.jpg';
-import favorite from "../asserts/favourite.png"; // Import favorite icon
-import cart from "../asserts/cart new.png"; // Import cart icon
+import favorite from "../asserts/favourite.png"; 
+import cart from "../asserts/cart new.png";
+import LogoutConfirmationModal from './LogoutConfirmationModal';
 
-const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
+const Navbar = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   const handleLogout = () => { 
-    // Perform logout logic here
-    setIsLoggedIn(false);
+    // No need for window.confirm here
+    setShowModal(true); // Open the modal for confirmation
+  };
+
+  const handleSignIn = () => {
+    setIsLoggedIn(true);
   };
 
   return (
@@ -42,7 +49,7 @@ const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
               </li>
             ) : (
               <li className="nav-item">
-                <NavLink className="nav-link btn btn-primary" to="/signin" onClick={() => console.log('Sign In clicked')}>Sign In</NavLink>
+                <NavLink className="nav-link btn btn-primary" to="/signin" onClick={handleSignIn}>Sign In</NavLink>
               </li>
             )}
             <li className="nav-item">
@@ -50,14 +57,15 @@ const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
                 <NavLink to="/favourite">
                   <img src={favorite} alt="Favorite" className="nav-link btn btn-link navbar-icon" />
                 </NavLink>
-                <NavLink to = "/Cart">
-                <img src={cart} alt="Cart" className="nav-link btn btn-link navbar-icon" />
+                <NavLink to="/cart">
+                  <img src={cart} alt="Cart" className="nav-link btn btn-link navbar-icon" />
                 </NavLink>
               </div>
             </li>
           </ul>
         </div>
       </div>
+      {showModal && <LogoutConfirmationModal handleLogout={handleLogout} handleClose={() => setShowModal(false)} />}
     </nav>
   );
 };

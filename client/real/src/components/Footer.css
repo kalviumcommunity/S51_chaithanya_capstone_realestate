@@ -17,7 +17,7 @@
 .footer-info,
 .footer-links,
 .footer-contact,
-.footer-social { /* Added .footer-social */
+.footer-social { 
   flex: 1;
   margin: 0 20px;
 }
@@ -25,7 +25,7 @@
 .footer-info h3,
 .footer-links h3,
 .footer-contact h3,
-.footer-social h3 { /* Added .footer-social h3 */
+.footer-social h3 { 
   font-size: 1.2rem;
   margin-bottom: 10px;
   color: #fff;

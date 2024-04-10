@@ -101,3 +101,21 @@ body {
     transform: scale(1.2); /* Scale up the icon on hover */
 }
 
+/* Navbar.css */
+
+/* Navbar.css */
+
+.logout-btn {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .logout-btn:hover {
+    background-color: #c82333;
+  }
+  
+  
