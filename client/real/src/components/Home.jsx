@@ -3,8 +3,8 @@ import "./Home.css";
 import footer from "./Footer"
 import homeImage from "../asserts/app.jpg";
 import image from "../asserts/building.jpeg"
-// import images from "../asserts/one.jpeg"
 import Footer from "../components/Footer"
+
 
 const Home = () => {
   return (
