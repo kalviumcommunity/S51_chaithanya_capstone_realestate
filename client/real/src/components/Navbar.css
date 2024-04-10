@@ -65,7 +65,7 @@ body {
 }
 
 .nav-item.active .nav-link {
-    background-color: #1e619b; /* Active button color */
+    background-color: #1e619b; 
 }
 
 /* Navbar Animation */

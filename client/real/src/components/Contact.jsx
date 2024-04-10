@@ -1,9 +1,66 @@
-import React from 'react';
+import React, { useState } from 'react';
+import './Contact.css'
 
 const Contact = () => {
+  const [messageSent, setMessageSent] = useState(false);
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    // Here you can add logic to handle form submission
+    // For demonstration purposes, let's just set messageSent to true
+    setMessageSent(true);
+    // You may also want to reset the form fields here
+  };
+
   return (
-    <div>
-    
+    <div className="contact-container">
+      <div className="contact-info">
+        <h2>Contact Us</h2>
+        <p>Feel free to reach out to us for any inquiries or assistance.</p>
+        <div className="contact-details">
+          <div className="contact-item">
+            <i className="fas fa-map-marker-alt"></i>
+            <p>
+            Dream House Realty <br />
+            19, Ranga Street, <br />
+            Dreamville, CA 12 <br />
+            Chennai <br />
+          </p>
+          </div>
+          <div className="contact-item">
+            <i className="fas fa-phone"></i>
+            <p>Phone: 7010965635 / 044-22234138</p>
+          </div>
+          <div className="contact-item">
+            <i className="fas fa-envelope"></i>
+            <p> Email:dreamhouserealty@gmail.com</p>
+          </div>
+        </div>
+      </div>
+      <div className="contact-form">
+        <h2>Send Us a Message</h2>
+        <form onSubmit={handleFormSubmit}>
+          <div className="form-group">
+            <label htmlFor="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div className="form-group">
+            <label htmlFor="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div className="form-group">
+            <label htmlFor="message">Feedback:</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+      {messageSent && (
+        <div className="popup">
+          <p>Message sent successfully!</p>
+          <button onClick={() => setMessageSent(false)}>Close</button>
+        </div>
+      )}
     </div>
   );
 };
