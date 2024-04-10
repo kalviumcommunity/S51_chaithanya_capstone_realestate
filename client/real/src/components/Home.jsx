@@ -17,7 +17,6 @@ const Home = () => {
             <option value="50L">50L-100L</option>
             <option value="100L">300L-600L</option>
             <option value="150L">800L-1CR</option>
-            <option value="150L">800L-1CR</option>
             <option value="150L">2CR-7CR</option>
             <option value="150L">10CR-20CR</option>
             <option value="150L">20CR above</option>
@@ -34,7 +33,38 @@ const Home = () => {
           </select>
         </div>
       </div>
-        
+      
+      {/* Grid Box with Images */}
+      <div className="image-grid">
+        <div className="grid-item">
+          <div className="box"></div>
+        </div>
+        <div className="grid-item">
+          <div className="box"></div>
+        </div>
+        <div className="grid-item">
+          <div className="box"></div>
+        </div>
+        <div className="grid-item">
+          <div className="box"></div>
+        </div>
+        <div className="grid-item">
+          <div className="box"></div>
+        </div>
+        <div className="grid-item">
+          <div className="box"></div>
+        </div>
+        <div className="grid-item">
+          <div className="box"></div>
+        </div>
+        <div className="grid-item">
+          <div className="box"></div>
+        </div>
+        <div className="grid-item">
+          <div className="box"></div>
+        </div>
+      </div>
+      
       <Footer />
     </div>
   );

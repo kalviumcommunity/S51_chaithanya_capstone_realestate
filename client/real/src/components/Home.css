@@ -145,6 +145,21 @@ body{
   transition: background-color 0.3s; /* Smooth transition */
 }
 
+.box {
+  width: 100%;
+  height: 150px; /* Adjust height as needed */
+  background-color: grey; /* Placeholder background color */
+  margin-bottom: 20px;
+ 
+}
+
+/* Optionally, you can add styling for the grid items as well */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+}
+
 .search-box button:hover {
   background-color: #45a049; /* Darker green on hover */
 }
