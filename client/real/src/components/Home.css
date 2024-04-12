@@ -25,21 +25,7 @@ body{
     margin-top: 1000px; /* Adjust margin-top as needed */
   }
   
-  .image {
-    width: 400px;
-    height: 200px; 
-    margin-bottom:2000px; 
-    animation: moveUp 1s ease-in-out infinite alternate;
-  }
-  .images{
-    width: 400px; /* Set the desired width for the image */
-    height:200px; /* Maintain aspect ratio */
-    float: left; /* Float the image to the left */
-    margin-left: 900px; /* Add margin to separate from text */
-    margin-bottom: 100px; /* Adjust margin-bottom as needed */
-    animation: moveUp 1s ease-in-out infinite alternate;
-  }
-  
+ 
 
   h1 {
     font-family: 'Montserrat', sans-serif;
@@ -145,20 +131,84 @@ body{
   transition: background-color 0.3s; /* Smooth transition */
 }
 
-.box {
-  width: 100%;
-  height: 150px; /* Adjust height as needed */
+/* Styling for grid items */
+/* Styling for grid items */
+.grid-item {
+  width: 100%; /* Adjust width as needed */
+  height: 200px; /* Adjust height as needed */
   background-color: grey; /* Placeholder background color */
-  margin-bottom: 20px;
- 
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex; /* Ensure flex layout for proper alignment */
+  justify-content: center; /* Center the box horizontally */
+  align-items: center; /* Center the box vertically */
 }
 
-/* Optionally, you can add styling for the grid items as well */
+/* Styling for the box */
+.box {
+  width: 80%; /* Adjust width of the box */
+  height: 80%; /* Adjust height of the box */
+  background-color: white; /* Background color of the box */
+}
+
+/* Styling for the image grid container */
 .image-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 40px;
+  grid-gap: 20px; /* Adjust gap between grid items as needed */
 }
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .image-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Styling for grid items */
+.grid-item {
+  width: 100%; /* Adjust width as needed */
+  height: 200px; /* Adjust height as needed */
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative; /* Ensure positioning context for pseudo-elements */
+}
+
+/* Styling for the images */
+.grid-item::after {
+  content: ""; /* Create a pseudo-element */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  transition: background-color 0.3s; /* Smooth transition for overlay */
+}
+
+/* Hover effect for images */
+.grid-item:hover::after {
+  background-color: rgba(0, 0, 0, 0); /* Hide overlay on hover */
+}
+
+/* Styling for the image grid container */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px; /* Adjust gap between grid items as needed */
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .image-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+
 
 .search-box button:hover {
   background-color: #45a049; /* Darker green on hover */
