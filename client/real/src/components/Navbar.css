@@ -44,30 +44,29 @@ body {
     align-items: center;
     justify-content: center; /* Center align the buttons */
     list-style-type: none; /* Remove bullet points */
-    flex: 1; /* Allow the buttons to take up remaining space */
 }
 
 .nav-item {
-    margin-right: 20px; /* Adjust margin-right for buttons */
+    margin-right: 10px; /* Adjust margin-right for buttons */
 }
 
 .nav-link {
-    color: black; /* Black text color */
+    color: black;
     font-weight: 600;
     text-decoration: none;
-    padding: 10px 15px; /* Adjust padding for buttons */
+    padding: 10px 10px;
     border-radius: 60px;
     transition: background-color 0.3s ease, color 0.3s ease; /* Modify transition */
 }
 
 .nav-link:hover {
-    background-color: black; /* Changed color on hover */
-    color: lightblue; /* Changed text color on hover */
+    color: black;
+   height: 100px;
+   width: 100px;
 }
-
 .nav-item.active .nav-link {
     background-color: #1e619b; 
-    color: white; /* Changed text color for active link */
+    color: white; 
 }
 
 /* Navbar Animation */

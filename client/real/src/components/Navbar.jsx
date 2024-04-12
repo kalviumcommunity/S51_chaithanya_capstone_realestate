@@ -1,3 +1,4 @@
+// Import necessary dependencies and components
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import './Navbar.css';
@@ -6,7 +7,9 @@ import favorite from "../asserts/favourite.png";
 import cart from "../asserts/cart new.png";
 import LogoutConfirmationModal from './LogoutConfirmationModal';
 
+// Define the Navbar component
 const Navbar = () => {
+  // Define state variables and event handlers
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [showModal, setShowModal] = useState(false);
 
@@ -19,6 +22,7 @@ const Navbar = () => {
     setIsLoggedIn(true);
   };
 
+  // Return the JSX for the Navbar component
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container">
@@ -43,6 +47,11 @@ const Navbar = () => {
             <li className="nav-item">
               <NavLink className="nav-link btn btn-link" to="/contact" activeClassName="active" onClick={() => console.log('Contact clicked')}>Contact</NavLink>
             </li>
+            {/* Add Resource Center link */}
+            <li className="nav-item">
+              <NavLink className="nav-link btn btn-link" to="/Resource" activeClassName="active">Resource</NavLink>
+            </li>
+            {/* Conditionally render Sign In/Logout button */}
             {isLoggedIn ? (
               <li className="nav-item">
                 <button className="nav-link btn btn-primary" onClick={handleLogout}>Logout</button>
@@ -52,6 +61,7 @@ const Navbar = () => {
                 <NavLink className="nav-link btn btn-primary" to="/signin" onClick={handleSignIn}>Sign In</NavLink>
               </li>
             )}
+            {/* Navbar icons container */}
             <li className="nav-item">
               <div className="navbar-icons-container">
                 <NavLink to="/favourite">
@@ -65,9 +75,11 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
+      {/* Render LogoutConfirmationModal if showModal is true */}
       {showModal && <LogoutConfirmationModal handleLogout={handleLogout} handleClose={() => setShowModal(false)} />}
     </nav>
   );
 };
 
+// Export the Navbar component
 export default Navbar;

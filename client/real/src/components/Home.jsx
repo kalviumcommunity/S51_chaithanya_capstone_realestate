@@ -46,9 +46,6 @@ const Home = () => {
             {/* Add more options as needed */}
           </select>
         </div>
-        <div className="search-box">
-          <button onClick={handleGoClick}>Go</button>
-        </div>
       </div>
 
       {/* Image grid */}
