@@ -44,36 +44,36 @@ const Home = () => {
       
       
       <div className="image-grid">
-        {/* <Link to="/Image1"> */}
+        <Link to="/Image1">
           <div className="grid-item" style={{backgroundImage: `url(${img1})`}}>
             <img src={img1} alt="" />
           </div>
-        {/* </Link> */}
-        {/* <Link to="/image2"> */}
+        </Link>
+        <Link to="/image2">
           <div className="grid-item" style={{backgroundImage: `url(${img2})`}}>
             <img src={img2} alt="" />
           </div>
-        {/* </Link> */}
-        {/* <Link to="/image3"> */}
+        </Link>
+        <Link to="/image3">
           <div className="grid-item" style={{backgroundImage: `url(${img3})`}}>
             <img src={img3} alt="" />
           </div>
-        {/* </Link> */}
-        {/* <Link to="/image4"> */}
+        </Link>
+        <Link to="/image4">
           <div className="grid-item" style={{backgroundImage: `url(${img4})`}}>
             <img src={img4} alt="" />
           </div>
-        {/* </Link> */}
-        {/* <Link to="/image5"> */}
+        </Link>
+        <Link to="/image5">
           <div className="grid-item" style={{backgroundImage: `url(${img5})`}}>
             <img src={img5} alt="" />
           </div>
-        {/* </Link> */}
-        {/* <Link to="/image6"> */}
+        </Link>
+        <Link to="/image6">
           <div className="grid-item" style={{backgroundImage: `url(${img6})`}}>
             <img src={img6} alt="" />
           </div>
-        {/* </Link> */}
+        </Link>
       </div>
 
 
