@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./Home.css";
 import Footer from "../components/Footer";
 import img1 from "../asserts/img 1.jpeg";
@@ -7,10 +7,16 @@ import img3 from "../asserts/img 3.jpeg";
 import img4 from "../asserts/img 4.jpeg";
 import img5 from "../asserts/img 5.jpeg";
 import img6 from "../asserts/img 6.jpeg";
-import{Link} from 'react-router-dom'
-
+import { Link } from 'react-router-dom';
 
 const Home = () => {
+  const [selectedRange, setSelectedRange] = useState('');
+  const [showImages, setShowImages] = useState(false);
+
+  const handleGoClick = () => {
+    setShowImages(true);
+  };
+
   return (
     <div className="home-container">
       <h1>Discover your dream home<br />
@@ -20,7 +26,7 @@ const Home = () => {
 
       <div className="search-box-container">
         <div className="search-box">
-          <select>
+          <select value={selectedRange} onChange={(e) => setSelectedRange(e.target.value)}>
             <option value="">Select Price Range</option>
             <option value="50L">50L-100L</option>
             <option value="100L">300L-600L</option>
@@ -40,44 +46,57 @@ const Home = () => {
             {/* Add more options as needed */}
           </select>
         </div>
-      </div>
-      
-      
-      <div className="image-grid">
-        <Link to="/Image1">
-          <div className="grid-item" style={{backgroundImage: `url(${img1})`}}>
-            <img src={img1} alt="" />
-          </div>
-        </Link>
-        <Link to="/image2">
-          <div className="grid-item" style={{backgroundImage: `url(${img2})`}}>
-            <img src={img2} alt="" />
-          </div>
-        </Link>
-        <Link to="/image3">
-          <div className="grid-item" style={{backgroundImage: `url(${img3})`}}>
-            <img src={img3} alt="" />
-          </div>
-        </Link>
-        <Link to="/image4">
-          <div className="grid-item" style={{backgroundImage: `url(${img4})`}}>
-            <img src={img4} alt="" />
-          </div>
-        </Link>
-        <Link to="/image5">
-          <div className="grid-item" style={{backgroundImage: `url(${img5})`}}>
-            <img src={img5} alt="" />
-          </div>
-        </Link>
-        <Link to="/image6">
-          <div className="grid-item" style={{backgroundImage: `url(${img6})`}}>
-            <img src={img6} alt="" />
-          </div>
-        </Link>
+        <div className="search-box">
+          <button onClick={handleGoClick}>Go</button>
+        </div>
       </div>
 
+      {/* Image grid */}
+      {showImages && selectedRange === '50L' && (
+        <div className="image-grid">
+          <Link to="/Image1">
+            <div className="grid-item" style={{backgroundImage: `url(${img1})`}}>
+              <img src={img1} alt="" />
+            </div>
+          </Link>
+        </div>
+      )}
 
-      
+      {showImages && selectedRange === '100L' && (
+        <div className="image-grid">
+          <Link to="/image2">
+            <div className="grid-item" style={{backgroundImage: `url(${img2})`}}>
+              <img src={img2} alt="" />
+            </div>
+          </Link>
+        </div>
+      )}
+
+      {showImages && selectedRange === '150L' && (
+        <div className="image-grid">
+          <Link to="/image3">
+            <div className="grid-item" style={{backgroundImage: `url(${img3})`}}>
+              <img src={img3} alt="" />
+            </div>
+          </Link>
+          <Link to="/image4">
+            <div className="grid-item" style={{backgroundImage: `url(${img4})`}}>
+              <img src={img4} alt="" />
+            </div>
+          </Link>
+          <Link to="/image5">
+            <div className="grid-item" style={{backgroundImage: `url(${img5})`}}>
+              <img src={img5} alt="" />
+            </div>
+          </Link>
+          <Link to="/image6">
+            <div className="grid-item" style={{backgroundImage: `url(${img6})`}}>
+              <img src={img6} alt="" />
+            </div>
+          </Link>
+        </div>
+      )}
+
       <Footer />
     </div>
   );
