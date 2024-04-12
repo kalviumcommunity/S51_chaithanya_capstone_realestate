@@ -1,8 +1,33 @@
-import React from 'react';
-import "./About.css"
+import React, { useEffect, useState } from 'react';
+import "./About.css";
+
 const About = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const aboutContainer = document.querySelector('.about-container');
+      if (!aboutContainer) return;
+
+      const aboutPosition = aboutContainer.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+
+      if (aboutPosition < windowHeight / 2) {
+        setIsVisible(true);
+      }
+    };
+
+    // Add event listener for scroll
+    window.addEventListener('scroll', handleScroll);
+
+    // Clean up event listener
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="about-container">
+    <div className={`about-container ${isVisible ? 'fade-in' : ''}`}>
       <h1>Welcome to DreamHouse Real Estate</h1>
       <p>
         At DreamHouse Real Estate, we believe in making dreams come true. Whether you're searching for your dream home, selling a property, or seeking expert advice on real estate investments, we're here to guide you every step of the way.
@@ -30,6 +55,9 @@ const About = () => {
       <p>
         Ready to embark on your real estate journey with DreamHouse Real Estate? Contact us today to schedule a consultation and experience the difference of working with a trusted partner in real estate.  
         <strong>Email:dreamhouserealty@gamil.com</strong>
+      </p>
+      <p>
+        To know more, <a href="https://youtu.be/ugK8HYpoDzE?si=aDreMyeMelninNvR" target="_blank" rel="noopener noreferrer">click here</a>.
       </p>
     </div>
   );
