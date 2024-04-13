@@ -11,10 +11,10 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
   const [selectedRange, setSelectedRange] = useState('');
-  const [showImages, setShowImages] = useState(false);
+  const [showAllImages, setShowAllImages] = useState(true); // Initially, show all images
 
   const handleGoClick = () => {
-    setShowImages(true);
+    setShowAllImages(false); // Hide all images when Go button is clicked
   };
 
   return (
@@ -52,50 +52,46 @@ const Home = () => {
       </div>
 
       {/* Image grid */}
-      {showImages && selectedRange === '50L' && (
-        <div className="image-grid">
+      <div className="image-grid">
+        {(showAllImages || (selectedRange === '50L' && !showAllImages)) && (
           <Link to="/Image1">
             <div className="grid-item" style={{backgroundImage: `url(${img1})`}}>
               <img src={img1} alt="" />
             </div>
           </Link>
-        </div>
-      )}
-
-      {showImages && selectedRange === '100L' && (
-        <div className="image-grid">
-          <Link to="/image2">
+        )}
+        {(showAllImages || (selectedRange === '100L' && !showAllImages)) && (
+          <Link to="/Image2">
             <div className="grid-item" style={{backgroundImage: `url(${img2})`}}>
               <img src={img2} alt="" />
             </div>
           </Link>
-        </div>
-      )}
-
-      {showImages && selectedRange === '150L' && (
-        <div className="image-grid">
-          <Link to="/image3">
-            <div className="grid-item" style={{backgroundImage: `url(${img3})`}}>
-              <img src={img3} alt="" />
-            </div>
-          </Link>
-          <Link to="/image4">
-            <div className="grid-item" style={{backgroundImage: `url(${img4})`}}>
-              <img src={img4} alt="" />
-            </div>
-          </Link>
-          <Link to="/image5">
-            <div className="grid-item" style={{backgroundImage: `url(${img5})`}}>
-              <img src={img5} alt="" />
-            </div>
-          </Link>
-          <Link to="/image6">
-            <div className="grid-item" style={{backgroundImage: `url(${img6})`}}>
-              <img src={img6} alt="" />
-            </div>
-          </Link>
-        </div>
-      )}
+        )}
+        {(showAllImages || (selectedRange === '150L' && !showAllImages)) && (
+          <>
+            <Link to="/image3">
+              <div className="grid-item" style={{backgroundImage: `url(${img3})`}}>
+                <img src={img3} alt="" />
+              </div>
+            </Link>
+            <Link to="/image4">
+              <div className="grid-item" style={{backgroundImage: `url(${img4})`}}>
+                <img src={img4} alt="" />
+              </div>
+            </Link>
+            <Link to="/image5">
+              <div className="grid-item" style={{backgroundImage: `url(${img5})`}}>
+                <img src={img5} alt="" />
+              </div>
+            </Link>
+            <Link to="/image6">
+              <div className="grid-item" style={{backgroundImage: `url(${img6})`}}>
+                <img src={img6} alt="" />
+              </div>
+            </Link>
+          </>
+        )}
+      </div>
 
       <Footer />
     </div>

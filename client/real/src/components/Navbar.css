@@ -56,13 +56,10 @@ body {
     text-decoration: none;
     padding: 10px 10px;
     border-radius: 60px;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Modify transition */
 }
 
 .nav-link:hover {
-    color: black;
-   height: 100px;
-   width: 100px;
+background-color:#55a1e4;
 }
 .nav-item.active .nav-link {
     background-color: #1e619b; 
@@ -109,8 +106,11 @@ body {
     padding: 8px 16px;
     border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s ease; /* Add transition for background color */
 }
 
 .logout-btn:hover {
     background-color: #c82333;
+    transform: scale(1.1); /* Add a slight scale on hover */
+    border-radius: 4px; /* Maintain the border-radius on hover */
 }

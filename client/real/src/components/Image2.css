@@ -4,7 +4,7 @@
     justify-content: center;
 }
 
-.Image1 {
+.Image2 {
     width: 100%;
     max-width: 500px;
     height: auto;
@@ -14,13 +14,13 @@
     transition: transform 0.3s ease;
 }
 
-.Image1:hover {
+.Image2:hover {
     transform: translateY(-5px);
 }
 
 .overlay {
-    background-color:grey;   
-     color: white;
+    background-color: grey;   
+    color: white;
     padding: 20px;
 }
 
@@ -52,21 +52,25 @@
 
 .details ul li {
     margin-bottom: 5px;
-    color:black;
+    color: black;
 }
 
 .back-to-home {
-    display: inline-block;
-    padding: 10px 20px;
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 20px auto;
+    padding: 15px 30px;
     background-color: #2ecc71; /* Green background color */
     color: #fff; /* White text color */
     text-decoration: none;
-    border-radius: 5px;
-    font-size: 1.1rem;
+    border-radius: 25px;
+    font-size: 1.2rem;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: background-color 0.3s ease;
+    text-align: center;
 }
 
 .back-to-home:hover {
