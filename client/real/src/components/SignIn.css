@@ -1,121 +1,80 @@
+/* SignIn.css */
 
 .signin-container {
-    max-width: 400px;
-    margin: auto;
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color:grey;
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 .signin-title {
-    text-align: center;
-    margin-bottom: 20px;
-    color:black;
-    margin-top: 30px;
-    font-size: 24px;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+  animation: fadeInUp 1s ease-in-out; /* Add animation */
 }
 
 .signin-form-group {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .signin-label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color:black;
-    font-weight: bolder;
+  display: block;
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 5px;
 }
 
 .signin-input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 .signin-submit {
-    width: 100%;
-    padding: 12px;
-    border: none;
-    text-decoration: none;
-    border-radius: 5px;
-    background-color:green;
-    color:black;
-    font-weight: bolder;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .signin-submit:hover {
-    background-color:green;
+  background-color: #0056b3;
+}
+
+.forgot-password-link {
+  font-size: 0.9rem;
+  color: #007bff;
+  cursor: pointer;
 }
 
 .signin-message {
-    margin-top: 15px;
-    text-align: center;
-    color: #888;
-    font-size: 16px;
+  margin-top: 20px;
 }
 
 .signin-link {
-    color:crimson;
-    text-decoration: none;
-    font-weight: bolder;
+  color: #007bff;
+  text-decoration: none;
 }
 
-.signin-link:hover {
-    text-decoration: underline;
+/* Animation keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
-p{
-    color: black;
-}
-
-/* SignIn.css */
-
-.forgot-password {
-    margin-top: 20px;
-  }
-  
-  .forgot-password label {
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  .forgot-password input {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  
-  .forgot-password button {
-    background-color: black;
-    color: #fff;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .forgot-password button:hover {
-    background-color: black;
-  }
-  
-  .forgot-password-link {
-    margin-top: 10px;
-    cursor: pointer;
-    color: black;
-    text-decoration: underline;
-  }
-  
-  .forgot-password-link:hover {
-    color: black;
-  }
-  
