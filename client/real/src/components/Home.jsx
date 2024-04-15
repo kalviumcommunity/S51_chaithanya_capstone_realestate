@@ -105,7 +105,7 @@ const Home = () => {
                 </div>
               </div>
             </Link>
-            <Link to="/image4">
+            <Link to="/Image4">
               <div className="grid-item" style={{backgroundImage: `url(${img4})`}}>
                 <img src={img4} alt="" />
                 <Link to="/favourite">
