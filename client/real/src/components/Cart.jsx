@@ -4,7 +4,6 @@ import React from 'react';
 import "./Cart.css";
 
 const Cart = () => {
-  // Dummy data for illustration
   const cartItems = [
     {
       id: 1,
