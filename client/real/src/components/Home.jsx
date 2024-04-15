@@ -7,6 +7,8 @@ import img3 from "../asserts/img 3.jpeg";
 import img4 from "../asserts/img 4.jpeg";
 import img5 from "../asserts/img 5.jpeg";
 import img6 from "../asserts/img 6.jpeg";
+import save from "../asserts/save.png";
+import like from "../asserts/like.png";
 import { Link } from 'react-router-dom';
 
 const Home = () => {
@@ -51,12 +53,21 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Image grid */}
       <div className="image-grid">
         {(showAllImages || (selectedRange === '50L' && !showAllImages)) && (
           <Link to="/Image1">
             <div className="grid-item" style={{backgroundImage: `url(${img1})`}}>
               <img src={img1} alt="" />
+              <Link to="/favourite">
+                <div className="favorite-button">
+                  <img src={like} alt="Favorite" />
+                </div>
+              </Link>
+              <div className="cart-button">
+                <Link to="/cart">
+                  <img src={save} alt="Cart" />
+                </Link>
+              </div>
             </div>
           </Link>
         )}
@@ -64,6 +75,16 @@ const Home = () => {
           <Link to="/Image2">
             <div className="grid-item" style={{backgroundImage: `url(${img2})`}}>
               <img src={img2} alt="" />
+              <Link to="/favourite">
+                <div className="favorite-button">
+                  <img src={like} alt="Favorite" />
+                </div>
+              </Link>
+              <div className="cart-button">
+                <Link to="/cart">
+                  <img src={save} alt="Cart" />
+                </Link>
+              </div>
             </div>
           </Link>
         )}
@@ -72,21 +93,61 @@ const Home = () => {
             <Link to="/image3">
               <div className="grid-item" style={{backgroundImage: `url(${img3})`}}>
                 <img src={img3} alt="" />
+                <Link to="/favourite">
+                  <div className="favorite-button">
+                    <img src={like} alt="Favorite" />
+                  </div>
+                </Link>
+                <div className="cart-button">
+                  <Link to="/cart">
+                    <img src={save} alt="Cart" />
+                  </Link>
+                </div>
               </div>
             </Link>
             <Link to="/image4">
               <div className="grid-item" style={{backgroundImage: `url(${img4})`}}>
                 <img src={img4} alt="" />
+                <Link to="/favourite">
+                  <div className="favorite-button">
+                    <img src={like} alt="Favorite" />
+                  </div>
+                </Link>
+                <div className="cart-button">
+                  <Link to="/cart">
+                    <img src={save} alt="Cart" />
+                  </Link>
+                </div>
               </div>
             </Link>
             <Link to="/image5">
               <div className="grid-item" style={{backgroundImage: `url(${img5})`}}>
                 <img src={img5} alt="" />
+                <Link to="/favourite">
+                  <div className="favorite-button">
+                    <img src={like} alt="Favorite" />
+                  </div>
+                </Link>
+                <div className="cart-button">
+                  <Link to="/cart">
+                    <img src={save} alt="Cart" />
+                  </Link>
+                </div>
               </div>
             </Link>
             <Link to="/image6">
               <div className="grid-item" style={{backgroundImage: `url(${img6})`}}>
                 <img src={img6} alt="" />
+                <Link to="/favourite">
+                  <div className="favorite-button">
+                    <img src={like} alt="Favorite" />
+                  </div>
+                </Link>
+                <div className="cart-button">
+                  <Link to="/cart">
+                    <img src={save} alt="Cart" />
+                  </Link>
+                </div>
               </div>
             </Link>
           </>
