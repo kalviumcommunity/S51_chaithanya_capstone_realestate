@@ -90,7 +90,7 @@ const Home = () => {
         )}
         {(showAllImages || (selectedRange === '150L' && !showAllImages)) && (
           <>
-            <Link to="/image3">
+            <Link to="/Image3">
               <div className="grid-item" style={{backgroundImage: `url(${img3})`}}>
                 <img src={img3} alt="" />
                 <Link to="/favourite">
