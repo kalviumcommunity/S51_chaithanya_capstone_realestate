@@ -116,54 +116,53 @@ h1 {
 .image-grid .grid-item:hover::after {
   background-color: rgba(0, 0, 0, 0);
 }
-/* 
-.grid-item .overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  padding: 5px;
-  background-color: rgba(0, 0, 0, 0.7);
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-} */
-
-
-
-.grid-item .favorite-button {
+.favorite-button,
+.cart-button {
   position: absolute;
   top: 10px;
-  left: 10px;
-  background-color: rgba(255, 255, 255, 0.7);
-  padding: 5px;
+  right: 10px;
+  background-color: #ff6363; 
+  padding: 8px; 
   border-radius: 50%;
   cursor: pointer;
-  transition: transform 0.3s ease-in-out;
-  z-index: 2; /* Ensure favorite button is above cart button */
+  transition: all 0.3s ease-in-out; 
+  z-index: 2; 
 }
 
-.grid-item .cart-button {
-  position: absolute;
-  top: 10px;
-  left: 40px; /* Adjusting the left position to avoid overlapping */
-  background-color: rgba(255, 255, 255, 0.7);
-  padding: 5px;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out;
-  z-index: 1;
+.cart-button {
+  right: 60px; 
+  background-color: white; 
+}
+.favorite-button img,
+.cart-button img {
+  width: 25px; 
+  height: 25px; 
 }
 
-.grid-item .favorite-button img,
-.grid-item .cart-button img {
-  width: 20px;
-  height: 20px;
+.favorite-button:hover,
+.cart-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
 }
 
-/* Hover effect */
-.grid-item .favorite-button:hover,
-.grid-item .cart-button:hover {
-  transform: scale(1.2);
+
+.favorite-button {
+  background-color:white; 
 }
+
+.favorite-button:hover {
+  animation: heartbeat 0.8s infinite; 
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
