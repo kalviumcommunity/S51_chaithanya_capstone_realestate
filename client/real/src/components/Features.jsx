@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'; // Import Link from React Router
 import img1 from "../asserts/img 1.jpeg";
 import img2 from "../asserts/img 2.jpeg";
 import best1 from "../asserts/best1.jpeg"; 
@@ -32,8 +33,13 @@ const Features = () => {
           <button className={`${classes.scrollButton} ${classes.leftButton}`} onClick={scrollLeft}>{'<'}</button>
           <div className={classes.propertyGallery}>
             <div className={classes.imageContainer} style={{ transform: `translateX(-${scrollPosition * 220}px)` }}>
-              {images.map((image, index) => (
-                <img key={index} src={image} alt={`Image ${index + 1}`} className={classes.propertyImage} />
+              {/* Wrap the first image with Link component */}
+              <Link to="/Bestseller">
+                <img src={images[0]} alt="Bestseller" className={classes.propertyImage} />
+              </Link>
+              {/* Render other images normally */}
+              {images.slice(1).map((image, index) => (
+                <img key={index + 1} src={image} alt={`Image ${index + 2}`} className={classes.propertyImage} />
               ))}
             </div>
           </div>

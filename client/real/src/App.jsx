@@ -17,6 +17,7 @@ import Image2 from './components/Image2';
 import Image3 from './components/Image 3';
 import Image4 from "./components/Image 4";
 import Image5 from  "./components/Image 5";
+import Bestseller from "./components/Bestseller"
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -35,6 +36,7 @@ const App = () => {
         <Route path="/Image3" element={<Image3/>} />
         <Route path="/Image4" element={<Image4/>} />
         <Route path="/Image5" element={<Image5/>} />
+        <Route path="/bestseller" element={<Bestseller/>}/>
         <Route path="/Resource" element={<Resource/>}/>
         <Route path='/LogoutConfirmation' element={<LogoutConfirmationModal />} />
         <Route path="/signin" element={<SignIn setIsLoggedIn={setIsLoggedIn}  />} />
