@@ -1,12 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import img1 from "../asserts/img 1.jpeg";
-import featureimg from "../asserts/feature1.jpeg";
-import featureimg2 from "../asserts/feature2.jpeg";
 import img2 from "../asserts/img 2.jpeg";
+import best1 from "../asserts/best1.jpeg"; 
+import best2 from "../asserts/best2.jpeg"; 
+import best3 from "../asserts/best3.jpeg"; 
+import best4 from "../asserts/best4.jpeg"; 
+import best5 from "../asserts/best5.jpeg"; 
+
 import classes from "./Features.module.css";
 
 const Features = () => {
-  return(
+  const images = [img1, img2, best1, best2, best3, best4, best5];
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  const scrollLeft = () => {
+    setScrollPosition(prevPos => Math.max(prevPos - 1, 0));
+  };
+
+  const scrollRight = () => {
+    setScrollPosition(prevPos => Math.min(prevPos + 1, images.length - 1));
+  };
+
+  return (
     <div className={classes.container}>
       <div className={classes.wrapper}>
         <div className={classes.header}>
@@ -14,27 +29,15 @@ const Features = () => {
           <h2>Explore Our Featured Properties</h2>
         </div>
         <div className={classes.properties}>
-          <div className={classes.property}>
-            <img src={featureimg} alt="Feature Image 1" />
-            <h3>Modern Apartment</h3>
-            <p>Located in the heart of the city, this stylish apartment offers luxury living with stunning city views.</p>
-            <button>View Details</button>
-          </div>
-          <div className={classes.property}>
-            <img src={featureimg2} alt="Feature Image 2" />
-            <h3>Seaside Villa</h3>
-            <p>Escape to this beautiful seaside villa, where you can enjoy breathtaking ocean views and luxurious amenities.</p>
-            <button>View Details</button>
-          </div>
-        </div>
-        <div className={classes.moreProperties}>
-          <h5>More Properties</h5>
+          <button className={`${classes.scrollButton} ${classes.leftButton}`} onClick={scrollLeft}>{'<'}</button>
           <div className={classes.propertyGallery}>
-            <img src={img1} alt="Image 1" />
-            <img src={img2} alt="Image 2" />
-            {/* Add more property images here */}
+            <div className={classes.imageContainer} style={{ transform: `translateX(-${scrollPosition * 220}px)` }}>
+              {images.map((image, index) => (
+                <img key={index} src={image} alt={`Image ${index + 1}`} className={classes.propertyImage} />
+              ))}
+            </div>
           </div>
-          <button>View All Properties</button>
+          <button className={`${classes.scrollButton} ${classes.rightButton}`} onClick={scrollRight}>{'>'}</button>
         </div>
       </div>
     </div>
