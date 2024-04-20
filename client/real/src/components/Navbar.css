@@ -17,7 +17,7 @@ body {
     background-color: white;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 10px 20px; /* Adjust padding */
+    padding: 10px 20px; 
     height: 100px; /* Adjust height */
     display: flex;
     justify-content: space-between; /* Adjust to evenly space elements */
@@ -33,7 +33,7 @@ body {
 }
 
 .navbar-logo {
-    height: 60px; /* Adjust height */
+    height: 30px; /* Adjust height */
     width: auto; /* Ensure responsive scaling */
     margin-right: 10px; /* Adjust margin-right */
     margin-top: 10px; /* Add margin-top to move the image down */

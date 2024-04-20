@@ -1,5 +1,6 @@
 import React from 'react';
-import "./Bestseller1.css"
+import { Link } from 'react-router-dom'; // Import Link from React Router
+import "./Bestseller1.css";
 
 function Bestseller1() {
   return (
@@ -32,7 +33,11 @@ function Bestseller1() {
         <p>Embark on an unforgettable mountain getaway. Contact us today to reserve your stay at our bestseller mountain villa.</p>
         <p>Phone: 7010965635 / 044-22234138</p>
         <p>Email: dreamhouserealty@gamil.com</p>
-        <button className="cta-button">Schedule a Viewing</button>
+        
+        {/* Link the button to Schedule.js */}
+        <Link to="/Schedule">
+          <button className="cta-button">Schedule a Viewing</button>
+        </Link>
       </div>
     </div>
   );
