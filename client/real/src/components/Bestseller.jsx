@@ -1,7 +1,7 @@
 import React from 'react';
 import "./Bestseller.css";
 
-const Bestseller1 = () => {
+const Bestseller = () => {
   return (
       <div className='content'>
         <h2 className='title'>Luxurious Seaside Villa - Your Dream Retreat</h2>
@@ -30,4 +30,4 @@ const Bestseller1 = () => {
   );
 };
 
-export default Bestseller1;
+export default Bestseller;
