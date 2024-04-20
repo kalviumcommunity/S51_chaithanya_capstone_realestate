@@ -7,11 +7,16 @@ import best2 from "../asserts/best2.jpeg";
 import best3 from "../asserts/best3.jpeg"; 
 import best4 from "../asserts/best4.jpeg"; 
 import best5 from "../asserts/best5.jpeg"; 
-
+import best6 from "../asserts/best6.jpeg"; 
+import best7 from "../asserts/best7.webp"; 
+import best8 from "../asserts/best8.jpg"; 
+import best9 from "../asserts/best9.jpg"; 
+import best10 from "../asserts/best10.jpg"; 
 import classes from "./Features.module.css";
 
 const Features = () => {
-  const images = [img1, img2, best1, best2, best3, best4, best5];
+  // Include all imported images into the images array
+  const images = [img1, img2, best1, best2, best3, best4, best5, best6, best7, best8, best9, best10];
   const [scrollPosition, setScrollPosition] = useState(0);
 
   const scrollLeft = () => {
@@ -37,9 +42,13 @@ const Features = () => {
               <Link to="/Bestseller">
                 <img src={images[0]} alt="Bestseller" className={classes.propertyImage} />
               </Link>
+              {/* Wrap the second image with Link component */}
+              <Link to="/Bestseller1">
+                <img src={images[1]} alt="Bestseller1" className={classes.propertyImage} />
+              </Link>
               {/* Render other images normally */}
-              {images.slice(1).map((image, index) => (
-                <img key={index + 1} src={image} alt={`Image ${index + 2}`} className={classes.propertyImage} />
+              {images.slice(2).map((image, index) => (
+                <img key={index + 2} src={image} alt={`Image ${index + 3}`} className={classes.propertyImage} />
               ))}
             </div>
           </div>

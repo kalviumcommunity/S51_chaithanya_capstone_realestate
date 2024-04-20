@@ -35,34 +35,45 @@
 .propertyGallery {
     overflow-x: auto;
     white-space: nowrap;
+    padding: 20px 0; /* Add padding to the property gallery */
 }
 
 .imageContainer {
     display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .propertyImage {
     width: 200px;
-    height: auto;
+    height: 200px;
     border-radius: 10px;
-    margin: 0 10px;
-    transition: transform 0.3s ease, opacity 0.3s ease; /* Added transition for transform and opacity */
+    margin-right: 30px; /* Add margin between images */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.propertyImage:first-child {
+    margin-right: 10px; /* Adjust margin for the first image */
+}
+
+.propertyImage:nth-child(2) {
+    margin-right: 20px; /* Adjust margin for the second image */
 }
 
 .propertyImage:hover {
-    transform: scale(1.1); /* Added scale transform on hover */
-    opacity: 0.8; /* Reduce opacity on hover */
+    transform: scale(1.1);
+    opacity: 0.8;
 }
 
 .scrollButton {
     font-size: 24px;
-    color:burlywood;
+    color: burlywood;
     background-color: cornsilk;
     background: none;
     border: none;
     outline: none;
     cursor: pointer;
-    transition: color 0.3s ease; /* Removed transition for transform */
+    transition: color 0.3s ease;
 }
 
 .leftButton {
