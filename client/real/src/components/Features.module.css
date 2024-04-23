@@ -70,20 +70,24 @@
     color: burlywood;
     background-color: cornsilk;
     background: none;
-    border: none;
-    outline: none;
     cursor: pointer;
     transition: color 0.3s ease;
 }
 
 .leftButton {
     margin-right: 10px;
+    color:black;
+    background-color:darkgoldenrod;
 }
 
 .rightButton {
     margin-left: 10px;
+    color:black;
+    background-color:darkgoldenrod;
 }
 
+
 .scrollButton:hover {
-    color: #555;
+    color: darkgoldenrod;
+    cursor: pointer; /* Ensure the cursor style is explicitly set */
 }

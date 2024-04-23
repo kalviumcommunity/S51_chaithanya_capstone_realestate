@@ -1,162 +1,95 @@
-import React, { useState } from 'react';
+import React from 'react';
 import "./Home.css";
+
 import Footer from "../components/Footer";
-import img1 from "../asserts/img 1.jpeg";
-import img2 from "../asserts/img 2.jpeg";
-import img3 from "../asserts/img 3.jpeg";
-import img4 from "../asserts/img 4.jpeg";
-import img5 from "../asserts/img 5.jpeg";
-import img6 from "../asserts/img 6.jpeg";
-import save from "../asserts/save.png";
-import like from "../asserts/like.png";
-import { Link } from 'react-router-dom';
 
-const Home = () => {
-  const [selectedRange, setSelectedRange] = useState('');
-  const [showAllImages, setShowAllImages] = useState(true); // Initially, show all images
-
-  const handleGoClick = () => {
-    setShowAllImages(false); // Hide all images when Go button is clicked
-  };
-
+const Navbar = () => {
   return (
-    <div className="home-container">
-      <h1>Discover your dream home<br />
-        with prices starting from 50L🏚️⚡!<br />
-        Don't miss out on our exclusive offers<br />
-        for premium apartments</h1>
-
-      <div className="search-box-container">
-        <div className="search-box">
-          <select value={selectedRange} onChange={(e) => setSelectedRange(e.target.value)}>
-            <option value="">Select Price Range</option>
-            <option value="50L">50L-100L</option>
-            <option value="100L">300L-600L</option>
-            <option value="150L">800L-1CR</option>
-            <option value="150L">2CR-7CR</option>
-            <option value="150L">10CR-20CR</option>
-            <option value="150L">20CR above</option>
-            {/* Add more options as needed */}
+    <div className="container">
+      <div className="search-boxes">
+        <select className="search-input">
+          <option value="">Select Location</option>
+          <option value="Adyar">Adyar</option>
+          <option value="Alandur">Alandur</option>
+          <option value="Alwarthirunagar">Alwarthirunagar</option>
+          <option value="Ambattur">Ambattur</option>
+          <option value="Anna Nagar">Anna Nagar</option>
+          <option value="Arumbakkam">Arumbakkam</option>
+          <option value="Ashok Nagar">Ashok Nagar</option>
+          <option value="Besant Nagar">Besant Nagar</option>
+          <option value="Chromepet">Chromepet</option>
+          <option value="Egmore">Egmore</option>
+          <option value="Gopalapuram">Gopalapuram</option>
+          <option value="Guindy">Guindy</option>
+          <option value="Kodambakkam">Kodambakkam</option>
+          <option value="Kolathur">Kolathur</option>
+          <option value="Korattur">Korattur</option>
+          <option value="Kotturpuram">Kotturpuram</option>
+          <option value="Koyambedu">Koyambedu</option>
+          <option value="Madipakkam">Madipakkam</option>
+          <option value="Maduravoyal">Maduravoyal</option>
+          <option value="Medavakkam">Medavakkam</option>
+          <option value="Mogappair">Mogappair</option>
+          <option value="Mount Road">Mount Road</option>
+          <option value="Mylapore">Mylapore</option>
+          <option value="Nandanam">Nandanam</option>
+          <option value="Nanganallur">Nanganallur</option>
+          <option value="Neelangarai">Neelangarai</option>
+          <option value="Nungambakkam">Nungambakkam</option>
+          <option value="Pallavaram">Pallavaram</option>
+          <option value="Pallikaranai">Pallikaranai</option>
+          <option value="Perambur">Perambur</option>
+          <option value="Perungalathur">Perungalathur</option>
+          <option value="Perungudi">Perungudi</option>
+          <option value="Poonamallee">Poonamallee</option>
+          <option value="Porur">Porur</option>
+          <option value="Purasawalkam">Purasawalkam</option>
+          <option value="R.A. Puram">R.A. Puram</option>
+          <option value="Royapettah">Royapettah</option>
+          <option value="Saidapet">Saidapet</option>
+          <option value="Saligramam">Saligramam</option>
+          <option value="Santhome">Santhome</option>
+          <option value="Shenoy Nagar">Shenoy Nagar</option>
+          <option value="Sholinganallur">Sholinganallur</option>
+          <option value="T. Nagar (Thyagaraya Nagar)">T. Nagar (Thyagaraya Nagar)</option>
+          <option value="Tambaram">Tambaram</option>
+          <option value="Teynampet">Teynampet</option>
+          <option value="Tharamani">Tharamani</option>
+          <option value="Thiruvanmiyur">Thiruvanmiyur</option>
+          <option value="Tondiarpet">Tondiarpet</option>
+          <option value="Triplicane">Triplicane</option>
+          <option value="Velachery">Velachery</option>
+        </select>
+        <div className="input-wrapper">
+          <select className='search-input'>
+            <option value="project type">project type</option>
+            <option value="apartment">apartment</option>
+            <option value="villa">villa</option>
+            \<option value="plot">plot</option>
           </select>
         </div>
-        <div className="search-box">
-          <select>
-            <option value="">Select Location</option>
-            <option value="Beach">Beach</option>
-            <option value="Mountain">Mountain</option>
-            <option value="Village">Village</option>
-            {/* Add more options as needed */}
+        <div className="input-wrapper">
+          <select className='search-input'>
+          <option value="">project status</option>
+          <option value="">under construction</option>
+          <option value="">New launch</option>
+          <option value="">Ready to occupy</option>
+          <option value="">completed projects</option>
           </select>
         </div>
-        <div className="search-box">
-          <button onClick={handleGoClick}>Go</button>
+        <div className="input-wrapper">
+          <select className='search-input'>
+          <option value="">Type</option>
+          <option value="">1 BHK</option>
+          <option value="">2 BHK</option>
+          <option value="">3 BHK</option>
+          <option value="">4 BHK</option>
+          </select>
         </div>
       </div>
-
-      <div className="image-grid">
-        {(showAllImages || (selectedRange === '50L' && !showAllImages)) && (
-          <Link to="/Image1">
-            <div className="grid-item" style={{backgroundImage: `url(${img1})`}}>
-              <img src={img1} alt="" />
-              <Link to="/favourite">
-                <div className="favorite-button">
-                  <img src={like} alt="Favorite" />
-                </div>
-              </Link>
-              <div className="cart-button">
-                <Link to="/cart">
-                  <img src={save} alt="Cart" />
-                </Link>
-              </div>
-            </div>
-          </Link>
-        )}
-        {(showAllImages || (selectedRange === '100L' && !showAllImages)) && (
-          <Link to="/Image2">
-            <div className="grid-item" style={{backgroundImage: `url(${img2})`}}>
-              <img src={img2} alt="" />
-              <Link to="/favourite">
-                <div className="favorite-button">
-                  <img src={like} alt="Favorite" />
-                </div>
-              </Link>
-              <div className="cart-button">
-                <Link to="/cart">
-                  <img src={save} alt="Cart" />
-                </Link>
-              </div>
-            </div>
-          </Link>
-        )}
-        {(showAllImages || (selectedRange === '150L' && !showAllImages)) && (
-          <>
-            <Link to="/Image3">
-              <div className="grid-item" style={{backgroundImage: `url(${img3})`}}>
-                <img src={img3} alt="" />
-                <Link to="/favourite">
-                  <div className="favorite-button">
-                    <img src={like} alt="Favorite" />
-                  </div>
-                </Link>
-                <div className="cart-button">
-                  <Link to="/cart">
-                    <img src={save} alt="Cart" />
-                  </Link>
-                </div>
-              </div>
-            </Link>
-            <Link to="/Image4">
-              <div className="grid-item" style={{backgroundImage: `url(${img4})`}}>
-                <img src={img4} alt="" />
-                <Link to="/favourite">
-                  <div className="favorite-button">
-                    <img src={like} alt="Favorite" />
-                  </div>
-                </Link>
-                <div className="cart-button">
-                  <Link to="/cart">
-                    <img src={save} alt="Cart" />
-                  </Link>
-                </div>
-              </div>
-            </Link>
-            <Link to="/Image5">
-              <div className="grid-item" style={{backgroundImage: `url(${img5})`}}>
-                <img src={img5} alt="" />
-                <Link to="/favourite">
-                  <div className="favorite-button">
-                    <img src={like} alt="Favorite" />
-                  </div>
-                </Link>
-                <div className="cart-button">
-                  <Link to="/cart">
-                    <img src={save} alt="Cart" />
-                  </Link>
-                </div>
-              </div>
-            </Link>
-            <Link to="/image6">
-              <div className="grid-item" style={{backgroundImage: `url(${img6})`}}>
-                <img src={img6} alt="" />
-                <Link to="/favourite">
-                  <div className="favorite-button">
-                    <img src={like} alt="Favorite" />
-                  </div>
-                </Link>
-                <div className="cart-button">
-                  <Link to="/cart">
-                    <img src={save} alt="Cart" />
-                  </Link>
-                </div>
-              </div>
-            </Link>
-          </>
-        )}
-      </div>
-
       <Footer />
     </div>
   );
 };
 
-export default Home;
+export default Navbar;

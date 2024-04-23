@@ -1,168 +1,74 @@
-/* General styling */
-.description {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  border-radius: 10px;
-  padding: 20px;
-  margin-top: 20px;
-  background-color: #f8f9fa;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transform: translateY(0);
-  opacity: 1;
-  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-}
-
-.home-image {
-  width: 400px;
-  height: 200px;
-  float: left;
-  margin-left: 900px;
-  margin-bottom: 100px;
-  animation: moveUp 1s ease-in-out infinite alternate;
-}
-
-h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
-  color: black;
-  text-align: center;
-  margin-top: 50px;
-  animation: fadeInAndScale 1.5s ease-out;
-}
-
-.search-box-container {
+.container {
   display: flex;
-  justify-content: center;
-  margin-top: 40px;
-}
-
-.search-box {
-  position: relative;
-  animation: moveDown 1s ease-in-out infinite alternate;
-}
-
-.search-box select {
-  width: 200px;
-  height: 50px;
-  padding: 10px;
-  border: none;
-  outline: none;
-  background-color: #f4f4f4;
-  border-radius: 25px;
-  appearance: none;
-  -webkit-appearance: none;
-}
-
-.search-box select::placeholder {
-  color: #999;
-}
-
-.search-box button {
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 50px;
-  height: 100%;
-  background-color: #3498db;
-  color: white;
-  border: none;
-  border-radius: 0 25px 25px 0;
-  cursor: pointer;
-}
-
-.search-box button:hover {
-  background-color: #2980b9;
-}
-
-.grid-item {
-  position: relative;
-  width: 100%;
-  height: 200px;
-  background-color: grey;
-  border-radius: 8px;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
 }
 
-.box {
-  width: 80%;
-  height: 80%;
-  background-color: white;
+.scroll-container {
+  margin-bottom: 20px;
 }
 
-.image-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
+.big-image {
+  width: 100%;
+  max-width: 600px;
 }
 
-.image-grid .grid-item {
-  background-size: cover;
-  background-position: center;
+.search-boxes {
+  display: flex;
+  justify-content: space-around; /* Horizontally space the input wrappers */
+  flex-wrap: wrap; /* Allow wrapping of input wrappers */
+  width: 100%; /* Ensure search boxes take full width */
+  max-width: 600px; /* Set maximum width */
 }
 
-.image-grid .grid-item::after {
-  content: "";
+.input-wrapper {
+  flex: 1; /* Let input wrappers take equal space */
+  max-width: 200px; /* Set maximum width for input wrappers */
+  margin: 0 5px; /* Add margin between input wrappers */
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  appearance: none;
+}
+
+.select-wrapper select option {
+  padding: 10px;
+}
+
+.select-wrapper select:focus + .dropdown {
+  display: block;
+}
+
+.dropdown {
+  display: none;
   position: absolute;
-  top: 0;
+  top: calc(100% + 5px);
   left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  transition: background-color 0.3s;
+  width: calc(100% - 2px);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  z-index: 1;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  max-height: 150px;
+  overflow-y: auto;
 }
-
-.image-grid .grid-item:hover::after {
-  background-color: rgba(0, 0, 0, 0);
-}
-.favorite-button,
-.cart-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: #ff6363; 
-  padding: 8px; 
-  border-radius: 50%;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out; 
-  z-index: 2; 
-}
-
-.cart-button {
-  right: 60px; 
-  background-color: white; 
-}
-.favorite-button img,
-.cart-button img {
-  width: 25px; 
-  height: 25px; 
-}
-
-.favorite-button:hover,
-.cart-button:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
-}
-
-
-.favorite-button {
-  background-color:white; 
-}
-
-.favorite-button:hover {
-  animation: heartbeat 0.8s infinite; 
-}
-
-@keyframes heartbeat {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
