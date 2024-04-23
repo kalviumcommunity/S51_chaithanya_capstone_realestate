@@ -1,7 +1,10 @@
 import React from 'react';
 import "./Home.css";
-
+import home1 from "../asserts/home1.jpg";
 import Footer from "../components/Footer";
+import home2 from "../asserts/home2.avif";
+import home3 from "../asserts/home3.jpg";
+import home4 from "../asserts/home4.avif";
 
 const Navbar = () => {
   return (
@@ -65,28 +68,116 @@ const Navbar = () => {
             <option value="project type">project type</option>
             <option value="apartment">apartment</option>
             <option value="villa">villa</option>
-            \<option value="plot">plot</option>
+            <option value="plot">plot</option>
           </select>
         </div>
         <div className="input-wrapper">
           <select className='search-input'>
-          <option value="">project status</option>
-          <option value="">under construction</option>
-          <option value="">New launch</option>
-          <option value="">Ready to occupy</option>
-          <option value="">completed projects</option>
+            <option value="">project status</option>
+            <option value="">under construction</option>
+            <option value="">New launch</option>
+            <option value="">Ready to occupy</option>
+            <option value="">completed projects</option>
           </select>
         </div>
         <div className="input-wrapper">
           <select className='search-input'>
-          <option value="">Type</option>
-          <option value="">1 BHK</option>
-          <option value="">2 BHK</option>
-          <option value="">3 BHK</option>
-          <option value="">4 BHK</option>
+            <option value="">Type</option>
+            <option value="">1 BHK</option>
+            <option value="">2 BHK</option>
+            <option value="">3 BHK</option>
+            <option value="">4 BHK</option>
           </select>
         </div>
       </div>
+      <div className="search-heading">
+  Most Searched Areas : <span>Omr</span> | <span>Tambaram</span> | <span>Mogappair</span> | <span>Pallikaranai</span>
+  <br />
+  Closer to IT corridors in Sholinganallur : <span>FirstCity</span> | <span>Cloud9</span> | <span>Flagship</span>
+  <br />
+  Ready to move in : <span>Crescendo</span> | <span>Supremus</span> | <span>Smart Town</span> | <span>Esquire</span>
+</div>
+
+      <div className='gridContainer'>
+      <form>
+      <div className="images-container">
+          <div className="image-box">
+            <div className="image-wrapper">
+              <img src={home1} alt="Home 1" className="home-image" />
+            </div>
+          </div>
+        </div>
+        <div className="form-container">
+          <div className="form-group">
+            <label htmlFor="selectedImage">DreamHouseLinore</label>
+            <p className="details">Best seller villa in Alwarpet<br/>2, 3 & 4 BHK Apts<br/>Starting from 71 Lakhs*<br/> under construction</p>
+          </div>
+          <div className="form-group">
+            {/* Additional form groups */}
+          </div>
+          <button type="submit">View More</button>
+        </div>
+      </form>
+      <form>
+      <div className="images-container">
+          <div className="image-box">
+            <div className="image-wrapper">
+              <img src={home2} alt="Home 2" className="home-image" />
+            </div>
+          </div>
+        </div>
+        <div className="form-container">
+          <div className="form-group">
+            <label htmlFor="selectedImage">Dreamhouse Flagship</label>
+            <p className="details">Best seller villa in Pallikaranai<br/>2, 3 BHK Apts<br/>Starting from 55 Lakhs*<br/> under construction</p>
+          </div>
+          <div className="form-group">
+            {/* Additional form groups */}
+          </div>
+          <button type="submit">View More</button>
+        </div>
+      </form>
+      <form>
+      <div className="images-container">
+          <div className="image-box">
+            <div className="image-wrapper">
+              <img src={home3} alt="Home 3" className="home-image" />
+            </div>
+          </div>
+        </div>
+        <div className="form-container">
+          <div className="form-group">
+            <label htmlFor="selectedImage">Dreamhouse Zenith</label>
+            <p className="details">Best seller villa in Medavakkam<br/>2 and 3 BHK Apts<br/>Starting from 86 Lakhs*<br/> under construction</p>
+          </div>
+          <div className="form-group">
+            {/* Additional form groups */}
+          </div>
+          <button type="submit">View More</button>
+        </div>
+      </form>
+      <form>
+      <div className="images-container">
+          <div className="image-box">
+            <div className="image-wrapper">
+              <img src={home4} alt="Home 4" className="home-image" />
+            </div>
+          </div>
+        </div>
+        <div className="form-container">
+          <div className="form-group">
+            <label htmlFor="selectedImage">Dreamhouse Royale</label>
+            <p className="details">Best seller villa in Shollinganallur<br/>2,3 and 4 BHK Apts<br/>Starting from 67 Lakhs*<br/> under construction</p>
+          </div>
+          <div className="form-group">
+            {/* Additional form groups */}
+          </div>
+          <button type="submit">View More</button>
+        </div>
+      </form>
+      </div>
+  
+    
       <Footer />
     </div>
   );

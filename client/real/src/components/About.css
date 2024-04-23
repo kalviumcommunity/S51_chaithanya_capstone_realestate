@@ -1,3 +1,7 @@
+body{
+    background-color: rgb(216, 118, 118);
+}
+
 .about-container {
     max-width: 800px;
     margin: 0 auto;
@@ -54,7 +58,4 @@ strong {
     }
 }
 
-/* Gradient Background */
-body {
-    background: linear-gradient(90deg, #a7d7e0, #73c8a9); /* Updated gradient colors */
-}
+
