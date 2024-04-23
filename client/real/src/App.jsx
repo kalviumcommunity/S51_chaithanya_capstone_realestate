@@ -12,6 +12,7 @@ import Cart from "./components/Cart";
 import Favorites from './components/Favorites';
 import LogoutConfirmationModal from './components/LogoutConfirmationModal';
 
+
 import Resource from './components/Resource';
 import Bestseller from "./components/Bestseller"
 import Bestseller1 from './components/Bestseller1';
@@ -33,6 +34,7 @@ const App = () => {
         <Route path="/bestseller1" element={<Bestseller1/>}/>
         <Route path="/schedule" element={<Schedule/>}/>
         <Route path="/Resource" element={<Resource/>}/>
+        
         <Route path='/LogoutConfirmation' element={<LogoutConfirmationModal />} />
         <Route path="/signin" element={<SignIn setIsLoggedIn={setIsLoggedIn}  />} />
         <Route path="/signup" element={<SignUp setIsLoggedIn={setIsLoggedIn}  />}/>
