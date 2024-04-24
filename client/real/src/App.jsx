@@ -11,6 +11,7 @@ import Footer from './components/Footer';
 import Cart from "./components/Cart";
 import Linore from './components/Linore';
 import Favorites from './components/Favorites';
+import Flagship from "./components/Flagship"
 import LogoutConfirmationModal from './components/LogoutConfirmationModal';
 
 
@@ -36,6 +37,7 @@ const App = () => {
         <Route path="/schedule" element={<Schedule/>}/>
         <Route path="/Resource" element={<Resource/>}/>
         <Route path="/Linore" element={<Linore/>}/>
+        <Route path="/Flagship" element={<Flagship/>}/>
         <Route path='/LogoutConfirmation' element={<LogoutConfirmationModal />} />
         <Route path="/signin" element={<SignIn setIsLoggedIn={setIsLoggedIn}  />} />
         <Route path="/signup" element={<SignUp setIsLoggedIn={setIsLoggedIn}  />}/>

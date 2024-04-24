@@ -1,113 +1,65 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-/* Navbar Styles */
+/* Navbar container */
 .navbar {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: #cb202d;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 10px 20px; 
-    height: 100px; /* Adjust height */
-    display: flex;
-    justify-content: space-between; /* Adjust to evenly space elements */
-    align-items: center;
-    animation: fadeIn 0.5s ease-in-out; 
+    background-color: #ffffff; /* White background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for subtle elevation */
+    background-color: rgb(226, 55, 55);
+    height: 100px;
+    width: 1500px;
 }
 
+/* Navbar brand */
 .navbar-brand {
-    color: white;
-    font-weight: bold;
-    font-size: 1.5rem;
-    text-decoration: none;
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center vertically */
+    color: #333333; /* Text color */
+    font-weight: bold; /* Bold font */
 }
 
+/* Navbar logo */
 .navbar-logo {
-    height: 30px; /* Adjust height */
-    width: auto; /* Ensure responsive scaling */
-    margin-right: 10px; /* Adjust margin-right */
-    margin-top: 10px; /* Add margin-top to move the image down */
+    width: 40px; /* Adjust logo width */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Margin to the right of the logo */
 }
 
-.navbar-nav {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Center align the buttons */
-    list-style-type: none; /* Remove bullet points */
+/* Navbar links */
+.navbar-nav .nav-link {
+    font-weight: bolder; /* Bold font */
+    margin-right: 15px; /* Margin between links */
+    display: inline-block; /* Display as inline-block */
+    height: 100px;
+    width: 100px;
+    margin-bottom: 100px;
+    background-color:  rgb(226, 55, 55); /* Background color */
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
 }
 
-.nav-item {
-    margin-right: 10px; /* Adjust margin-right for buttons */
+/* Navbar links on hover */
+/* .navbar-nav .nav-link:hover {
+    color: #007bff;
+}
+ */
+
+/* Navbar buttons */
+.navbar-nav .btn {
+    margin-right: 15px; /* Margin between buttons */
+    display: inline-block; /* Display as inline-block */
+    padding: 5px 10px; /* Adjust padding */
+    font-size: 14px; /* Adjust font size */
+    height: auto; /* Adjust height */
 }
 
-.nav-link {
-    color: white;
-    font-weight: 600;
-    text-decoration: none;
-    padding: 10px 10px;
-    border-radius: 60px;
-}
-
-
-.nav-item.active .nav-link {
-    background-color: #1e619b; 
-    color: white; 
-}
-
-/* Navbar Animation */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-/* Navbar Icon Styles */
+/* Navbar icons container */
 .navbar-icons-container {
-    display: flex;
-    align-items: center;
-    margin-left: auto; /* Move icons to the right by aligning them to the end */
+    display: inline-block; /* Display as inline-block */
+    margin-right: 15px; /* Margin between icons */
 }
 
-.nav-item {
-    margin-left: 80px; /* Adjust margin-right for buttons */
-}
-
-.nav-item img.navbar-icon {
-    width: 60px; /* Adjust width of icons */
-    height: 60px; /* Adjust height of icons */
-    cursor: pointer; /* Change cursor to pointer on hover */
-    transition: transform 0.3s ease; /* Add smooth transition for transform property */
-}
-
-/* Hover effect */
-.nav-item img.navbar-icon:hover {
-    transform: scale(1.2); /* Scale up the icon on hover */
-}
-
-.logout-btn {
-    background-color: #dc3545;
-    color: #fff;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease; /* Add transition for background color */
-}
-
-.logout-btn:hover {
-    background-color: #50262a;
-    transform: scale(1.1); /* Add a slight scale on hover */
-    border-radius: 4px; /* Maintain the border-radius on hover */
+/* Navbar icon */
+.navbar-icon {
+    width: 25px; /* Adjust icon width */
+    height: auto; /* Maintain aspect ratio */
 }
