@@ -9,6 +9,7 @@ import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
 import Footer from './components/Footer';
 import Cart from "./components/Cart";
+import Linore from './components/Linore';
 import Favorites from './components/Favorites';
 import LogoutConfirmationModal from './components/LogoutConfirmationModal';
 
@@ -34,7 +35,7 @@ const App = () => {
         <Route path="/bestseller1" element={<Bestseller1/>}/>
         <Route path="/schedule" element={<Schedule/>}/>
         <Route path="/Resource" element={<Resource/>}/>
-        
+        <Route path="/Linore" element={<Linore/>}/>
         <Route path='/LogoutConfirmation' element={<LogoutConfirmationModal />} />
         <Route path="/signin" element={<SignIn setIsLoggedIn={setIsLoggedIn}  />} />
         <Route path="/signup" element={<SignUp setIsLoggedIn={setIsLoggedIn}  />}/>
