@@ -6,7 +6,6 @@
 
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: white;
 }
 
 /* Navbar Styles */
@@ -14,7 +13,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: white;
+    background-color: #cb202d;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 10px 20px; 
@@ -26,7 +25,7 @@ body {
 }
 
 .navbar-brand {
-    color: black;
+    color: white;
     font-weight: bold;
     font-size: 1.5rem;
     text-decoration: none;
@@ -51,16 +50,14 @@ body {
 }
 
 .nav-link {
-    color: black;
+    color: white;
     font-weight: 600;
     text-decoration: none;
     padding: 10px 10px;
     border-radius: 60px;
 }
 
-.nav-link:hover {
-background-color:#55a1e4;
-}
+
 .nav-item.active .nav-link {
     background-color: #1e619b; 
     color: white; 
@@ -110,7 +107,7 @@ background-color:#55a1e4;
 }
 
 .logout-btn:hover {
-    background-color: #c82333;
+    background-color: #50262a;
     transform: scale(1.1); /* Add a slight scale on hover */
     border-radius: 4px; /* Maintain the border-radius on hover */
 }

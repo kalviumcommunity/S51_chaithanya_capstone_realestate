@@ -5,7 +5,10 @@ import Footer from "../components/Footer";
 import home2 from "../asserts/home2.avif";
 import home3 from "../asserts/home3.jpg";
 import home4 from "../asserts/home4.avif";
-
+import couple from "../asserts/couple.jpg"
+import family from "../asserts/family.jpg"
+import { Link } from 'react-router-dom';
+ 
 const Navbar = () => {
   return (
     <div className="container">
@@ -15,6 +18,7 @@ const Navbar = () => {
           <option value="Adyar">Adyar</option>
           <option value="Alandur">Alandur</option>
           <option value="Alwarthirunagar">Alwarthirunagar</option>
+          <option value="Alwarpet">Alwarpet</option>
           <option value="Ambattur">Ambattur</option>
           <option value="Anna Nagar">Anna Nagar</option>
           <option value="Arumbakkam">Arumbakkam</option>
@@ -115,7 +119,9 @@ const Navbar = () => {
           <div className="form-group">
             {/* Additional form groups */}
           </div>
-          <button type="submit">View More</button>
+        <Link  to="/Linore">
+          <button type="button">View More</button>
+        </Link>
         </div>
       </form>
       <form>
@@ -168,6 +174,44 @@ const Navbar = () => {
           <div className="form-group">
             <label htmlFor="selectedImage">Dreamhouse Royale</label>
             <p className="details">Best seller villa in Shollinganallur<br/>2,3 and 4 BHK Apts<br/>Starting from 67 Lakhs*<br/> under construction</p>
+          </div>
+          <div className="form-group">
+            {/* Additional form groups */}
+          </div>
+          <button type="submit">View More</button>
+        </div>
+      </form>
+      <form>
+      <div className="images-container">
+          <div className="image-box">
+            <div className="image-wrapper">
+              <img src={couple} alt="couple" className="home-image" />
+            </div>
+          </div>
+        </div>
+        <div className="form-container">
+          <div className="form-group">
+            <label htmlFor="selectedImage">Dreamhouse couple villa </label>
+            <p className="details">Best seller villa in velacherry <br/>3 and 4 BHK Apts<br/>Starting from 1.2CR*<br/> ready to occupy</p>
+          </div>
+          <div className="form-group">
+            {/* Additional form groups */}
+          </div>
+          <button type="submit">View More</button>
+        </div>
+      </form>
+      <form>
+      <div className="images-container">
+          <div className="image-box">
+            <div className="image-wrapper">
+              <img src={family} alt="family" className="home-image" />
+            </div>
+          </div>
+        </div>
+        <div className="form-container">
+          <div className="form-group">
+            <label htmlFor="selectedImage">Dreamhouse family villa </label>
+            <p className="details">Best seller villa in ECR <br/>5 BHK Apts<br/>Starting from 87lakhs*<br/>New launch</p>
           </div>
           <div className="form-group">
             {/* Additional form groups */}
