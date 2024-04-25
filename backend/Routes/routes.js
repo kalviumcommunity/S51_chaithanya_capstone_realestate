@@ -1,7 +1,7 @@
 bconst express = require("express")
 
 const router = express.router()
-const user = require("./Models/User")
+const user = require("../Models/User")
 
 router.post("/login", (req, res) => {
     const { email, password } = req.body;
