@@ -72,9 +72,12 @@ const Navbar = () => {
             <option value="">1 BHK</option>
             <option value="">2 BHK</option>
             <option value="">3 BHK</option>
-            <option value="">4 BHK</option>
+            <option value="">4 BHK</option>    
           </select>
         </div>
+      <div className='but'>
+        <button>search</button>
+      </div>
       </div>
       <div className="search-heading">
   Most Searched Areas : <span>Omr</span> | <span>Tambaram</span> | <span>Mogappair</span> | <span>Pallikaranai</span>

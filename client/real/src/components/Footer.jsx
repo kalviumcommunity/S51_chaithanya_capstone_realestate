@@ -25,12 +25,33 @@ const Footer = () => {
           <h3>Contact Us</h3>
           <p>
             Dream House Realty <br />
-            19,ranga street, <br />
+            19, Ranga Street, <br />
             Dreamville, CA 12 <br />
             Chennai <br />
             Phone: 7010965635 / 044-22234138<br />
-            Email:dreamhouserealty@gamil.com
+            Email: dreamhouserealty@gmail.com
           </p>
+        </div>
+        <div className="footer-buy-sell">
+          <h3>Buy & Sell with Us</h3>
+          <p>
+            Whether you're looking to buy or sell, Dream House Realty is here to assist you every step of the way. Contact us today to get started.
+          </p>
+        </div>
+        <div className="footer-faq">
+          <h3>FAQ</h3>
+          <p>Have questions? Check out our frequently asked questions for answers or contact us for assistance.</p>
+          <ul className="footer-faq-list">
+            <li><a href="/faq">FAQ Page</a></li>
+          </ul>
+        </div>
+        <div className="footer-newsletter">
+          <h3>Newsletter</h3>
+          <p>Subscribe to our newsletter to receive updates on the latest properties, real estate trends, and special offers.</p>
+          <form className="newsletter-form">
+            <input type="email" placeholder="Enter your email" />
+            <button type="submit">Subscribe</button>
+          </form>
         </div>
         <div className="footer-social">
           <h3>Follow Us</h3>
