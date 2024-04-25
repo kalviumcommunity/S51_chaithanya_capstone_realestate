@@ -16,7 +16,6 @@
   .enquire-now {
     float: left;
     width: 50%;
-    margin-bottom: 200px;
     color: black;
   }
   
@@ -154,3 +153,38 @@
     transition: all 0.3s ease; /* Add transition for all properties */
     text-align: center; /* Center text */
   }
+ 
+  .amenities {
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    padding: 10px 500px; /* Adjust padding as needed */
+    margin-bottom: 100px;
+    transition: 0.2s ease-in; /* Added 's' to specify seconds */
+  }
+  
+  .amenities-list,
+  .aminities-list1 {
+    font-size: large;
+    overflow: hidden; /* Hide overflowing text */
+
+  }
+  
+  .amenities-list li,
+  .aminities-list1 li {
+    animation: moveLeft 2s  alternate; /* Animation properties */
+  }
+  
+  .amenities-list li::before {
+  content: "\2022"; /* Bullet character */
+  display: inline-block;
+  width: 1em;
+  margin-right: 10px;
+}
+  @keyframes moveLeft {
+    0% {
+      transform: translateX(-100%); /* Start position */
+    }
+   
+  }
+  

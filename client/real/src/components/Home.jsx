@@ -83,7 +83,7 @@ const Navbar = () => {
   <br />
   Ready to move in : <span>Crescendo</span> | <span>Supremus</span> | <span>Smart Town</span> | <span>Esquire</span>
 </div>
-
+<h1>BEST SELLERS </h1>
       <div className='gridContainer'>
       <form>
       <div className="images-container">
@@ -106,6 +106,7 @@ const Navbar = () => {
         </Link>
         </div>
       </form>
+
       <form>
       <div className="images-container">
           <div className="image-box">
@@ -203,7 +204,28 @@ const Navbar = () => {
           <button type="submit">View More</button>
         </div>
       </form>
+      <form>
+      <div className="images-container">
+          <div className="image-box">
+            <div className="image-wrapper">
+              <img src={family} alt="family" className="home-image" />
+            </div>
+          </div>
+        </div>
+        <div className="form-container">
+          <div className="form-group">
+            <label htmlFor="selectedImage">family villa </label>
+            <p className="details">Best seller villa in ECR <br/>5 BHK Apts<br/>Starting from 87lakhs*<br/>New launch</p>
+          </div>
+          <div className="form-group">
+            {/* Additional form groups */}
+          </div>
+          <button type="submit">View More</button>
+        </div>
+      </form>
       </div>
+    
+   
   
     
       <Footer />
