@@ -1,99 +1,124 @@
-/* Footer.css */
-
 .footer-container {
-  background-color: #333;
-  color: #fff;
-  padding: 50px 100px;
-  margin-top: 1500px;
-  text-align: center; /* Center-align text */
+  background-color: #333; /* Change the background color as needed */
+  color: #fff; /* Change the text color as needed */
+  padding: 10px; /* Adjust the padding as needed */
+  margin-top: 700px; /* Adjust the margin from the top as needed */
+  width: 1290px;
 }
+
 
 .footer-content {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  max-width: 1500px;
-  margin: 0 auto;
-  text-align: left; /* Reset text alignment for children */
 }
 
 .footer-info,
 .footer-links,
 .footer-contact,
-.footer-social { 
-  flex: 1;
-  margin: 0 20px;
-  text-align: center; /* Center-align text */
+.footer-buy-sell,
+.footer-faq,
+.footer-newsletter {
+  flex: 1 1 200px; /* Adjust the width of each section */
+  margin-bottom: 20px; /* Adjust the spacing between sections */
 }
 
 .footer-info h3,
 .footer-links h3,
 .footer-contact h3,
-.footer-social h3 { 
-  font-size: 1.2rem;
-  margin-bottom: 10px;
+.footer-buy-sell h3,
+.footer-faq h3,
+.footer-newsletter h3 {
   color: #fff;
-  text-align: center; /* Center-align text */
+  font-size: 18px;
+  margin-bottom: 20px;
+  margin-left: 10px;
 }
 
 .footer-info p,
-.footer-links p,
 .footer-contact p,
-.footer-social p { 
+.footer-buy-sell p,
+.footer-faq p,
+.footer-newsletter p {
   color: #ccc;
-  margin: 0; /* Remove default margin */
-  text-align: center; /* Center-align text */
+  font-size: 14px;
 }
 
-.footer-nav-list {
+.footer-links ul {
   list-style: none;
   padding: 0;
-  text-align: center; /* Center-align text */
 }
 
-.footer-nav-list li {
+.footer-links ul li {
   margin-bottom: 10px;
 }
 
-.footer-nav-list li a {
+.footer-links ul li a {
   color: #ccc;
   text-decoration: none;
+  font-size: 14px;
 }
 
-.footer-nav-list li a:hover {
+.footer-links ul li a:hover {
   color: #fff;
 }
 
-.footer-bottom {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 0.9rem;
-  color: #ccc;
+.footer-newsletter form {
+  display: flex;
+}
+
+.footer-newsletter input[type="email"],
+.footer-newsletter button[type="submit"] {
+  padding: 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+}
+
+.footer-newsletter input[type="email"] {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.footer-newsletter button[type="submit"] {
+  background-color: #4caf50; /* Change the button background color as needed */
+  color: #fff;
+  cursor: pointer;
+}
+
+.footer-newsletter button[type="submit"]:hover {
+  background-color: #45a049; /* Change the button hover color as needed */
+}
+
+.footer-social {
+  flex: 1 1 100%; /* Take full width of the footer */
+  text-align: center; /* Center-align the social icons */
 }
 
 .social-icons {
   list-style: none;
   padding: 0;
+  margin: 0;
   display: flex;
-  justify-content: center;
-  margin-top: 20px;
+  justify-content: center; /* Center-align the social icons horizontally */
 }
 
 .social-icons li {
-  margin: 0 10px;
+  margin-right: 10px;
+}
+
+.social-icons li:last-child {
+  margin-right: 0;
 }
 
 .social-icons li a {
-  color: #fff;
-  font-size: 1.5rem;
-  transition: color 0.3s ease;
+  color: #ccc;
+  font-size: 24px;
+  text-decoration: none;
 }
 
 .social-icons li a:hover {
-  color: #007bff;
+  color: #fff;
 }
-
-h3 {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  text-align: center; /* Center-align h3 elements */
+a{
+  color: black;
 }
