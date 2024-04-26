@@ -187,4 +187,27 @@
     }
    
   }
-  
+.p{
+  color:  black;
+  animation: moveLeft 2s  alternate; /* Animation properties */
+  font-weight: bold;
+  font-size: large;
+}
+.arrow-button {
+  background-color: yellow;
+  color: black;
+  height: 40px;
+  width:100px;
+  margin-right: 10px;
+}
+
+.superior {
+  color: black;
+  height: 40px;
+  width:100px;
+  margin-top: 10px;
+ 
+
+
+}
+

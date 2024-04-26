@@ -1,6 +1,6 @@
 import React from 'react';
 import "./Home.css";
-import home1 from "../asserts/home1.jpg";
+import linore from "../asserts/linore.webp";
 import Footer from "../components/Footer";
 import home2 from "../asserts/home2.avif";
 import home3 from "../asserts/home3.jpg";
@@ -75,6 +75,14 @@ const Navbar = () => {
             <option value="">4 BHK</option>    
           </select>
         </div>
+      <div className='types'>
+        <select className='search-input'>
+          <option value=""> HOUSE TYPE</option>
+        <option value="">TENANT</option>
+        <option value="">BUY</option>
+        <option value="">LEASE</option>
+        </select>
+      </div>
       <div className='but'>
         <button>search</button>
       </div>
@@ -92,14 +100,14 @@ const Navbar = () => {
       <div className="images-container">
           <div className="image-box">
             <div className="image-wrapper">
-              <img src={home1} alt="Home 1" className="home-image" />
+              <img src={linore} alt="Home 1" className="home-image" />
             </div>
           </div>
         </div>
         <div className="form-container">
           <div className="form-group">
             <label htmlFor="selectedImage">Linore</label>
-            <p className="details">Best seller villa in Alwarpet<br/>2, 3 & 4 BHK Apts<br/>Starting from 71 Lakhs*<br/> under construction</p>
+            <p className="details">Located in Kattupakkam, Chennai<br/>2, 3 & 4 BHK Apts<br/>Starting from 71 Lakhs*<br/> under construction</p>
           </div>
           <div className="form-group">
             {/* Additional form groups */}

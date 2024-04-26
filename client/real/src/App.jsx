@@ -8,13 +8,13 @@ import Contact from './components/Contact';
 import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
 import Footer from './components/Footer';
+import Superior from './components/Superior';
+import Linoremore from './components/Linoremore';
 import Cart from "./components/Cart";
 import Linore from './components/Linore';
 import Favorites from './components/Favorites';
 import Flagship from "./components/Flagship"
 import LogoutConfirmationModal from './components/LogoutConfirmationModal';
-
-
 import Resource from './components/Resource';
 import Bestseller from "./components/Bestseller"
 import Bestseller1 from './components/Bestseller1';
@@ -39,8 +39,10 @@ const App = () => {
         <Route path="/Linore" element={<Linore/>}/>
         <Route path="/Flagship" element={<Flagship/>}/>
         <Route path='/LogoutConfirmation' element={<LogoutConfirmationModal />} />
+        <Route path="/Linoremore" element={<Linoremore/>}/>
         <Route path="/signin" element={<SignIn setIsLoggedIn={setIsLoggedIn}  />} />
         <Route path="/signup" element={<SignUp setIsLoggedIn={setIsLoggedIn}  />}/>
+        <Route path="/Superior" element={<Superior/>} />  
 
       </Routes>
     </Router>
