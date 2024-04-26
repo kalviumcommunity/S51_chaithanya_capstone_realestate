@@ -1,6 +1,9 @@
 import React from 'react';
+import { WhatsAppWidget } from 'react-whatsapp-widget';
+
 import home1 from '../asserts/linore.webp';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import GoogleMap from './GoogleMap';
 import "./Linore.css";
 
 function Linore() {
@@ -39,106 +42,141 @@ function Linore() {
           </form>
         </div>
       </div>
+
+      {/* Highlights Section */}
       <div className='highlights'>
-  <h1>DREAMHOUSE LINORE HIGHLIGHTS</h1>
-  <h2>SALIENT FEATURES</h2>
-<div className='p'>
-  <li>275 signature 2, 3 & 4 BHK residences built on a B+G+5 Floor with Contemporary elevation across 4.87-acres</li>
-  <li> Superior specs like gleaming Italian marble flooring, Digital Lock, High-end Sanitary Fittings and more</li>
-  <li> Bedrooms with 3x ventilation with Huge windows</li>
-  <li> Beautiful views of a 1.5-acre podium and lush green belt of 56,000 sft. to give an opportunity to be with nature</li>
-  <li> 70+ Amenities including 11,000 sft. Clubhouse with Double-height Lobby, 9400 sft. Swimming pool and more</li>
-  <div className='more'>
-        {/* Add arrow button for more reasons */}
-
-        <Link to="/Linoremore">
-        <button className="arrow-button">MORE REASON &#8594;</button>
-        </Link>
-      <div className='superior'>
-        <Link to ="/Superior">
-          <button>SUPERIOR HOMES</button>
-        </Link>
+        <h1>DREAMHOUSE LINORE HIGHLIGHTS</h1>
+        <h2>SALIENT FEATURES</h2>
+        <div className='p'>
+          <ul>
+            <li>275 signature 2, 3 & 4 BHK residences built on a B+G+5 Floor with Contemporary elevation across 4.87-acres</li>
+            <li>Superior specs like gleaming Italian marble flooring, Digital Lock, High-end Sanitary Fittings and more</li>
+            <li>Bedrooms with 3x ventilation with Huge windows</li>
+            <li>Beautiful views of a 1.5-acre podium and lush green belt of 56,000 sft. to give an opportunity to be with nature</li>
+            <li>70+ Amenities including 11,000 sft. Clubhouse with Double-height Lobby, 9400 sft. Swimming pool and more</li>
+          </ul>
+          <div className='more'>
+            <Link to="/Linoremore">
+              <button className="arrow-button">MORE REASON &#8594;</button>
+            </Link>
+            <div className='superior'>
+              <Link to="/Superior">
+                <button>SUPERIOR HOMES</button>
+              </Link>
+            </div>
+          </div>
+        </div>
       </div>
-      </div>
-  </div>
-</div>
 
-{/*     
+      {/* Amenities Section */}
       <div className="amenities">
         <h1>Amenities</h1>
-        <div style={{display: "flex"}}>
-          <ul className="amenities-list">
-            <li>Mini golf</li>
-            <li>Tree house</li>
-            <li>Hammock zone</li>
-            <li>Jogging track / Walking track</li>
-            <li>Quiet nook</li>
-            <li>Pets park</li>
-            <li>Aroma garden</li>
-            <li>Birds bath</li>
-            <li>Bicycle rack & Bicycle track</li>
-            <li>Water pavilion</li>
-            <li>Party lawn</li>
-            <li>Barbecue corner</li>
-            <li>Senior citizen zone</li>
-            <li>Outdoor board game</li>
-            <li>Nanny’s pavilion</li>
-            <li>Reflexology walkway</li>
-            <li>Yoga deck</li>
-            <li>Hobby pavilion</li>
-            <li>Butterfly garden</li>
-            <li>Seating bay</li>
-            <li>Botanical garden</li>
-            <li>Tot lot</li>
-            <li>Kids jungle gym</li>
-            <li>Rock climbing wall</li>
-            <li>Sensory play area</li>
-            <li>Musical garden</li>
-            <li>Obstacle arena</li>
-            <li>Chalkboard wall</li>
-            <li>Science park</li>
-            <li>Sand pit</li>
-            <li>Traditional play</li>
-            <li>Interactive wall</li>
-            <li>DIY Garden</li>
-            <li>Car charging point</li>
-            <li>Car wash bay</li>
-          </ul>
+        <div className="amenities-list-container">
+          <div className="amenities-list">
+            <h2>Outdoor Amenities</h2>
+            <ul>
+              <li>Mini golf</li>
+              <li>Tree house</li>
+              <li>Hammock zone</li>
+              {/* Add more amenities as needed */}
+            </ul>
+          </div>
           <div className='aminities-list1'>
+            <h2>Indoor Amenities</h2>
             <ul>
               <li>Swimming pool</li>
               <li>Kids pool</li>
               <li>In pool day bed</li>
-              <li>Recessed seating</li>
-              <li>Jacuzzi</li>
-              <li>Poolside lounge</li>
-              <li>Multipurpose hall</li>
-              <li>Home theatre</li>
-              <li>Indoor games</li>
-              <li>Kids play area</li>
-              <li>Kids Library</li>
-              <li>Gym</li>
-              <li>Interactive workout</li>
-              <li>Crossfit corner</li>
-              <li>Adventure wall games</li>
-              <li>Mini play</li>
-              <li>Ball pit</li>
-              <li>Association room</li>
-              <li>Café</li>
-              <li>Creche</li>
-              <li>Convenience store</li>
-              <li>Interactive wall games</li>
-              <li>VR games</li>
-              <li>Video games</li>
-              <li>Game arcade</li>
-              <li>Driver/maid dormitory</li>
-              <li>Infinity walkway</li>
-              <li>Roof top party corner</li>
-              <li>Terrace sit out</li>
+              {/* Add more amenities as needed */}
             </ul>
           </div>
         </div>
-      </div> */}
+      </div>
+
+      {/* Walkthrough Section */}
+      <div className='walkthrough'>
+        <h1>WALKTHROUGH</h1>
+        <div className="video-container">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Iujq_H4RBX4" title="Walkthrough 1" frameBorder="0" allowFullScreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/bsAsYwFfmio" title="Walkthrough 2" frameBorder="0" allowFullScreen></iframe>
+        </div>
+      </div>
+
+      {/* Configuration Section */}
+      <h1>CONFIGURATION</h1>
+      <div className='configuration'>
+        <div className='configuration-box'>
+          <p>Market Price : ₹6500 / Sqft</p>
+        </div>
+        <div className='configuration-box'>
+          <p>Casagrand Price : ₹5849 / Sqft</p>
+        </div>
+        <div className='configuration-box'>
+          <p>Offer Price : ₹5749 / Sqft</p>
+        </div>
+      </div>
+
+      {/* Apartment Configurations Section */}
+      <div className='apartment'>
+        <h1>Apartment Configurations</h1>
+        <table className="apartment-table">
+          <thead>
+            <tr>
+              <th>BHK</th>
+              <th>UNIT TYPE</th>
+              <th>BUILT-UP AREA</th>
+              <th>PRICE PER SQ. FT.</th>
+              <th>PRICE RANGE</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2 BHK</td>
+              <td>Apartment</td>
+              <td>1169 - 1316 Sqft</td>
+              <td>5749/Sqft</td>
+              <td>Rs. 67.20 Lakhs Onwards</td>
+            </tr>
+            <tr>
+              <td>3 BHK</td>
+              <td>Apartment</td>
+              <td>1593 - 1780 Sqft</td>
+              <td>5749/Sqft</td>
+              <td>Rs. 91.58 Lakhs Onwards</td>
+            </tr>
+            <tr>
+              <td>4 BHK</td>
+              <td>Apartment</td>
+              <td>2506 - 2512 Sqft</td>
+              <td>5849/Sqft</td>
+              <td>Rs. 1.46 Cr Onwards</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      {/* Copyright Section */}
+      <div className='copy'>
+        <p>&copy; *Price mention is basic cost. Other charges excluded</p>
+      </div>
+
+      {/* Community Map Section */}
+      <h1>KNOW YOUR COMMUNITY</h1>
+      <div className='community'>
+      </div>
+      <div className='whatsapp-container'>
+  <div className='whatsapp'>
+    {/* WhatsApp Widget */}
+    <WhatsAppWidget
+      className="whatsapp-button"
+      phoneNumber="7010965635"
+      message="I'm interested in DreamHouse Linore. Can you provide me with more information?"
+    />
+    
+    {/* Help message */}
+    <p className="help-message">Need help? Chat with us on WhatsApp!</p>
+  </div>
+</div>
     </div>
   );
 }

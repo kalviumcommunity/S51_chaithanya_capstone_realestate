@@ -19,6 +19,7 @@ import Resource from './components/Resource';
 import Bestseller from "./components/Bestseller"
 import Bestseller1 from './components/Bestseller1';
 import Schedule from './components/Schedule';
+import GoogleMap from './components/GoogleMap';
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -38,6 +39,8 @@ const App = () => {
         <Route path="/Resource" element={<Resource/>}/>
         <Route path="/Linore" element={<Linore/>}/>
         <Route path="/Flagship" element={<Flagship/>}/>
+        <Route path="/GoogleMap" element={<GoogleMap/>}/>
+
         <Route path='/LogoutConfirmation' element={<LogoutConfirmationModal />} />
         <Route path="/Linoremore" element={<Linoremore/>}/>
         <Route path="/signin" element={<SignIn setIsLoggedIn={setIsLoggedIn}  />} />
