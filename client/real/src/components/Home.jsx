@@ -3,6 +3,7 @@ import "./Home.css";
 import linore from "../asserts/linore.webp";
 import Footer from "../components/Footer";
 import flagship from "../asserts/flagship.webp";
+import m from "../asserts/m.webp"
 import home3 from "../asserts/home3.jpg";
 import home4 from "../asserts/home4.avif";
 import couple from "../asserts/couple.jpg"
@@ -10,7 +11,7 @@ import family from "../asserts/family.jpg"
 import { Link } from 'react-router-dom';
 import Flagship from './Flagship';
  
-const Navbar = () => {
+const Home = () => {
   return (
     <div className="container">
       <div className="search-boxes">
@@ -144,19 +145,21 @@ const Navbar = () => {
       <div className="images-container">
           <div className="image-box">
             <div className="image-wrapper">
-              <img src={home3} alt="Home 3" className="home-image" />
+              <img src={m} alt="m" className="home-image" />
             </div>
           </div>
         </div>
         <div className="form-container">
           <div className="form-group">
-            <label htmlFor="selectedImage">Zenith</label>
-            <p className="details">Best seller villa in Mogappair<br/>2 and 3 BHK Apts<br/>Starting from 86 Lakhs*<br/> under construction</p>
+            <label htmlFor="selectedImage">Casagrand Medora</label>
+            <p className="details">Located in Korattur<br/>2 and 3 BHK Apts<br/>Rs. 1.16 Cr Onwards*<br/> under construction</p>
           </div>
           <div className="form-group">
             {/* Additional form groups */}
           </div>
+        <Link to ="/Medora">
           <button type="submit">View More</button>
+          </Link>
         </div>
       </form>
       <form>
@@ -216,33 +219,13 @@ const Navbar = () => {
           <button type="submit">View More</button>
         </div>
       </form>
-      <form>
-      <div className="images-container">
-          <div className="image-box">
-            <div className="image-wrapper">
-              <img src={family} alt="family" className="home-image" />
-            </div>
-          </div>
-        </div>
-        <div className="form-container">
-          <div className="form-group">
-            <label htmlFor="selectedImage">family villa </label>
-            <p className="details">Best seller villa in ECR <br/>5 BHK Apts<br/>Starting from 87lakhs*<br/>New launch</p>
-          </div>
-          <div className="form-group">
-            {/* Additional form groups */}
-          </div>
-          <button type="submit">View More</button>
-        </div>
-      </form>
-      </div>
+      <h1>NEW LAUNCH</h1>
     
-   
+    </div>
   
-    
       <Footer />
     </div>
   );
 };
 
-export default Navbar;
+export default Home;
