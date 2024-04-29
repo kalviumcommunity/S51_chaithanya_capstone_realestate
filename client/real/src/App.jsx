@@ -20,6 +20,8 @@ import Bestseller from "./components/Bestseller"
 import Bestseller1 from './components/Bestseller1';
 import Schedule from './components/Schedule';
 import GoogleMap from './components/GoogleMap';
+import Advantages from './components/Advantages';
+import Superior1 from './components/Superior1';
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -40,7 +42,8 @@ const App = () => {
         <Route path="/Linore" element={<Linore/>}/>
         <Route path="/Flagship" element={<Flagship/>}/>
         <Route path="/GoogleMap" element={<GoogleMap/>}/>
-
+        <Route path="/Superior1" element={<Superior1/>}/>
+        <Route path="/Advantages" element={<Advantages/>}/>
         <Route path='/LogoutConfirmation' element={<LogoutConfirmationModal />} />
         <Route path="/Linoremore" element={<Linoremore/>}/>
         <Route path="/signin" element={<SignIn setIsLoggedIn={setIsLoggedIn}  />} />

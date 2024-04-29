@@ -28,7 +28,7 @@ const Footer = () => {
             19, Ranga Street, <br />
             Dreamville, CA 12 <br />
             Chennai <br />
-            Phone: 7010965635 / 044-22234138<br />
+            Phone: 7010965635<br />
             Email: dreamhouserealty@gmail.com
           </p>
         </div>
