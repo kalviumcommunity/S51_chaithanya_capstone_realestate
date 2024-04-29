@@ -16,6 +16,7 @@ import Favorites from './components/Favorites';
 import Flagship from "./components/Flagship"
 import LogoutConfirmationModal from './components/LogoutConfirmationModal';
 import Resource from './components/Resource';
+import Medora from './components/Medora';
 import Bestseller from "./components/Bestseller"
 import Bestseller1 from './components/Bestseller1';
 import Schedule from './components/Schedule';
@@ -40,6 +41,8 @@ const App = () => {
         <Route path="/schedule" element={<Schedule/>}/>
         <Route path="/Resource" element={<Resource/>}/>
         <Route path="/Linore" element={<Linore/>}/>
+        <Route path="/Medora" element={<Medora/>}/>
+
         <Route path="/Flagship" element={<Flagship/>}/>
         <Route path="/GoogleMap" element={<GoogleMap/>}/>
         <Route path="/Superior1" element={<Superior1/>}/>
