@@ -2,12 +2,13 @@ import React from 'react';
 import "./Home.css";
 import linore from "../asserts/linore.webp";
 import Footer from "../components/Footer";
-import home2 from "../asserts/home2.avif";
+import flagship from "../asserts/flagship.webp";
 import home3 from "../asserts/home3.jpg";
 import home4 from "../asserts/home4.avif";
 import couple from "../asserts/couple.jpg"
 import family from "../asserts/family.jpg"
 import { Link } from 'react-router-dom';
+import Flagship from './Flagship';
  
 const Navbar = () => {
   return (
@@ -106,7 +107,7 @@ const Navbar = () => {
         </div>
         <div className="form-container">
           <div className="form-group">
-            <label htmlFor="selectedImage">Linore</label>
+            <label htmlFor="selectedImage">Casagrand Linore</label>
             <p className="details">Located in Kattupakkam, Chennai<br/>2, 3 & 4 BHK Apts<br/>Starting from 71 Lakhs*<br/> under construction</p>
           </div>
           <div className="form-group">
@@ -122,13 +123,13 @@ const Navbar = () => {
       <div className="images-container">
           <div className="image-box">
             <div className="image-wrapper">
-              <img src={home2} alt="Home 2" className="home-image" />
+              <img src={Flagship} alt="flagship1" className="home-image" />
             </div>
           </div>
         </div>
         <div className="form-container">
           <div className="form-group">
-            <label htmlFor="selectedImage">Flagship</label>
+            <label htmlFor="selectedImage">Casagrand Flagship</label>
             <p className="details">Best seller villa in Pallikaranai<br/>2, 3 BHK Apts<br/>Starting from 55 Lakhs*<br/> under construction</p>
           </div>
           <div className="form-group">

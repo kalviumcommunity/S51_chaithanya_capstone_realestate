@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import "./Superior.css"; // Import CSS file for styling
 
-function Superior() {
+function Superior1() {
   return (
     <div className="superior-container">
       <h2>Superior Homes</h2>
@@ -47,11 +47,11 @@ function Superior() {
         {/* Add more details as needed */}
       </div>
       {/* Link to close the popup */}
-      <Link to="/Linore" className="close-link">
+      <Link to="/Flagship" className="close-link">
         <button>Close</button>
       </Link>
     </div>
   );
 }
 
-export default Superior;
+export default Superior1;

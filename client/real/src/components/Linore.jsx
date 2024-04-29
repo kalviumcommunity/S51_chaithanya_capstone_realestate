@@ -1,12 +1,40 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import { WhatsAppWidget } from 'react-whatsapp-widget';
-
-import home1 from '../asserts/linore.webp';
 import { Link } from 'react-router-dom';
-import GoogleMap from './GoogleMap';
+import home1 from '../asserts/linore.webp';
+import left from "../asserts/left.png";
+import right from "../asserts/right.png";
+import l1 from "../asserts/l1.webp";
+import l2 from "../asserts/l2.webp";
+import l3 from "../asserts/l3.webp";
+import l4 from "../asserts/l4.webp";
+import l5 from "../asserts/l5.webp";
+import l6 from "../asserts/l6.webp";
 import "./Linore.css";
 
 function Linore() {
+  const [scrolling, setScrolling] = useState(false);
+  const galleryRef = useRef(null); // Define galleryRef using the useRef hook
+
+  const scrollGallery = (direction) => {
+    if (!scrolling) {
+      setScrolling(true);
+      const gallery = galleryRef.current;
+      if (gallery) {
+        const scrollAmount = direction === 'left' ? -200 : 200;
+        gallery.scrollBy({
+          top: 0,
+          left: scrollAmount,
+          behavior: 'smooth'
+        });
+        // After scroll animation ends, set scrolling to false
+        setTimeout(() => {
+          setScrolling(false);
+        }, 500); // Adjust this timeout as needed based on your scroll animation duration
+      }
+    }
+  };
+
   return (
     <div>
       <div className="linore-container">
@@ -16,7 +44,7 @@ function Linore() {
         {/* Salient Features Section */}
         <div className="salient-features">
           <h2>Features</h2>
-          <h3>DreamHouse Linore</h3>
+          <h3>Casagrand Linore</h3>
           <div className="features">
             <ul>
               <li>Starting from 71 lakhs </li>
@@ -45,7 +73,7 @@ function Linore() {
 
       {/* Highlights Section */}
       <div className='highlights'>
-        <h1>DREAMHOUSE LINORE HIGHLIGHTS</h1>
+        <h1>LINORE HIGHLIGHTS</h1>
         <h2>SALIENT FEATURES</h2>
         <div className='p'>
           <ul>
@@ -160,23 +188,69 @@ function Linore() {
         <p>&copy; *Price mention is basic cost. Other charges excluded</p>
       </div>
 
-      {/* Community Map Section */}
-      <h1>KNOW YOUR COMMUNITY</h1>
-      <div className='community'>
+      {/* Project Overview Section */}
+      <div className="project-overview">
+        <h1>Experience awe in an amazing community!</h1>
+        <div className="overview-container">
+          <img src={home1} alt="home1" className="overview-image" />
+          <div className="overview-details">
+            <p>Prepare to be captivated by a community that exudes sophistication in its breathtaking design! Casagrand Linore sets the standard for luxury, boasting a contemporary facade, opulent five-star interiors, and an abundance of meticulously curated features and amenities. Immerse yourself in a living experience that transcends ordinary, delivering unparalleled excellence at every corner.</p>
+            <p>RERA number – TN/02/Building/035/2024</p>
+            <p><a href="http://www.rera.tn.gov.in" target="_blank" rel="noopener noreferrer">www.rera.tn.gov.in</a></p>
+          </div>
+        </div>
       </div>
+
+      {/* Location Advantage Section */}
+      <div className='location'>
+        <h1>LOCATION ADVANTAGE</h1>
+        <h3> TRANSPORTATION</h3>
+        <div className='location-details'>
+          <ul>
+            <li>Upcoming Kattupakkam Metro Station – 5 Mins</li>
+            <li>Upcoming Kumananchavadi Metro Station – 5 Mins</li>
+            <li>Kattupakkam Bus Stop – 5 Mins</li>
+            <li>Poonamallee Junction – 5 Mins</li>
+            <li>Thiruverkadu Junction / Bus Stop – 7 Mins</li>
+            <li>Karayanchavadi Bus Stand – 10 Mins</li>
+            <li>Porur Junction / Bus Stop / Upcoming Porur Metro Station – 10 Mins</li>
+          </ul>
+          <div className='but'>
+            <Link to="/Advantages">
+              <button type='button'>MORE ADVANTAGES</button>
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      {/* Image Gallery Section */}
+      <div className="galleries">
+        <h2>Image Gallery</h2>
+        <div className="gallery-container">
+          <img src={left} alt="Left Arrow" className="scroll-icon left" onClick={() => scrollGallery('left')} />
+          <div className="gallery" ref={galleryRef}>
+            <img src={l1} alt="Gallery 1" className="gallery-image" />
+            <img src={l2} alt="Gallery 2" className="gallery-image" />
+            <img src={l3} alt="Gallery 3" className="gallery-image" />
+            <img src={l4} alt="Gallery 4" className="gallery-image" />
+            <img src={l5} alt="Gallery 5" className="gallery-image" />
+            <img src={l6} alt="Gallery 6" className="gallery-image" />
+          </div>
+          <img src={right} alt="Right Arrow" className="scroll-icon right" onClick={() => scrollGallery('right')} />
+        </div>
+      </div>
+
+
+      {/* WhatsApp Widget Section */}
       <div className='whatsapp-container'>
-  <div className='whatsapp'>
-    {/* WhatsApp Widget */}
-    <WhatsAppWidget
-      className="whatsapp-button"
-      phoneNumber="7010965635"
-      message="I'm interested in DreamHouse Linore. Can you provide me with more information?"
-    />
-    
-    {/* Help message */}
-    <p className="help-message">Need help? Chat with us on WhatsApp!</p>
-  </div>
-</div>
+        <WhatsAppWidget
+          className="whatsapp-button"
+          phoneNumber="7010965635"
+          message="I'm interested in DreamHouse Linore. Can you provide me with more information?"
+        />
+        {/* Help message */}
+        <p className="help-message">Need help? Chat with us on WhatsApp!</p>
+      </div>
     </div>
   );
 }
