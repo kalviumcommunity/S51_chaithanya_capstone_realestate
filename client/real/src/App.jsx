@@ -19,10 +19,13 @@ import Resource from './components/Resource';
 import Medora from './components/Medora';
 import Bestseller from "./components/Bestseller"
 import Bestseller1 from './components/Bestseller1';
+import Flagadvantages from './components/Flagadvantages';
 import Schedule from './components/Schedule';
 import GoogleMap from './components/GoogleMap';
 import Advantages from './components/Advantages';
 import Superior1 from './components/Superior1';
+import Aminitiesf from './components/Aminitiesf';
+
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -42,7 +45,7 @@ const App = () => {
         <Route path="/Resource" element={<Resource/>}/>
         <Route path="/Linore" element={<Linore/>}/>
         <Route path="/Medora" element={<Medora/>}/>
-
+        <Route path="/Flagadvantages" element={<Flagadvantages/>}/>
         <Route path="/Flagship" element={<Flagship/>}/>
         <Route path="/GoogleMap" element={<GoogleMap/>}/>
         <Route path="/Superior1" element={<Superior1/>}/>
@@ -52,6 +55,8 @@ const App = () => {
         <Route path="/signin" element={<SignIn setIsLoggedIn={setIsLoggedIn}  />} />
         <Route path="/signup" element={<SignUp setIsLoggedIn={setIsLoggedIn}  />}/>
         <Route path="/Superior" element={<Superior/>} />  
+        <Route path="/Aminitiesf" element={<Aminitiesf/>} />  
+
 
       </Routes>
     </Router>

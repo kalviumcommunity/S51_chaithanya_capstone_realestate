@@ -1,18 +1,23 @@
-import React from 'react';
-import { WhatsAppWidget } from 'react-whatsapp-widget';
-import flagship from "../asserts/flagship.webp"; // Import the flagship1 image
-import { Link } from 'react-router-dom';
-import GoogleMap from './GoogleMap';
+import React, { useState, useRef } from 'react';
 import "./Flagship.css";
+import { WhatsAppWidget } from 'react-whatsapp-widget';
+import { Link } from 'react-router-dom';
+import flagship from "../asserts/flagship.webp";
+import f1 from "../asserts/f1.webp";
+import f2 from "../asserts/f2.jpg";
+import f3 from "../asserts/f3.webp";
+import f4 from "../asserts/f4.webp";
+import f5 from "../asserts/f5.webp";
+import project from "../asserts/project.webp";
+import GoogleMap from './GoogleMap';
 
 function Flagship() {
+  const galleryRef = useRef(null);
+
   return (
     <div>
       <div className="linore-container">
-        {/* Villa Image */}
-        <img src={flagship} alt="flagship" className="villa-image" /> {/* Use the flagship1 image */}
-
-        {/* Salient Features Section */}
+        <img src={flagship} alt="flagship" className="villa-image" />
         <div className="salient-features">
           <h2>Features</h2> 
           <h3>Casagrand flagship</h3>
@@ -24,8 +29,6 @@ function Flagship() {
             </ul>
           </div>
         </div>
-
-        {/* Enquire Now Section */}
         <div className="enquire-now">
           <h2>Enquire Now</h2>
           <form>
@@ -41,8 +44,6 @@ function Flagship() {
           </form>
         </div>
       </div>
-
-      {/* Highlights Section */}
       <div className='highlights'>
         <h1>FLAGSHIP HIGHLIGHTS</h1>
         <h2>SALIENT FEATURES</h2>
@@ -66,8 +67,6 @@ function Flagship() {
           </div>
         </div>
       </div>
-
-      {/* Amenities Section */}
       <div className="amenities">
         <h1>Amenities</h1>
         <div className="amenities-list-container">
@@ -87,13 +86,13 @@ function Flagship() {
               <li>Reading nook</li>
               <li>Seating nooks along pathways</li>
               <li>Multi-purpose lawn for social gatherings & events</li>
-              {/* Add more amenities as needed */}
             </ul>
+          <Link to ="/Aminitiesf">
+            <button type='onclick'>ALL AMINITIES</button>
+          </Link>
           </div>
         </div>
       </div>
-
-      {/* Walkthrough Section */}
       <div className='walkthrough'>
         <h1>WALKTHROUGH</h1>
         <div className="video-container">
@@ -101,8 +100,6 @@ function Flagship() {
           <iframe width="560" height="315" src="https://www.youtube.com/embed/m3Y8aVwZtU4" title="Walkthrough 2" frameborder="0" allowfullscreen></iframe>
         </div>
       </div>
-
-      {/* Configuration Section */}
       <h1>CONFIGURATION</h1>
       <div className='configuration'>
         <div className='configuration-box'>
@@ -115,8 +112,6 @@ function Flagship() {
           <p>Offer Price : ₹4999 / Sqft</p>
         </div>
       </div>
-
-      {/* Apartment Configurations Section */}
       <div class="apartment-table-container">
         <h2>Phase 1</h2>
         <table class="apartment-table">
@@ -168,7 +163,6 @@ function Flagship() {
           </tbody>
         </table>
       </div>
-
       <div class="apartment-table-container">
         <h2>Phase 2</h2>
         <table class="apartment-table">
@@ -199,26 +193,53 @@ function Flagship() {
           </tbody>
         </table>
       </div>
-
-      {/* Copyright Section */}
       <div className='copy'>
         <p>&copy; *Price mention is basic cost. Other charges excluded</p>
       </div>
-
-      {/* Community Map Section */}
-      <h1>KNOW YOUR COMMUNITY</h1>
-
-      <div className='whatsapp-container'>
-        <div className='whatsapp'>
-          {/* WhatsApp */}
-          <WhatsAppWidget
-            className="whatsapp-button"
-            phoneNumber="7010965635"
-            message="I'm interested in DreamHouse Linore. Can you provide me with more information?"
-          />
-
-          {/* Help message */}
-          <p className="help-message">Need help? Chat with us on WhatsApp!</p>
+      <div className='project-overview'>
+        <h1>Experience awe in an amazing community!</h1>
+        <div className='overview-container'>
+          <img src={project} alt='project' className='overview-image'/>
+          <div className='overview-details'>
+            <p>Casagrand Flagship – A proud creation of Casagrand, Flagship is the largest residential community at Pallikaranai. This is one of the most important projects and is a definitive statement in luxury living in a well-integrated community. The project weaves all the joys of
+community living with the finest nuances of luxury beautifully.
+Designed impeccably with stunning aesthetics, these Tudor-styled homes impart an aura of elegance to the whole township. It’s a perfect blend of old-world charm and modern refinement. It’s real classy, very English and sophisticated. Flagship is the perfect new-age symbol of modern living in a happy, thriving community.</p>
+            <p>Elegantly crafted 887 Apartments and 54 Villas on 17.58 acres</p>
+            <p>Rera No: TN/29/BUILDING/0531/2022</p>
+            <p><a href='http://www.rera.tn.gov.in' target='_blank' rel='nooper noreferrer'>www.rera.tn.gov.in</a></p>
+          </div>
+        </div>
+      </div>
+      <div className='location'>
+        <h1>LOCATION ADVANTAGE</h1>
+        <h3>Distance from Railway Station & Bus Stand</h3>
+        <div className='location-details'>
+          <ul>
+            <li>Pallikaranai Bus Stand – 9Mins</li>
+            <li>Kamakshi Hospital Bus Stand – 15Mins</li>
+            <li>Balaji Dental College Bus Stand – 15mins</li>
+            <li>Velachery Railway Station- 20mins</li>
+            <li>Perungudi Railway Station- 25mins</li>
+            <li>Taramani Railway Station- 25mins</li>
+            <li>Adambakkam Railway Station- 20mins</li>
+          </ul>
+          <div className='but'>
+            <Link to ="/Flagadvantages">
+              <button type='button'>MORE ADVANTAGES</button>
+            </Link>
+          </div>
+        </div>
+      </div>
+      <div className='galleries'>
+        <h2>Image Gallery</h2>
+        <div className='gallery-container'>
+          <div className='gallery' ref={galleryRef}>
+            <img src={f1} alt='Gallery 1' className='gallery-image'></img>
+            <img src={f2} alt='Gallery 2' className='gallery-image'></img>
+            <img src={f3} alt='Gallery 3' className='gallery-image'></img>
+            <img src={f4} alt='Gallery 4' className='gallery-image'></img>
+            <img src={f5} alt='Gallery 5' className='gallery-image'></img>
+          </div>
         </div>
       </div>
     </div>

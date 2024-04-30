@@ -355,32 +355,26 @@ p{
 .but button:hover {
   background-color: #45a049; /* Darker green */
 }
-.gallery-container {
-  position: relative;
-}
 
-.gallery {
-  display: flex
+.gallery-container {
+  display: flex; /* Use flexbox to arrange items horizontally */
+  justify-content: space-between; /* Distribute space between items */
+  flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
 }
 
 .gallery-image {
-  width: 200px;
-  margin-left: 10px;
-  flex-shrink: 0; /* Prevent images from shrinking */
+  width: 210px; /* Set the width of each image */
+  margin-bottom: 20px;
+  transition: transform 0.3s ease; /* Add transition effect */
 }
 
-.scroll-icon {
-  position: absolute;
-  top: 50%;
-  height: 30px;
-  transform: translateY(-50%);
-  cursor: pointer;
+/* Adjust the margin between images for better spacing */
+.gallery-image:not(:last-child) {
+  margin-right: 10px;
 }
 
-.left {
-  left: 0;
+/* Add hover effect */
+.gallery-image:hover {
+  transform: scale(1.1); /* Scale the image up slightly on hover */
 }
 
-.right {
-  right: 0;
-}

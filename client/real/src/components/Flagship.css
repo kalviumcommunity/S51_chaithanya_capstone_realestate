@@ -234,3 +234,24 @@
   font-size: 14px;
   color: #666; /* Dark gray text color */
 }
+.gallery-container {
+  display: flex; /* Use flexbox to arrange items horizontally */
+  justify-content: space-between; /* Distribute space between items */
+  flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+}
+
+.gallery-image {
+  width: 230px; /* Set the width of each image */
+  margin-bottom: 40px;
+  transition: transform 0.3s ease; /* Add transition effect */
+}
+
+/* Adjust the margin between images for better spacing */
+.gallery-image:not(:last-child) {
+  margin-right: 10px;
+}
+
+/* Add hover effect */
+.gallery-image:hover {
+  transform: scale(1.1); /* Scale the image up slightly on hover */
+}

@@ -2,8 +2,7 @@ import React, { useState, useRef } from 'react';
 import { WhatsAppWidget } from 'react-whatsapp-widget';
 import { Link } from 'react-router-dom';
 import home1 from '../asserts/linore.webp';
-import left from "../asserts/left.png";
-import right from "../asserts/right.png";
+
 import l1 from "../asserts/l1.webp";
 import l2 from "../asserts/l2.webp";
 import l3 from "../asserts/l3.webp";
@@ -13,28 +12,7 @@ import l6 from "../asserts/l6.webp";
 import "./Linore.css";
 
 function Linore() {
-  const [scrolling, setScrolling] = useState(false);
-  const galleryRef = useRef(null); // Define galleryRef using the useRef hook
-
-  const scrollGallery = (direction) => {
-    if (!scrolling) {
-      setScrolling(true);
-      const gallery = galleryRef.current;
-      if (gallery) {
-        const scrollAmount = direction === 'left' ? -200 : 200;
-        gallery.scrollBy({
-          top: 0,
-          left: scrollAmount,
-          behavior: 'smooth'
-        });
-        // After scroll animation ends, set scrolling to false
-        setTimeout(() => {
-          setScrolling(false);
-        }, 500); // Adjust this timeout as needed based on your scroll animation duration
-      }
-    }
-  };
-
+const galleryRef = useRef(null)
   return (
     <div>
       <div className="linore-container">
@@ -194,8 +172,8 @@ function Linore() {
         <div className="overview-container">
           <img src={home1} alt="home1" className="overview-image" />
           <div className="overview-details">
-            <p>Prepare to be captivated by a community that exudes sophistication in its breathtaking design! Casagrand Linore sets the standard for luxury, boasting a contemporary facade, opulent five-star interiors, and an abundance of meticulously curated features and amenities. Immerse yourself in a living experience that transcends ordinary, delivering unparalleled excellence at every corner.</p>
-            <p>RERA number – TN/02/Building/035/2024</p>
+            <p>Prepare to be captivated by a community that exudes sophistication in its breathtaking design! Casagrand Linore sets the standard for luxury,boasting a contemporary facade, opulent five-star interiors, and an abundance of meticulously curated features and amenities. Immerse yourself in a living experience that transcends ordinary, delivering unparalleled excellence at every corner.</p>
+            <p>RERA number – TN/02/Buildinog/035/2024</p>
             <p><a href="http://www.rera.tn.gov.in" target="_blank" rel="noopener noreferrer">www.rera.tn.gov.in</a></p>
           </div>
         </div>
@@ -227,7 +205,6 @@ function Linore() {
       <div className="galleries">
         <h2>Image Gallery</h2>
         <div className="gallery-container">
-          <img src={left} alt="Left Arrow" className="scroll-icon left" onClick={() => scrollGallery('left')} />
           <div className="gallery" ref={galleryRef}>
             <img src={l1} alt="Gallery 1" className="gallery-image" />
             <img src={l2} alt="Gallery 2" className="gallery-image" />
@@ -236,7 +213,6 @@ function Linore() {
             <img src={l5} alt="Gallery 5" className="gallery-image" />
             <img src={l6} alt="Gallery 6" className="gallery-image" />
           </div>
-          <img src={right} alt="Right Arrow" className="scroll-icon right" onClick={() => scrollGallery('right')} />
         </div>
       </div>
 
