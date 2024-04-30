@@ -18,6 +18,14 @@ function Flagship() {
     <div>
       <div className="linore-container">
         <img src={flagship} alt="flagship" className="villa-image" />
+        <div class="fav">
+      <Link to="/Favorites">
+      <button type="button">ADD TO FAV</button>
+      </Link>
+      <Link to="/Cart">
+      <button type="button">ADD TO CART</button>
+      </Link>
+    </div>
         <div className="salient-features">
           <h2>Features</h2> 
           <h3>Casagrand flagship</h3>
@@ -29,6 +37,7 @@ function Flagship() {
             </ul>
           </div>
         </div>
+      
         <div className="enquire-now">
           <h2>Enquire Now</h2>
           <form>
@@ -62,6 +71,7 @@ function Flagship() {
             <div className='superior'>
               <Link to="/Superior1">
                 <button>SUPERIOR HOMES</button>
+
               </Link>
             </div>
           </div>
