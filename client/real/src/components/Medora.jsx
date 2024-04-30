@@ -58,7 +58,7 @@ environment and liveliness of the community</li>
 of the interiors</li>
           </ul>
           <div className='more'>
-            <div className='superior'>
+            <div className='superior.'>
               <Link to="/Superior1">
                 <button>SUPERIOR HOMES</button>
               </Link>

@@ -255,3 +255,12 @@
 .gallery-image:hover {
   transform: scale(1.1); /* Scale the image up slightly on hover */
 }
+
+.fav {
+  margin-top: 300px; /* Adjust as needed */
+}
+
+.fav button {
+  display: block;
+  margin-bottom: 10px; /* Adjust as needed */
+}

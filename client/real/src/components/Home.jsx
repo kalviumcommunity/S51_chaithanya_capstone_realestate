@@ -3,8 +3,12 @@ import "./Home.css";
 import linore from "../asserts/linore.webp";
 import Footer from "../components/Footer";
 import flagship from "../asserts/flagship.webp";
+import royale from "../asserts/royale.webp"
 import m from "../asserts/m.webp"
 import home3 from "../asserts/home3.jpg";
+import laurel from "../asserts/laurel.webp"
+import s from "../asserts/s.webp"
+import  mercury from "../asserts/mercury.webp"
 import home4 from "../asserts/home4.avif";
 import couple from "../asserts/couple.jpg"
 import family from "../asserts/family.jpg"
@@ -13,6 +17,7 @@ import Flagship from './Flagship';
  
 const Home = () => {
   return (
+    <>
     <div className="container">
       <div className="search-boxes">
         <select className="search-input">
@@ -166,19 +171,21 @@ const Home = () => {
       <div className="images-container">
           <div className="image-box">
             <div className="image-wrapper">
-              <img src={home4} alt="Home 4" className="home-image" />
+              <img src={royale} alt="Home 4" className="home-image" />
             </div>
           </div>
         </div>
         <div className="form-container">
           <div className="form-group">
-            <label htmlFor="selectedImage">Royale</label>
-            <p className="details">Best seller villa in Shollinganallur<br/>2,3 and 4 BHK Apts<br/>Starting from 67 Lakhs*<br/> under construction</p>
+            <label htmlFor="selectedImage">Casagrand Royale</label>
+            <p className="details">Best seller villa in Shollinganallur<br/>2,3 and 4 BHK Apts<br/>Starting from 67 Lakhs*<br/> Nearing Completion, Ready to Occupy</p>
           </div>
           <div className="form-group">
             {/* Additional form groups */}
           </div>
+        <Link to="/Royale">
           <button type="submit">View More</button>
+          </Link>
         </div>
       </form>
       <form>
@@ -219,12 +226,73 @@ const Home = () => {
           <button type="submit">View More</button>
         </div>
       </form>
+      <form>
+      <div className="images-container">
+          <div className="image-box">
+            <div className="image-wrapper">
+              <img src={s} alt="family" className="home-image" />
+            </div>
+          </div>
+        </div>
+        <div className="form-container">
+          <div className="form-group">
+            <label htmlFor="selectedImage">Casagrand Suncity</label>
+            <p className="details">Kelambakkam - Vandalur Main Road, Chennai <br/>2, 3 & 4 BHK Apts<br/>Starting from 48lakhs*<br/>New launch and under construction</p>
+          </div>
+          <div className="form-group">
+            {/* Additional form groups */}
+          </div>
+          <button type="submit">View More</button>
+        </div>
+      </form>
+      <form>
+      <div className="images-container">
+          <div className="image-box">
+            <div className="image-wrapper">
+              <img src={mercury} alt="family" className="home-image" />
+            </div>
+          </div>
+        </div>
+        <div className="form-container">
+          <div className="form-group">
+            <label htmlFor="selectedImage">Casagrand Mercury</label>
+            <p className="details">Kilpauk,Chennai <br/>2, 3 BHK and 4 BHK Floor Villas with Maid Room<br/>Apts 91 Lakhs and Floor Villa 3.16 Cr Onwards*<br/>New launch and under construction</p>
+          </div>
+          <div className="form-group">
+            {/* Additional form groups */}
+          </div>
+          <button type="submit">View More</button>
+        </div>
+      </form>
+      <form>
+      <div className="images-container">
+          <div className="image-box">
+            <div className="image-wrapper">
+              <img src={laurel} alt="family" className="home-image" />
+            </div>
+          </div>
+        </div>
+        <div className="form-container">
+          <div className="form-group">
+            <label htmlFor="selectedImage">Casagrand Laurels</label>
+            <p className="details">Navalur,Chennai <br/>5 BHK Floor Villa<br/>1.70 Cr onwards*<br/>under construction</p>
+          </div>
+          <div className="form-group">
+            {/* Additional form groups */}
+          </div>
+          <button type="submit">View More</button>
+        </div>
+      </form>
     </div>
+
+
   
   
       <Footer />
     </div>
+    </>
   );
 };
+
 
 export default Home;
