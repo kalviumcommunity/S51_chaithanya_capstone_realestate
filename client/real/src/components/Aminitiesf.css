@@ -1,0 +1,59 @@
+.amenities-container {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .amenities-list {
+    margin-bottom: 20px;
+  }
+  
+  .amenities-list h2 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .amenities-list ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .amenities-list ul li {
+    margin-bottom: 5px;
+  }
+  
+  .close-btn {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .close-btn:hover {
+    background-color: #c82333;
+  }
+  
+  .flagship-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+  }
+  
+  .flagship-link:hover {
+    color: #0056b3;
+  }
+  

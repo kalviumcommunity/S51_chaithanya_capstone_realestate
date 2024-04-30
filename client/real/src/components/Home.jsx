@@ -219,9 +219,8 @@ const Home = () => {
           <button type="submit">View More</button>
         </div>
       </form>
-      <h1>NEW LAUNCH</h1>
-    
     </div>
+  
   
       <Footer />
     </div>
