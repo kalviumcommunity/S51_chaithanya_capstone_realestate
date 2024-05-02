@@ -4,7 +4,6 @@ import './LogoutConfirmationModal.css';
 const LogoutConfirmationModal = ({ handleLogout }) => {
   const handleLogoutClick = () => {
     handleLogout();
-    window.location.href = '/Home'; // Navigate to the home page after logout
   };
 
   const handleCloseClick = () => {
@@ -16,8 +15,11 @@ const LogoutConfirmationModal = ({ handleLogout }) => {
       <div className="modal-content">
         <p>Are you sure you want to logout?</p>
         <div className="modal-buttons">
+    
           <button onClick={handleLogoutClick}>Logout</button>
+      
           <button onClick={handleCloseClick}>Cancel</button>
+       
         </div>
       </div>
     </div>

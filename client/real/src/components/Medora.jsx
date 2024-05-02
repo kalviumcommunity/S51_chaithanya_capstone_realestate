@@ -41,6 +41,11 @@ function Medora() {
           </form>
         </div>
       </div>
+      <div classname="construction-range">
+      <label for="construction">Construction Range:</label>
+      <input type="range" id="construction" name="construction" min="0" max="100" value="3"></input>
+      <span id="construction-value">3%</span>
+    </div>
 
       {/* Highlights Section */}
       <div className='highlights'>
