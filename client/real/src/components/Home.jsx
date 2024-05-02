@@ -5,7 +5,10 @@ import Footer from "../components/Footer";
 import flagship3 from "../asserts/flagship3.jpeg"
 import royale from "../asserts/royale.webp"
 import m from "../asserts/m.webp"
+import aria from "../asserts/aria.webp"
 import home3 from "../asserts/home3.jpg";
+import aspires from "../asserts/aspires.webp"
+import south from "../asserts/south.webp"
 import zenith from "../asserts/zenith.webp"
 import uto from "../asserts/uto.webp"
 import cloud from "../asserts/cloud.webp"
@@ -479,6 +482,63 @@ const Home = () => {
           <div className="form-group">
             <label htmlFor="selectedImage">Casagrand FirstCity</label>
             <p className="details">Sholinganallur<br/>2 BHK Premium Apartments<br/>Rs.55 Lakhs onwards<br/>Nearing Completion,Under Construction</p>
+          </div>
+          <div className="form-group">
+            {/* Additional form groups */}
+          </div>
+          <button type="submit">View More</button>
+        </div>
+      </form>
+      <form>
+      <div className="images-container">
+          <div className="image-box">
+            <div className="image-wrapper">
+              <img src={aria} alt="family" className="home-image" />
+            </div>
+          </div>
+        </div>
+        <div className="form-container">
+          <div className="form-group">
+            <label htmlFor="selectedImage">Casagrand Aria</label>
+            <p className="details">Tambaram<br/>2 BHK Apartments<br/>Rs.43 Lakhs onwards<br/>Under Construction</p>
+          </div>
+          <div className="form-group">
+            {/* Additional form groups */}
+          </div>
+          <button type="submit">View More</button>
+        </div>
+      </form>
+      <form>
+      <div className="images-container">
+          <div className="image-box">
+            <div className="image-wrapper">
+              <img src={south} alt="family" className="home-image" />
+            </div>
+          </div>
+        </div>
+        <div className="form-container">
+          <div className="form-group">
+            <label htmlFor="selectedImage">Casagrand Southbrooke</label>
+            <p className="details">Kelambakkam<br/>2 BHK Apartments<br/>Rs.31 Lakhs onwards<br/>Nearing completion</p>
+          </div>
+          <div className="form-group">
+            {/* Additional form groups */}
+          </div>
+          <button type="submit">View More</button>
+        </div>
+      </form>
+      <form>
+      <div className="images-container">
+          <div className="image-box">
+            <div className="image-wrapper">
+              <img src={aspires} alt="family" className="home-image" />
+            </div>
+          </div>
+        </div>
+        <div className="form-container">
+          <div className="form-group">
+            <label htmlFor="selectedImage">Casagrand Aspires</label>
+            <p className="details">Navalur<br/>2 & 3 BHK Apartments<br/>Rs.39 Lakhs onwards<br/>Under construction</p>
           </div>
           <div className="form-group">
             {/* Additional form groups */}
