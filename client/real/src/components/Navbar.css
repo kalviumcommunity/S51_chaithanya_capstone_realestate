@@ -5,8 +5,9 @@
     background-color: rgb(226, 55, 55);
     height: 100px;
     width: 1340px;
-    
+
 }
+
 
 /* Navbar brand */
 .navbar-brand {
@@ -17,11 +18,7 @@
 }
 
 /* Navbar logo */
-.navbar-logo {
-    width: 40px; /* Adjust logo width */
-    height: auto; /* Maintain aspect ratio */
-    margin-right: 10px; /* Margin to the right of the logo */
-}
+
 
 /* Navbar links */
 .navbar-nav .nav-link {

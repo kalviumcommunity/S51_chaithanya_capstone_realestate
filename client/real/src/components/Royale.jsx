@@ -34,6 +34,11 @@ function Royale() {
                     </form>
                 </div>
             </div>
+            <div classname="construction-range">
+      <label for="construction">Construction Range:</label>
+      <input type="range" id="construction" name="construction" min="0" max="100" value="97"></input>
+      <span id="construction-value">97%</span>
+    </div>
             <div className='highlights'>
                 <h1>ROYALE HIGHLIGHTS</h1>
                 <h2>SALIENT FEATURES</h2>

@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import "./Flagship.css";
 import { WhatsAppWidget } from 'react-whatsapp-widget';
 import { Link } from 'react-router-dom';
-import flagship from "../asserts/flagship.webp";
+import flag from "../asserts/flag.webp";
 import f1 from "../asserts/f1.webp";
 import f2 from "../asserts/f2.jpg";
 import f3 from "../asserts/f3.webp";
@@ -17,15 +17,18 @@ function Flagship() {
   return (
     <div>
       <div className="linore-container">
-        <img src={flagship} alt="flagship" className="villa-image" />
-        <div class="fav">
-      <Link to="/Favorites">
+        <img src={flag} alt="flagship" className="villa-image" />
+      
+        {/* <div class="fav"> */}
+      {/* <Link to="/Favorites">
       <button type="button">ADD TO FAV</button>
       </Link>
       <Link to="/Cart">
       <button type="button">ADD TO CART</button>
-      </Link>
-    </div>
+      </Link> */}
+    {/* </div> */}
+  
+
         <div className="salient-features">
           <h2>Features</h2> 
           <h3>Casagrand flagship</h3>
@@ -37,6 +40,7 @@ function Flagship() {
             </ul>
           </div>
         </div>
+      
       
         <div className="enquire-now">
           <h2>Enquire Now</h2>
@@ -53,6 +57,11 @@ function Flagship() {
           </form>
         </div>
       </div>
+      <div classname="construction-range">
+      <label for="construction">Construction Range:</label>
+      <input type="range" id="construction" name="construction" min="0" max="100" value="55"></input>
+      <span id="construction-value">55%</span>
+    </div>
       <div className='highlights'>
         <h1>FLAGSHIP HIGHLIGHTS</h1>
         <h2>SALIENT FEATURES</h2>

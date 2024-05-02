@@ -22,7 +22,7 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container">
         <NavLink className="navbar-brand" to="/">
-          <img src={p} alt="Logo" className="navbar-logo" />
+  
         </NavLink>
 
         <div className="collapse navbar-collapse" id="navbarNav">
@@ -35,7 +35,7 @@ const Navbar = () => {
             {isLoggedIn ? (
               <button className="nav-link btn btn-primary" onClick={handleLogout}>Logout</button>
             ) : (
-              <button className="nav-link btn btn-primary" onClick={handleSignIn}>Sign In</button>
+              <NavLink className="nav-link btn" to="/signin" onClick={handleSignIn}>Signin</NavLink>
             )}
             <div className="navbar-icons-container d-flex align-items-center">
               {/* Link Favorite icon to "/fav" */}
