@@ -1,13 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import royale from "../asserts/royale.webp"
+import "./Royale.css"
 
 function Royale() {
     return (
         <>
-            <div className="linore-container">
+            <div className="royale-container">
                 {/* Villa Image */}
-                <img src={royale} alt="flagship" className="villa-image" /> {/* Use the flagship1 image */}
+                <img src={royale} alt="rolaye" className="villa-image" /> {/* Use the flagship1 image */}
                 <div className="salient-features">
                     <h2>Features</h2>
                     <h3>Casagrand Royale</h3>
@@ -87,6 +88,54 @@ function Royale() {
           </Link>
             </div>
         </div>
+    <h1>CONFIGURATION</h1>
+    <div className='configuration'>
+        <div className='configuration-box'>
+            <p>Market Price : ₹6500/Sqft* </p>
+        </div>
+        <div className="configuration-box">
+            <p>Casagrand Price : ₹6099/Sqft</p>
+
+        </div>
+    </div>
+    <div className='apartment'>
+      <h1>Apartment Configurations</h1>
+      <p>*Price mentioned is the Basic cost which is Exclusive of other charges.</p>
+      <table className="apartment-table">
+        <thead>
+          <tr>
+            <th>BHK</th>
+            <th>UNIT TYPE</th>
+            <th>BUILT-UP AREA</th>
+            <th>PRICE PER SQ. FT.</th>
+            <th>PRICE RANGE</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2 BHK</td>
+            <td>Regular</td>
+            <td>1138 Sqft</td>
+            <td>Rs.6099/Sqft</td>
+            <td>Sold Out</td>
+          </tr>
+          <tr>
+            <td>3 BHK</td>
+            <td>Regular</td>
+            <td>1478 Sqft</td>
+            <td>Rs.6099/Sqft</td>
+            <td>Sold Out</td>
+          </tr>
+          <tr>
+            <td>4 BHK</td>
+            <td>Regular</td>
+            <td>2055 Sqft</td>
+            <td>Rs.6099/Sqft</td>
+            <td>Sold Out</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
             </>
 
 
