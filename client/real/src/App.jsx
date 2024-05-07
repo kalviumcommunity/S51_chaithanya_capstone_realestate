@@ -26,6 +26,7 @@ import Advantages from './components/Advantages';
 import Superior1 from './components/Superior1';
 import Aminitiesf from './components/Aminitiesf';
 import Aminitiesr from './components/Aminitiesr';
+import Post from './components/Post';
 
 import Royale from './components/Royale';
 import Superior3 from './components/Superior3';
@@ -59,7 +60,9 @@ const App = () => {
         <Route path="/signin" element={<SignIn setIsLoggedIn={setIsLoggedIn}  />} />
         <Route path="/signup" element={<SignUp setIsLoggedIn={setIsLoggedIn}  />}/>
         <Route path="/Superior" element={<Superior/>} /> 
-        <Route path="/Superior3" element={<Superior3/>} />  
+        <Route path="/Superior3" element={<Superior3/>} />
+        <Route path="/Post" element={<Post/>} />  
+  
  
         <Route path="/Royale" element={<Royale/>} />  
         <Route path="/Aminitiesr" element={<Aminitiesr/>} />  

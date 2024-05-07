@@ -7,6 +7,7 @@ import royale from "../asserts/royale.webp"
 import m from "../asserts/m.webp"
 import aria from "../asserts/aria.webp"
 import home3 from "../asserts/home3.jpg";
+import plus from "../asserts/plus.png"
 import aspires from "../asserts/aspires.webp"
 import south from "../asserts/south.webp"
 import zenith from "../asserts/zenith.webp"
@@ -94,18 +95,17 @@ const Home = () => {
             <option value="">4 BHK</option>    
           </select>
         </div>
-      <div className='types'>
-        <select className='search-input'>
-          <option value=""> HOUSE TYPE</option>
-        <option value="">TENANT</option>
-        <option value="">BUY</option>
-        <option value="">LEASE</option>
-        </select>
-      </div>
       <div className='but'>
         <button>search</button>
       </div>
       </div>
+    
+<div className='post'>
+  <h1>Post your property</h1>
+  <Link to="/Post">
+    <img src={plus} alt='post' />
+  </Link>
+</div>
       <div className="search-heading">
   Most Searched Areas : <span>Omr</span> | <span>Tambaram</span> | <span>Mogappair</span> | <span>Pallikaranai</span>
   <br />
@@ -547,6 +547,7 @@ const Home = () => {
         </div>
       </form>
     </div>
+
 
 
 
