@@ -1,63 +1,61 @@
 /* Navbar container */
 .navbar {
-    background-color: #ffffff; /* White background */
+    background-color: black; /* White background */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for subtle elevation */
-    background-color: rgb(226, 55, 55);
     height: 100px;
     width: 1340px;
-
+    /* display: flex; Use flexbox for alignment */
+    /* justify-content: space-between; Space items evenly */
+    /* align-items: center; Center vertically */
+    padding: 0 20px; /* Add padding */
 }
-
 
 /* Navbar brand */
 .navbar-brand {
-    display: flex; /* Use flexbox for alignment */
-    align-items: center; /* Center vertically */
     color: #333333; /* Text color */
     font-weight: bold; /* Bold font */
+    font-size: 24px; /* Adjust font size */
 }
-
-/* Navbar logo */
-
 
 /* Navbar links */
 .navbar-nav .nav-link {
-    font-weight: bolder; /* Bold font */
-    margin-right: 15px; /* Margin between links */
-    display: inline-block; /* Display as inline-block */
-    height: 100px;
-    width: 100px;
-    margin-bottom: 100px;
-    background-color:  rgb(226, 55, 55); /* Background color */
-    color: white; /* Text color */
+    font-weight: bold; /* Bold font */
+    color: black; /* Text color */
     text-decoration: none; /* Remove underline */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: medium;
+    font-size: 18px; /* Adjust font size */
+    margin-right: 20px; /* Margin between links */
 }
-
-/* Navbar links on hover */
-/* .navbar-nav .nav-link:hover {
-    color: #007bff;
-}
- */
 
 /* Navbar buttons */
 .navbar-nav .btn {
-    margin-right: 15px; /* Margin between buttons */
-    display: inline-block; /* Display as inline-block */
-    padding: 5px 10px; /* Adjust padding */
-    font-size: 14px; /* Adjust font size */
-    height: auto; /* Adjust height */
+    color: white; /* Text color */
+    background-color: black; /* Button background color */
+    padding: 8px 16px; /* Adjust padding */
+    font-size: 16px; /* Adjust font size */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Add border radius */
+    cursor: pointer; /* Add cursor pointer */
 }
 
 /* Navbar icons container */
 .navbar-icons-container {
-    display: inline-block; /* Display as inline-block */
-    margin-right: 15px; /* Margin between icons */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center vertically */
 }
 
 /* Navbar icon */
 .navbar-icon {
-    width: 25px; /* Adjust icon width */
+    width: 30px; /* Adjust icon width */
     height: auto; /* Maintain aspect ratio */
+    margin-left: 200px; /* Margin between icons */
+}
+
+/* Align icons to the right */
+.navbar-nav-right {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center vertically */
+}
+
+.flex-holder{
+    display: flex;
 }

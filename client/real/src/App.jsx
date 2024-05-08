@@ -27,6 +27,7 @@ import Superior1 from './components/Superior1';
 import Aminitiesf from './components/Aminitiesf';
 import Aminitiesr from './components/Aminitiesr';
 import Post from './components/Post';
+import Holachennai from './components/Holachennai';
 
 import Royale from './components/Royale';
 import Superior3 from './components/Superior3';
@@ -62,11 +63,9 @@ const App = () => {
         <Route path="/Superior" element={<Superior/>} /> 
         <Route path="/Superior3" element={<Superior3/>} />
         <Route path="/Post" element={<Post/>} />  
-  
- 
+        <Route path="/Holachennai" element={<Holachennai/>} />  
         <Route path="/Royale" element={<Royale/>} />  
         <Route path="/Aminitiesr" element={<Aminitiesr/>} />  
-
         <Route path="/Aminitiesf" element={<Aminitiesf/>} />  
 
 

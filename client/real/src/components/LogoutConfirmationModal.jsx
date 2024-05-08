@@ -15,8 +15,9 @@ const LogoutConfirmationModal = ({ handleLogout }) => {
       <div className="modal-content">
         <p>Are you sure you want to logout?</p>
         <div className="modal-buttons">
-    
+      <Link to="/Home">
           <button onClick={handleLogoutClick}>Logout</button>
+      </Link>
       
           <button onClick={handleCloseClick}>Cancel</button>
        

@@ -27,3 +27,5 @@ This is a real estate website where users can browse properties for sale or rent
   - MongoDB (or any other preferred database)
 - Authentication:
   - JSON Web Tokens (JWT)
+## deployment link
+https://6630bd8a7519e9adca4bfc53--warm-bienenstitch-95217d.netlify.app/
