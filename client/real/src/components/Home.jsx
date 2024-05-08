@@ -216,7 +216,9 @@ const Home = () => {
           <div className="form-group">
             {/* Additional form groups */}
           </div>
+        <Link to="/Holachennai">
           <button type="submit">View More</button>
+          </Link>
         </div>
       </form>
       <form>

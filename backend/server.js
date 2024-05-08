@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
 });
 app.use(express.json())
 app.use(FeedbackRouter)
-app.use("/api/auth", router)
+// app.use("/api/auth", router)
 
 app.listen(port, async () => {
   await startDatabase();
