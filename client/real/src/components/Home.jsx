@@ -1,4 +1,4 @@
-import React from 'react';
+import React ,{useState} from 'react';
 import "./Home.css";
 import linore from "../asserts/linore.webp";
 import Footer from "../components/Footer";
@@ -29,14 +29,42 @@ import Flagship from './Flagship';
 import { BiFirstPage } from 'react-icons/bi';
 
 const Home = () => {
-  const handleFavorite = () => {
-    // Handle favorite functionality here
-    console.log('Added to favorites!');
-  };
-  const handleCart = () => {
-    // Handle cart functionality here
-    console.log('Added to cart!');
-  };
+  const [activeComponent, setActiveComponent] = useState(null);
+const [favorites, setFavorites] = useState([]); 
+const [cart, setCart] = useState([]);
+ 
+const handleBoxClick = (component) => {
+    setActiveComponent(component);
+};
+
+const handleAddToFavorites = (component) => {
+    setFavorites(prevFavorites => {
+        if (!prevFavorites.includes(component)) {
+            return [...prevFavorites, component];
+        } else {
+            return prevFavorites.filter(item => item !== component);
+        }
+    });
+};
+
+const handleRemoveFromFavorites = (component) => {
+    setFavorites(prevFavorites => prevFavorites.filter(item => item !== component));
+};
+
+const handleAddToCart = (component) => {
+    setCart(prevCart => {
+        if (!prevCart.includes(component)) {
+            return [...prevCart, component];
+        } else {
+            return prevCart;
+        }
+    });
+};
+
+const handleRemoveFromCart = (component) => {
+    setCart(prevCart => prevCart.filter(item => item !== component));
+};
+
   return (
     <>
       <div className="container">
@@ -143,10 +171,10 @@ const Home = () => {
                 </div>
                
                 <div className="button-group">
-      <button className="fav-btn" onClick={handleFavorite}>
+      <button className="fav-btn" onClick={handleAddToFavorites }>
         <i className="fas fa-heart"></i>
       </button>
-      <button className="cart-btn" onClick={handleCart}>
+      <button className="cart-btn" onClick={handleAddToCart}>
         <i className="fas fa-shopping-cart"></i>
       </button>
       <Link to="/Linore">
@@ -161,6 +189,9 @@ const Home = () => {
               <div className="image-box">
                 <div className="image-wrapper">
                   <img src={flagship3} alt="flagship1" className="home-image" />
+                  <h2>Flagship</h2>
+            <button onClick={() => handleAddToFavorites("Flagship")}>Add to Favorites</button>
+            <button onClick={() => handleAddToCart("Flagship")}>Add to Cart</button>
                 </div>
               </div>
             </div>
@@ -174,10 +205,10 @@ const Home = () => {
               </div>
              
               <div className="button-group">
-      <button className="fav-btn" onClick={handleFavorite}>
+      <button className="fav-btn" onClick={handleAddToFavorites}>
         <i className="fas fa-heart"></i>
       </button>
-      <button className="cart-btn" onClick={handleCart}>
+      <button className="cart-btn" onClick={handleAddToCart}>
         <i className="fas fa-shopping-cart"></i>
       </button>
       <Link to="/Flagship">
@@ -204,10 +235,10 @@ const Home = () => {
               </div>
               
               <div className="button-group">
-      <button className="fav-btn" onClick={handleFavorite}>
+      <button className="fav-btn" onClick={handleAddToFavorites}>
         <i className="fas fa-heart"></i>
       </button>
-      <button className="cart-btn" onClick={handleCart}>
+      <button className="cart-btn" onClick={handleAddToCart}>
         <i className="fas fa-shopping-cart"></i>
       </button>
       <Link to="/Medora">
@@ -234,10 +265,10 @@ const Home = () => {
               </div>
              
               <div className="button-group">
-      <button className="fav-btn" onClick={handleFavorite}>
+      <button className="fav-btn" onClick={handleAddToFavorites}>
         <i className="fas fa-heart"></i>
       </button>
-      <button className="cart-btn" onClick={handleCart}>
+      <button className="cart-btn" onClick={handleAddToCart}>
         <i className="fas fa-shopping-cart"></i>
       </button>
       <Link to="/Royale">
@@ -264,10 +295,10 @@ const Home = () => {
               </div>
             
               <div className="button-group">
-      <button className="fav-btn" onClick={handleFavorite}>
+      <button className="fav-btn" onClick={handleAddToFavorites}>
         <i className="fas fa-heart"></i>
       </button>
-      <button className="cart-btn" onClick={handleCart}>
+      <button className="cart-btn" onClick={handleAddToCart}>
         <i className="fas fa-shopping-cart"></i>
       </button>
       <Link to="/Holachennai">
@@ -294,10 +325,10 @@ const Home = () => {
               </div>
             
               <div className="button-group">
-      <button className="fav-btn" onClick={handleFavorite}>
+      <button className="fav-btn" onClick={handleAddToFavorites}>
         <i className="fas fa-heart"></i>
       </button>
-      <button className="cart-btn" onClick={handleCart}>
+      <button className="cart-btn" onClick={handleAddToCart}>
         <i className="fas fa-shopping-cart"></i>
       </button>
       <Link to="/Linore">
@@ -324,10 +355,10 @@ const Home = () => {
               </div>
            
               <div className="button-group">
-      <button className="fav-btn" onClick={handleFavorite}>
+      <button className="fav-btn" onClick={handleAddToFavorites}>
         <i className="fas fa-heart"></i>
       </button>
-      <button className="cart-btn" onClick={handleCart}>
+      <button className="cart-btn" onClick={handleAddToCart}>
         <i className="fas fa-shopping-cart"></i>
       </button>
       <Link to="/Linore">
@@ -354,10 +385,10 @@ const Home = () => {
               </div>
               
               <div className="button-group">
-      <button className="fav-btn" onClick={handleFavorite}>
+      <button className="fav-btn" onClick={handleAddToFavorites}>
         <i className="fas fa-heart"></i>
       </button>
-      <button className="cart-btn" onClick={handleCart}>
+      <button className="cart-btn" onClick={handleAddToCart}>
         <i className="fas fa-shopping-cart"></i>
       </button>
       <Link to="/Linore">
@@ -384,10 +415,10 @@ const Home = () => {
               </div>
               
               <div className="button-group">
-      <button className="fav-btn" onClick={handleFavorite}>
+      <button className="fav-btn" onClick={handleAddToFavorites}>
         <i className="fas fa-heart"></i>
       </button>
-      <button className="cart-btn" onClick={handleCart}>
+      <button className="cart-btn" onClick={handleAddToCart}>
         <i className="fas fa-shopping-cart"></i>
       </button>
       <Link to="/Linore">
@@ -414,10 +445,10 @@ const Home = () => {
               </div>
               
               <div className="button-group">
-      <button className="fav-btn" onClick={handleFavorite}>
+      <button className="fav-btn" onClick={handleAddToFavorites}>
         <i className="fas fa-heart"></i>
       </button>
-      <button className="cart-btn" onClick={handleCart}>
+      <button className="cart-btn" onClick={handleAddToCart}>
         <i className="fas fa-shopping-cart"></i>
       </button>
       <Link to="/Linore">
@@ -444,10 +475,10 @@ const Home = () => {
               </div>
               
               <div className="button-group">
-      <button className="fav-btn" onClick={handleFavorite}>
+      <button className="fav-btn" onClick={handleAddToFavorites}>
         <i className="fas fa-heart"></i>
       </button>
-      <button className="cart-btn" onClick={handleCart}>
+      <button className="cart-btn" onClick={handleAddToCart}>
         <i className="fas fa-shopping-cart"></i>
       </button>
       <Link to="/Linore">
@@ -474,10 +505,10 @@ const Home = () => {
               </div>
               
               <div className="button-group">
-      <button className="fav-btn" onClick={handleFavorite}>
+      <button className="fav-btn" onClick={handleAddToFavorites}>
         <i className="fas fa-heart"></i>
       </button>
-      <button className="cart-btn" onClick={handleCart}>
+      <button className="cart-btn" onClick={handleAddToCart}>
         <i className="fas fa-shopping-cart"></i>
       </button>
       <Link to="/Linore">
@@ -505,10 +536,10 @@ const Home = () => {
               </div>
               
               <div className="button-group">
-      <button className="fav-btn" onClick={handleFavorite}>
+      <button className="fav-btn" onClick={handleAddToFavorites}>
         <i className="fas fa-heart"></i>
       </button>
-      <button className="cart-btn" onClick={handleCart}>
+      <button className="cart-btn" onClick={handleAddToCart}>
         <i className="fas fa-shopping-cart"></i>
       </button>
       <Link to="/Linore">
@@ -536,10 +567,10 @@ const Home = () => {
               </div>
               
               <div className="button-group">
-      <button className="fav-btn" onClick={handleFavorite}>
+      <button className="fav-btn" onClick={handleAddToFavorites}>
         <i className="fas fa-heart"></i>
       </button>
-      <button className="cart-btn" onClick={handleCart}>
+      <button className="cart-btn" onClick={handleAddToCart}>
         <i className="fas fa-shopping-cart"></i>
       </button>
       <Link to="/Linore">
@@ -567,10 +598,10 @@ const Home = () => {
               </div>
               
               <div className="button-group">
-      <button className="fav-btn" onClick={handleFavorite}>
+      <button className="fav-btn" onClick={handleAddToFavorites}>
         <i className="fas fa-heart"></i>
       </button>
-      <button className="cart-btn" onClick={handleCart}>
+      <button className="cart-btn" onClick={handleAddToCart}>
         <i className="fas fa-shopping-cart"></i>
       </button>
       <Link to="/Linore">
@@ -598,10 +629,10 @@ const Home = () => {
               </div>
               
               <div className="button-group">
-      <button className="fav-btn" onClick={handleFavorite}>
+      <button className="fav-btn" onClick={handleAddToFavorites}>
         <i className="fas fa-heart"></i>
       </button>
-      <button className="cart-btn" onClick={handleCart}>
+      <button className="cart-btn" onClick={handleAddToCart}>
         <i className="fas fa-shopping-cart"></i>
       </button>
       <Link to="/Linore">
@@ -629,10 +660,10 @@ const Home = () => {
               
               
               <div className="button-group">
-      <button className="fav-btn" onClick={handleFavorite}>
+      <button className="fav-btn" onClick={handleAddToFavorites}>
         <i className="fas fa-heart"></i>
       </button>
-      <button className="cart-btn" onClick={handleCart}>
+      <button className="cart-btn" onClick={handleAddToCart}>
         <i className="fas fa-shopping-cart"></i>
       </button>
       <Link to="/Linore">
@@ -660,10 +691,10 @@ const Home = () => {
               </div>
               
               <div className="button-group">
-      <button className="fav-btn" onClick={handleFavorite}>
+      <button className="fav-btn" onClick={handleAddToFavorites}>
         <i className="fas fa-heart"></i>
       </button>
-      <button className="cart-btn" onClick={handleCart}>
+      <button className="cart-btn" onClick={handleAddToCart}>
         <i className="fas fa-shopping-cart"></i>
       </button>
       <Link to="/Linore">
