@@ -113,3 +113,28 @@ form:hover {
 .post img[src='plus'] {
   /* Add styles specific to the plus image */
 }
+
+.but{
+  margin-bottom: 20px;
+}
+.button-group {
+  position: relative;
+  margin-bottom: 50px;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+}
+
+.button-group button {
+  width: 80px;
+  height: 50px;
+  background-color: black;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.button-group button:hover {
+  background-color:chocolate;
+}

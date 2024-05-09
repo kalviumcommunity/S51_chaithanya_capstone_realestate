@@ -1,40 +1,53 @@
 /* Navbar container */
 .navbar {
-    background-color: black; /* White background */
+    background-color: black; /* Black background */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for subtle elevation */
-    height: 100px;
-    width: 1340px;
-    /* display: flex; Use flexbox for alignment */
-    /* justify-content: space-between; Space items evenly */
-    /* align-items: center; Center vertically */
-    padding: 0 20px; /* Add padding */
+    height: auto; /* Auto height */
+    width: 100%; /* Use full width */
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Align children in a column */
+    padding: 20px; /* Add padding */
 }
 
 /* Navbar brand */
 .navbar-brand {
-    color: #333333; /* Text color */
+    color: #ffffff; /* White text color */
     font-weight: bold; /* Bold font */
     font-size: 24px; /* Adjust font size */
 }
 
 /* Navbar links */
+.navbar-nav {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center items horizontally */
+    margin-bottom: 20px; /* Add margin to separate from buttons */
+}
+
 .navbar-nav .nav-link {
     font-weight: bold; /* Bold font */
-    color: black; /* Text color */
+    color: white; /* White text color */
     text-decoration: none; /* Remove underline */
     font-size: 18px; /* Adjust font size */
-    margin-right: 20px; /* Margin between links */
+    margin: 0 20px; /* Margin between links */
+    height: 30px;
+    width: 200px;
 }
 
 /* Navbar buttons */
-.navbar-nav .btn {
-    color: white; /* Text color */
+.navbar-buttons {
+    display: flex; /* Use flexbox for alignment */
+    align-self: flex-start; /* Align buttons to the left */
+}
+
+.navbar-buttons .btn {
+    color: white; /* White text color */
     background-color: black; /* Button background color */
     padding: 8px 16px; /* Adjust padding */
     font-size: 16px; /* Adjust font size */
     border: none; /* Remove border */
     border-radius: 4px; /* Add border radius */
     cursor: pointer; /* Add cursor pointer */
+    margin-right: 10px; /* Margin between buttons */
 }
 
 /* Navbar icons container */
@@ -47,15 +60,15 @@
 .navbar-icon {
     width: 30px; /* Adjust icon width */
     height: auto; /* Maintain aspect ratio */
-    margin-left: 200px; /* Margin between icons */
+    margin-right: 10px; /* Adjust margin */
 }
 
 /* Align icons to the right */
 .navbar-nav-right {
-    display: flex; /* Use flexbox for alignment */
-    align-items: center; /* Center vertically */
+    margin-left: auto; /* Push icons to the right */
 }
 
 .flex-holder{
     display: flex;
 }
+

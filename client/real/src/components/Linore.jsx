@@ -48,14 +48,14 @@ const galleryRef = useRef(null)
           </form>
         </div>
       </div>
-    <div className='new'>
+    {/* <div className='new'>
     <Link to="/Favorites">
     <button>FAV</button>
     </Link>
   <Link to="/Cart">
     <button>CART</button>
     </Link>
-    </div>
+    </div> */}
       <div classname="construction-range">
       <label for="construction">Construction Range:</label>
       <input type="range" id="construction" name="construction" min="0" max="100" value="3"></input>

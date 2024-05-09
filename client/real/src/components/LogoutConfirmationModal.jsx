@@ -1,9 +1,10 @@
 import React from 'react';
 import './LogoutConfirmationModal.css';
 
-const LogoutConfirmationModal = ({ handleLogout }) => {
+const LogoutConfirmationModal = ({ handleLogout, navigateToHome }) => {
   const handleLogoutClick = () => {
     handleLogout();
+    navigateToHome(); // Call the callback function to navigate to Home
   };
 
   const handleCloseClick = () => {
@@ -15,12 +16,9 @@ const LogoutConfirmationModal = ({ handleLogout }) => {
       <div className="modal-content">
         <p>Are you sure you want to logout?</p>
         <div className="modal-buttons">
-      <Link to="/Home">
+          {/* Call handleLogoutClick directly */}
           <button onClick={handleLogoutClick}>Logout</button>
-      </Link>
-      
           <button onClick={handleCloseClick}>Cancel</button>
-       
         </div>
       </div>
     </div>
