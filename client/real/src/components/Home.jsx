@@ -66,6 +66,7 @@ const handleRemoveFromCart = (component) => {
 };
 
   return (
+    
     <>
       <div className="container">
         <h1>WELCOME TO DREAMHOUSE REALITY</h1>
@@ -171,6 +172,7 @@ const handleRemoveFromCart = (component) => {
                 </div>
                
                 <div className="button-group">
+   
       <button className="fav-btn" onClick={handleAddToFavorites }>
         <i className="fas fa-heart"></i>
       </button>

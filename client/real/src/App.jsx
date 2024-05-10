@@ -28,7 +28,7 @@ import Aminitiesf from './components/Aminitiesf';
 import Aminitiesr from './components/Aminitiesr';
 import Post from './components/Post';
 import Holachennai from './components/Holachennai';
-
+import Crisp from './components/Crisp';
 import Royale from './components/Royale';
 import Superior3 from './components/Superior3';
 
@@ -67,6 +67,8 @@ const App = () => {
         <Route path="/Royale" element={<Royale/>} />  
         <Route path="/Aminitiesr" element={<Aminitiesr/>} />  
         <Route path="/Aminitiesf" element={<Aminitiesf/>} />  
+        <Route path="/Crisp" element={<Crisp/>} />  
+
 
 
       </Routes>
