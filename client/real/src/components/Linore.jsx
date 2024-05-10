@@ -1,5 +1,4 @@
 import React, { useState, useRef } from 'react';
-import { WhatsAppWidget } from 'react-whatsapp-widget';
 import { Link } from 'react-router-dom';
 import home1 from '../asserts/linore.webp';
 
@@ -230,16 +229,6 @@ const galleryRef = useRef(null)
       </div>
 
 
-      {/* WhatsApp Widget Section */}
-      <div className='whatsapp-container'>
-        <WhatsAppWidget
-          className="whatsapp-button"
-          phoneNumber="7010965635"
-          message="I'm interested in DreamHouse Linore. Can you provide me with more information?"
-        />
-        {/* Help message */}
-        <p className="help-message">Need help? Chat with us on WhatsApp!</p>
-      </div>
     </div>
   );
 }
