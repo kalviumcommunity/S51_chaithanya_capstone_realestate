@@ -77,12 +77,16 @@
 .leftButton {
     margin-right: 10px;
     color:black;
+    height: 100px;
+    width: 30px;
     background-color:darkgoldenrod;
 }
 
 .rightButton {
     margin-left: 10px;
     color:black;
+    height: 100px;
+    width: 30px; 
     background-color:darkgoldenrod;
 }
 

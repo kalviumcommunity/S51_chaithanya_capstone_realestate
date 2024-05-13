@@ -27,6 +27,7 @@ import first from "../asserts/first.jpg"
 import { Link } from 'react-router-dom';
 import Flagship from './Flagship';
 import { BiFirstPage } from 'react-icons/bi';
+import Crisp from './Crisp';
 
 const Home = () => {
   const [activeComponent, setActiveComponent] = useState(null);
@@ -786,6 +787,7 @@ const handleRemoveFromCart = (component) => {
             </div>
           </form>
         </div>
+      <Crisp/>
       </div>
 
       <Footer />
