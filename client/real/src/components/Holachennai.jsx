@@ -1,6 +1,5 @@
 import React, { useState, useRef } from 'react'; // Add comma here
 import hola from "../asserts/hola.webp";
-import { WhatsAppWidget } from 'react-whatsapp-widget';
 import { Link } from "react-router-dom";
 
 
@@ -241,16 +240,7 @@ function Holachennai() {
     
     
     
-          {/* WhatsApp Widget Section */}
-          <div className='whatsapp-container'>
-            <WhatsAppWidget
-              className="whatsapp-button"
-              phoneNumber="7010965635"
-              message="I'm interested in DreamHouse Linore. Can you provide me with more information?"
-            />
-            {/* Help message */}
-            <p className="help-message">Need help? Chat with us on WhatsApp!</p>
-          </div>
+        
         </div>
       );
     }

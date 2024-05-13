@@ -1,5 +1,4 @@
 import React from 'react';
-import { WhatsAppWidget } from 'react-whatsapp-widget';
 import flagship from "../asserts/flagship.webp"; // Import the flagship1 image
 import { Link } from 'react-router-dom';
 import m from "../asserts/m.webp"
@@ -231,20 +230,6 @@ of the interiors</li>
 
       {/* Community Map Section */}
       <h1>KNOW YOUR COMMUNITY</h1>
-
-      <div className='whatsapp-container'>
-        <div className='whatsapp'>
-          {/* WhatsApp */}
-          <WhatsAppWidget
-            className="whatsapp-button"
-            phoneNumber="7010965635"
-            message="I'm interested in DreamHouse Linore. Can you provide me with more information?"
-          />
-
-          {/* Help message */}
-          <p className="help-message">Need help? Chat with us on WhatsApp!</p>
-        </div>
-      </div>
     </div>
   );
 }
