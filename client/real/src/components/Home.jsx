@@ -28,9 +28,10 @@ import { Link } from 'react-router-dom';
 import Flagship from './Flagship';
 import { BiFirstPage } from 'react-icons/bi';
 import Crisp from './Crisp';
+import axios from 'axios'
 
 const Home = () => {
-  const [activeComponent, setActiveComponent] = useState(null);
+const [activeComponent, setActiveComponent] = useState(null);
 const [favorites, setFavorites] = useState([]); 
 const [cart, setCart] = useState([]);
  
@@ -39,13 +40,9 @@ const handleBoxClick = (component) => {
 };
 
 const handleAddToFavorites = (component) => {
-    setFavorites(prevFavorites => {
-        if (!prevFavorites.includes(component)) {
-            return [...prevFavorites, component];
-        } else {
-            return prevFavorites.filter(item => item !== component);
-        }
-    });
+  axios.post('http://localhost:3000/api/favourite',{
+
+  })
 };
 
 const handleRemoveFromFavorites = (component) => {
@@ -69,6 +66,15 @@ const handleRemoveFromCart = (component) => {
   return (
     
     <>
+    <div className='searchbar'>
+  <input
+    type="text"
+    placeholder="Search Your property"
+    className="search-input"
+  />
+  {/* You can add a button for submitting the search if needed */}
+  {/* <button type="submit" className="search-button">Search</button> */}
+</div>
       <div className="container">
         <h1>WELCOME TO DREAMHOUSE REALITY</h1>
         <div className="search-boxes">
@@ -174,7 +180,7 @@ const handleRemoveFromCart = (component) => {
                
                 <div className="button-group">
    
-      <button className="fav-btn" onClick={handleAddToFavorites }>
+      <button className="fav-btn" onClick={()=>{handleAddToFavorites()}}>
         <i className="fas fa-heart"></i>
       </button>
       <button className="cart-btn" onClick={handleAddToCart}>

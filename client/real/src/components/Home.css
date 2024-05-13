@@ -138,3 +138,16 @@ form:hover {
 .button-group button:hover {
   background-color:chocolate;
 }
+.searchbar {
+  color: blue;
+  width: 300px;
+  margin-left: 450px;
+  margin-top: 20px;
+  position: relative; /* Required for absolute positioning of the animated border */
+  animation: moveLeft 2s  alternate; /* Animation properties */
+}
+@keyframes moveLeft {
+  0% {
+    transform: translateX(-100%); /* Start position */
+  }
+}
