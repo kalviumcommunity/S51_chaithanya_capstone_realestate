@@ -42,7 +42,7 @@ const Footer = () => {
           <h3>FAQ</h3>
           <p>Have questions? Check out our frequently asked questions for answers or contact us for assistance.</p>
           <ul className="footer-faq-list">
-            <li><a href="/faq">FAQ Page</a></li>
+            <li><a href="/Faq">FAQ Page</a></li>
           </ul>
         </div>
         <div className="footer-newsletter">
