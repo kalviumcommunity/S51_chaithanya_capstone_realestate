@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-
+import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import auth from './Firebase.config'
 import './SignIn.css';
+import { getAuth} from 'firebase/auth'
+import googleimg from "../asserts/google.png"
 
 const SignIn = ({ setIsLoggedIn }) => {
   const [email, setEmail] = useState('');
@@ -48,6 +51,26 @@ const SignIn = ({ setIsLoggedIn }) => {
       navigate('/');
     }
   };
+
+  const google = async (e) => {
+    const provider = new GoogleAuthProvider();
+    function setCookie(name, value, daysToExpire) {
+      let date = new Date();
+      date.setTime(date.getTime() + daysToExpire * 24 * 60 * 60 * 1000);
+      document.cookie = name + '=' + value + ';expires=' + date.toUTCString() + ';path=/';
+  }
+    try {
+      const result = await signInWithPopup(auth, provider);
+      console.log(result);
+      setCookie('logedin',true,365)
+      setCookie("username",result.user.displayName,365);
+      setCookie('token', result.user.accessToken,365);
+      navigate('/'); 
+      setIsLoggedIn(true);
+    } catch (error) {
+      console.error(error.message);
+    }
+  }
 
   return (
     <div className="signin-container">
@@ -107,7 +130,11 @@ const SignIn = ({ setIsLoggedIn }) => {
         ) : (
           <>
             <button type="submit" className="signin-submit">Sign In</button>
+          
             <p className="forgot-password-link" onClick={handleForgotPassword}>Forgot Password?</p>
+          <div>
+          <img className='g_icon' src={googleimg} onClick={google} alt="google icon" />
+          </div>
           </>
         )}
       </form>
