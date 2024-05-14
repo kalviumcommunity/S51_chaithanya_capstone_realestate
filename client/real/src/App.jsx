@@ -31,7 +31,9 @@ import Holachennai from './components/Holachennai';
 import Crisp from './components/Crisp';
 import Royale from './components/Royale';
 import Superior3 from './components/Superior3';
+import Statistics from './components/Statistics';
 import Faq from './components/Faq';
+import Radvantages from './components/Radvantages';
 
 
 const App = () => {
@@ -57,6 +59,7 @@ const App = () => {
         <Route path="/GoogleMap" element={<GoogleMap/>}/>
         <Route path="/Superior1" element={<Superior1/>}/>
         <Route path="/Advantages" element={<Advantages/>}/>
+        <Route path="/Radvantages" element={<Radvantages/>}/>
         <Route path='/LogoutConfirmation' element={<LogoutConfirmationModal />} />
         <Route path="/Linoremore" element={<Linoremore/>}/>
         <Route path="/signin" element={<SignIn setIsLoggedIn={setIsLoggedIn}  />} />
@@ -69,6 +72,8 @@ const App = () => {
         <Route path="/Aminitiesr" element={<Aminitiesr/>} />  
         <Route path="/Aminitiesf" element={<Aminitiesf/>} />  
         <Route path="/Crisp" element={<Crisp/>} />  
+        <Route path="/Statistics" element={<Statistics/>} />  
+
         <Route path="/Faq" element={<Faq/>} />  
 
 

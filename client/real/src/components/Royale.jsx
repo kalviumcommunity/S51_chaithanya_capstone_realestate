@@ -66,7 +66,7 @@ function Royale() {
             </div>
 
             </div>
-        <div className='aminities'></div>
+        <div className='aminities'>
         <h1>Aminities</h1>
         <div className='amenities-list-container'>
             <div className='amenities-list'>
@@ -88,6 +88,41 @@ function Royale() {
           </Link>
             </div>
         </div>
+      </div>
+      <div className='walkthrough'>
+    <h1>WALKTHROUGH</h1>
+    <div className="video-container">
+        <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/S_l91QEAptw"
+            title="Walkthrough 1"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+        ></iframe>
+        <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/Qvwo8GDtznM"
+            title="Walkthrough 2"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+        ></iframe>
+        <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/IpIyGb84KTE"
+            title="Walkthrough 3"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+        ></iframe>
+    </div>
+
+
+      </div>
     <h1>CONFIGURATION</h1>
     <div className='configuration'>
         <div className='configuration-box'>
@@ -136,7 +171,46 @@ function Royale() {
         </tbody>
       </table>
     </div>
-            </>
+    <div className='copy'>
+        <p>&copy; *Price mention is basic cost. Other charges excluded</p>
+      </div>
+
+      {/* Project Overview Section */}
+      <div className="project-overview">
+        <h1>Experience awe in an amazing community!</h1>
+        <div className="overview-container">
+          <img src={royale} alt="home1" className="overview-image" />
+          <div className="overview-details">
+            <p>Casagrand Royale, is where life, in all its glory, can be experienced. Stunning homes, designed for comfort, with a wholesome lifestyle, Royale is the perfect stage for an extraordinary life. All this without having to pay an exorbitant price</p>
+            <p> RERA Registration Number: TN/29/Building/175/2019 Approval Authority</p>
+            <p><a href="http://www.rera.tn.gov.in" target="_blank" rel="noopener noreferrer">www.rera.tn.gov.in</a></p>
+          </div>
+        </div>
+      </div>
+    
+      <div className='location'>
+        <h1>LOCATION ADVANTAGE</h1>
+        <h3> TRANSPORTATION</h3>
+        <div className='location-details'>
+          <ul>
+            <li>Sholinganallur Bus Stop – 850 m</li>
+            <li>Dollar Bus Stop – 1.4 km</li>
+            <li>Perungudi – 9.3 km</li>
+            <li>Sholinganallur – 1.7 km</li>
+            <li>Velammal Vidhyalaya – 950 m</li>
+            <li>HLC International School – 11.2 km</li>
+            <li>Chettinad Health City – 13.6 km</li>
+            <li>Jeppiaar Engineering College – 3.2 km</li>
+            <li>KCG College of Technolog – 4.6 km</li>
+          </ul>
+          <div className='but'>
+            <Link to="/Radvantages">
+              <button type='button'>MORE ADVANTAGES</button>
+            </Link>
+          </div>
+        </div>
+      </div>
+        </>
 
 
 

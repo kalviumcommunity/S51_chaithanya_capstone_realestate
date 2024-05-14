@@ -232,6 +232,6 @@ of the interiors</li>
       <h1>KNOW YOUR COMMUNITY</h1>
     </div>
   );
-}
+} 
 
 export default Medora;
