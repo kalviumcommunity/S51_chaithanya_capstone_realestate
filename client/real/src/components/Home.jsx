@@ -77,6 +77,9 @@ const handleRemoveFromCart = (component) => {
 </div>
       <div className="container">
         <h1>WELCOME TO DREAMHOUSE REALITY</h1>
+      <div className='stats'>
+        <h3>Do you want to know about local statistics? <Link to="/Statistics">Click here</Link></h3>
+        </div>
         <div className="search-boxes">
           <select className="search-input">
             <option value="">Select Location</option>
