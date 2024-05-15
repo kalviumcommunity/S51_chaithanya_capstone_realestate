@@ -34,6 +34,7 @@ import Superior3 from './components/Superior3';
 import Statistics from './components/Statistics';
 import Faq from './components/Faq';
 import Radvantages from './components/Radvantages';
+import Book from './components/Book';
 
 
 const App = () => {
@@ -73,6 +74,7 @@ const App = () => {
         <Route path="/Aminitiesf" element={<Aminitiesf/>} />  
         <Route path="/Crisp" element={<Crisp/>} />  
         <Route path="/Statistics" element={<Statistics/>} />  
+        <Route path="/Book" element={<Book/>} />  
 
         <Route path="/Faq" element={<Faq/>} />  
 
