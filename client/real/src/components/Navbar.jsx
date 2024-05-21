@@ -35,7 +35,7 @@ const Navbar = () => {
             <NavLink className="nav-link btn" to="/signin" onClick={handleSignIn}>Signin</NavLink>
           )}
          {/* Favorite button */}
-<NavLink to="/favorite" className="nav-link btn" style={{ marginLeft: '10px' }}>
+<NavLink to="/Favorites" className="nav-link btn" style={{ marginLeft: '10px' }}>
   <i className="fas fa-heart"></i> {/* Assuming you're using Font Awesome for icons */}
 </NavLink>
 {/* Cart button */}

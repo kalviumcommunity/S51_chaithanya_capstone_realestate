@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import "./Home.css";
+import { useTranslation } from 'react-i18next';
 import linore from "../asserts/linore.webp";
 import Footer from "../components/Footer";
 import flagship3 from "../asserts/flagship3.jpeg"
@@ -37,6 +38,11 @@ const Home = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleShareClick = () => {
+    const { t, i18n } = useTranslation();
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
     setIsModalOpen(true);
   };
 
@@ -51,7 +57,7 @@ const Home = () => {
 
   const handleAddToFavorites = (event) => {
     event.preventDefault();
-    // Add your logic to handle adding to favorites here
+    // Add your logic to handle adding to fa vorites here
   };
 
   const handleAddToCart = (event) => {

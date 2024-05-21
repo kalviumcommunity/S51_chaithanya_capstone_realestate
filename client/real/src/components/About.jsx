@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom'
 import "./About.css";
 
 const About = () => {
@@ -51,6 +52,21 @@ const About = () => {
         <li><strong>Integrity:</strong> Our commitment to honesty, integrity, and professionalism sets us apart in the real estate industry.</li>
         <li><strong>Results-Driven:</strong> We're dedicated to achieving the best results for our clients, whether it's securing the highest sale price or finding the perfect property.</li>
       </ul>
+      <h2>Testimonials</h2>
+      <div className="testimonials">
+        <div className="testimonial">
+          <p>"DreamHouse Real Estate helped us find our dream home! The team was incredibly supportive and professional throughout the entire process. Highly recommend!"</p>
+          <p><strong>- Jane and John Doe</strong></p>
+        </div>
+        <div className="testimonial">
+          <p>"Selling our house was a breeze thanks to DreamHouse. They handled everything with such expertise and got us a great price. Thank you!"</p>
+          <p><strong>- Sarah and Mike Smith</strong></p>
+        </div>
+        <div className="testimonial">
+          <p>"As first-time home buyers, we were pretty nervous, but the DreamHouse team made it so easy for us. They were always available to answer our questions and guide us through each step."</p>
+          <p><strong>- Emma Brown</strong></p>
+        </div>
+      </div>
       <h2>Get in Touch</h2>
       <p>
         Ready to embark on your real estate journey with DreamHouse Real Estate? Contact us today to schedule a consultation and experience the difference of working with a trusted partner in real estate.  
@@ -59,6 +75,9 @@ const About = () => {
       <p>
         To know more, <a href="https://youtu.be/ugK8HYpoDzE?si=aDreMyeMelninNvR" target="_blank" rel="noopener noreferrer">click here</a>.
       </p>
+      <div className="para">
+        <p>GET STARTED!! CLICK HERE TO JOIN THE CLUB, <Link to="/Club">CLICK HERE</Link></p>
+      </div>
     </div>
   );
 };
