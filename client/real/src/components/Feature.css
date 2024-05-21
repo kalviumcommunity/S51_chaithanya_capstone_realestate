@@ -1,0 +1,31 @@
+.plots {
+    text-align: center;
+    margin: 20px auto;
+  }
+  
+  .plots h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .plotsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .plotImage {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .plotImage:hover {
+    transform: scale(1.05);
+  }
+  

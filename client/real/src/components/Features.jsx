@@ -7,6 +7,9 @@ import classes from "./Features.module.css";
 import luxeria from "../asserts/luxeria.webp";
 import eco from "../asserts/eco.webp";
 import vistaz from "../asserts/vistaz.jpg";
+import clovis from "../asserts/clovis.jpg";
+import up from "../asserts/up.jpg";
+import "./Feature.css"
 
 const Features = () => {
   // Include all imported images into the images array
@@ -41,6 +44,13 @@ const Features = () => {
             </div>
           </div>
           <button className={`${classes.scrollButton} ${classes.rightButton}`} onClick={scrollRight}>{'>'}</button>
+        </div>
+      </div>
+      <div className={classes.plots}>
+        <h1>Plots</h1>
+        <div className={classes.plotsContainer}>
+          <img src={clovis} alt="Clovis Plot" className={classes.plotImage} />
+          <img src={up} alt="Up Plot" className={classes.plotImage} />
         </div>
       </div>
     </div>

@@ -1,11 +1,6 @@
 
 
-.about-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 40px;
-    text-align: center;
-}
+
 
 h1 {
     font-size: 2.5rem;
@@ -57,3 +52,33 @@ strong {
 }
 
 
+
+.about-container {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .about-container.fade-in {
+    opacity: 1;
+  }
+  
+  .testimonials {
+    margin-top: 20px;
+  }
+  
+  .testimonial {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-left: 5px solid #ff6600;
+  }
+  
+  .testimonial p {
+    margin: 0;
+  }
+  
+  .testimonial p strong {
+    display: block;
+    margin-top: 10px;
+  }
+  
