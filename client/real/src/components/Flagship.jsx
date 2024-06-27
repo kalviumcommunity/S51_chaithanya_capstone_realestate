@@ -1,6 +1,5 @@
 import React, { useState, useRef } from 'react';
 import "./Flagship.css";
-import { WhatsAppWidget } from 'react-whatsapp-widget';
 import { Link } from 'react-router-dom';
 import flag from "../asserts/flag.webp";
 import f1 from "../asserts/f1.webp";
@@ -9,7 +8,6 @@ import f3 from "../asserts/f3.webp";
 import f4 from "../asserts/f4.webp";
 import f5 from "../asserts/f5.webp";
 import project from "../asserts/project.webp";
-import GoogleMap from './GoogleMap';
 
 function Flagship() {
   const galleryRef = useRef(null);

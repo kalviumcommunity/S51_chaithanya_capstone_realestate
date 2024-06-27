@@ -3,10 +3,12 @@ import { Link, useNavigate } from 'react-router-dom';
 import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import auth from './Firebase.config'
 import './SignIn.css';
-import { getAuth} from 'firebase/auth'
+import { useLocation } from 'react-router-dom';
 import googleimg from "../asserts/google.png"
 
 const SignIn = ({ setIsLoggedIn }) => {
+  const { login } = useAuth();
+  const location = useLocation();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');

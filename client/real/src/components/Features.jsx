@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom'; // Import Link from React Router
 import pri from "../asserts/pri.webp";
 import dior from "../asserts/dior.webp";
 import tranquil from "../asserts/tranquil.webp";
-import classes from "./Features.module.css";
 import luxeria from "../asserts/luxeria.webp";
 import eco from "../asserts/eco.webp";
 import vistaz from "../asserts/vistaz.jpg";
 import clovis from "../asserts/clovis.jpg";
 import up from "../asserts/up.jpg";
-import "./Feature.css"
+import classes from "./Features.module.css"; // Import the CSS module
+import "./Feature.css"; // Import additional CSS
 
 const Features = () => {
   // Include all imported images into the images array
