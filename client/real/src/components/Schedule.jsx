@@ -1,29 +1,37 @@
 import React, { useState } from 'react';
-import "./schedule.css";
+import './schedule.css';
 
 function Schedule() {
-  // State for form fields
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [dateTime, setDateTime] = useState('');
 
-  // Function to handle form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // You can implement further actions, like sending form data to a backend server
-    // For now, let's just log the form data
-    console.log({
-      fullName,
-      email,
-      phoneNumber,
-      dateTime
-    });
-    // Reset form fields after submission
-    setFullName('');
-    setEmail('');
-    setPhoneNumber('');
-    setDateTime('');
+    try {
+      const response = await fetch('http://localhost:3000/api/schedule', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ fullName, email, phoneNumber, dateTime }),
+      });
+
+      if (response.ok) {
+        console.log('Email sent successfully');
+        // Optionally, you can show a success message or reset the form
+        setFullName('');
+        setEmail('');
+        setPhoneNumber('');
+        setDateTime('');
+      } else {
+        console.error('Error sending email');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      // Handle any network or other errors here
+    }
   };
 
   return (

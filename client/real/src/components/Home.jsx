@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import "./Home.css";
-import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 import linore from "../asserts/linore.webp";
 import Footer from "../components/Footer";
 import flagship3 from "../asserts/flagship3.jpeg"
@@ -30,19 +30,29 @@ import Flagship from './Flagship';
 import { BiFirstPage } from 'react-icons/bi';
 import Crisp from './Crisp';
 import share from "../asserts/share.png"
+import Favorites from './Favorites';
 import axios from 'axios'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart, faShoppingCart, faCopy } from '@fortawesome/free-solid-svg-icons';
 import { faWhatsapp, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import AppContext from "../components/AppContext";
+
+
+
+
+
 const Home = () => {
+  const navigate = useNavigate();
+
+  const handleChange = (event) => {
+    const selectedValue = event.target.value;
+    if (selectedValue) {
+      navigate(`/${selectedValue}`);
+    }
+  };
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleShareClick = () => {
-    const { t, i18n } = useTranslation();
-
-  const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
-  };
     setIsModalOpen(true);
   };
 
@@ -50,110 +60,65 @@ const Home = () => {
     setIsModalOpen(false);
   };
 
+  const handleAddToFavorites = () => {
+    // Add to favorites logic
+  };
+
+  const handleAddToCart = () => {
+    // Add to cart logic
+  };
+
   const handleCopyLink = () => {
     navigator.clipboard.writeText(window.location.href);
     alert('Link copied to clipboard!');
   };
 
-  const handleAddToFavorites = (event) => {
-    event.preventDefault();
-    // Add your logic to handle adding to fa vorites here
+  const handleViewMore = () => {
+    if (isUserAuthenticated()) {
+      history.push('/Flagship');
+    } else {
+      history.push('/signin');
+    }
   };
 
-  const handleAddToCart = (event) => {
-    event.preventDefault();
-    // Add your logic to handle adding to cart here
-  };
-
-  return (
+  return(
 
     <>
-
-      <div className='searchbar'>
+   
+      <div>
+      <div className="container">
+        <h1>WELCOME TO DREAMHOUSE REALITY</h1>
+      <div className='des'>
+        <h4>Welcome to DreamHouse, your ultimate destination for finding the perfect home! Our user-friendly website offers a seamless experience for buyers, sellers, and renters. With an extensive listing of stunning properties, detailed virtual tours, and expert advice, DreamHouse makes your real estate journey enjoyable and stress-free. Explore your dream home today!</h4>
+      </div>
+        <div className='searchbar'>
         <input
           type="text"
           placeholder="Search Your property"
           className="search-input"
         />
-        {/* You can add a button for submitting the search if needed */}
-        {/* <button type="submit" className="search-button">Search</button> */}
+       
       </div>
-      <div>
-      <div className="container">
-        <h1>WELCOME TO DREAMHOUSE REALITY</h1>
-        <div className='stats'>
-          <h3>Do you want to know about local statistics? <Link to="/Statistics">Click here</Link></h3>
-        </div>
         <div className='book'>
           <h3>Book appointmets for further details <Link to="/Book">Click here</Link></h3>
         </div>
-        <div className="search-boxes">
-          <select className="search-input">
-            <option value="">Select Location</option>
-            <option value="Adyar">Adyar</option>
-            <option value="Alwarpet">Alwarpet</option>
-            <option value="Ambattur">Ambattur</option>
-            <option value="Anna Nagar">Anna Nagar</option>
-            <option value="Besant Nagar">Besant Nagar</option>
-            <option value="Guindy">Guindy</option>
-            <option value="Kodambakkam">Kodambakkam</option>
-            <option value="Injambakkam">Injambakkam</option>
-            <option value="Koyambedu">Koyambedu</option>
-            <option value="Madipakkam">Madipakkam</option>
-            <option value="Maduravoyal">Maduravoyal</option>
-            <option value="Medavakkam">Medavakkam</option>
-            <option value="Mount Road">Mount Road</option>
-            <option value="Mogappair">Mogappair</option>
-            <option value="Mylapore">Mylapore</option>
-            <option value="Nandanam">Nandanam</option>
-            <option value="Nanganallur">Nanganallur</option>
-            <option value="Neelangarai">Neelangarai</option>
-            <option value="Nungambakkam">Nungambakkam</option>
-            <option value="Pallikaranai">Pallikaranai</option>
-            <option value="Perambur">Perambur</option>
-            <option value="Perungalathur">Perungalathur</option>
-            <option value="Perungudi">Perungudi</option>
-            <option value="Porur">Porur</option>
-            <option value="Purasawalkam">Purasawalkam</option>
-            <option value="Santhome">Santhome</option>
-            <option value="Shenoy Nagar">Shenoy Nagar</option>
-            <option value="Sholinganallur">Sholinganallur</option>
-            <option value="ECR">ECR</option>
-            <option value="Tambaram">Tambaram</option>
-            <option value="Teynampet">Teynampet</option>
-            <option value="Triplicane">Triplicane</option>
-            <option value="Velachery">Velachery</option>
-          </select>
-          <div className="input-wrapper">
-            <select className='search-input'>
-              <option value="project type">project type</option>
-              <option value="apartment">apartment</option>
-              <option value="villa">villa</option>
-              <option value="plot">plot</option>
-            </select>
-          </div>
-          <div className="input-wrapper">
-            <select className='search-input'>
-              <option value="">project status</option>
-              <option value="">under construction</option>
-              <option value="">New launch</option>
-              <option value="">Ready to occupy</option>
-              <option value="">completed projects</option>
-            </select>
-          </div>
-          <div className="input-wrapper">
-            <select className='search-input'>
-              <option value="">Type</option>
-              <option value="">1 BHK</option>
-              <option value="">2 BHK</option>
-              <option value="">3 BHK</option>
-              <option value="">4 BHK</option>
-            </select>
-          </div>
-          <div className='but'>
-            <button>search</button>
-          </div>
-        </div>
+      <div className='click'>CLICK ON PLACES TO GET THE AMAZING PROPERTY</div>
+        <ul class="location-list">
+  <li><a href="Adayar">Adayar</a></li>
+  <li><a href="Alwarpet">Alwarpet</a></li>
+  <li><a href="ambattur">Ambattur</a></li>
+  <li><a href="anna-nagar">Anna Nagar</a></li>
+  <li><a href="besant-nagar">Besant Nagar</a></li>
+  <li><a href="guindy">Guindy</a></li>
+  <li><a href="kodambakkam">Kodambakkam</a></li>
+  <li><a href="injambakkam">Injambakkam</a></li>
+  <li><a href="koyambedu">Koyambedu</a></li>
+  <li><a href="madipakkam">Madipakkam</a></li>
+  <li><a href="maduravoyal">Maduravoyal</a></li>
+  <li><a href="medavakkam">Medavakkam</a></li>
+</ul>
+        
+        
 
         <div className='post'>
           <h1>Post your property</h1>
@@ -216,7 +181,26 @@ const Home = () => {
                 </div>
               </div>
             </form>
-           <form>
+            {isModalOpen && (
+        <div className="modal">
+          <div className="modal-content">
+            <span className="close" onClick={handleCloseModal}>&times;</span>
+            <h2>Share</h2>
+            <div className="share-options">
+              <a href={`https://wa.me/?text=${encodeURIComponent(window.location.href)}`} target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faWhatsapp} size="2x" className="fa-icon" />
+              </a>
+              <a href={`https://www.instagram.com/`} target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faInstagram} size="2x" className="fa-icon" />
+              </a>
+              <button onClick={handleCopyLink}>
+                <FontAwesomeIcon icon={faCopy} size="2x" className="fa-icon" />
+              </button>
+            </div>
+          </div>
+        </div>
+        )}
+            <form>
         <div className="images-container">
           <div className="image-box">
             <div className="image-wrapper">
@@ -243,32 +227,29 @@ const Home = () => {
             <button className="cart-btn" onClick={handleAddToCart}>
               <FontAwesomeIcon icon={faShoppingCart} />
             </button>
-            <Link to="/Flagship">
-              <button type="button">View More</button>
-            </Link>
+            <button type="button" onClick={handleViewMore}>View More</button>
           </div>
         </div>
-      </form>
-
-      {isModalOpen && (
-        <div className="modal">
-          <div className="modal-content">
-            <span className="close" onClick={handleCloseModal}>&times;</span>
-            <h2>Share</h2>
-            <div className="share-options">
-              <a href={`https://wa.me/?text=${encodeURIComponent(window.location.href)}`} target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faWhatsapp} size="2x" className="fa-icon" />
-              </a>
-              <a href={`https://www.instagram.com/`} target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faInstagram} size="2x" className="fa-icon" />
-              </a>
-              <button onClick={handleCopyLink}>
-                <FontAwesomeIcon icon={faCopy} size="2x" className="fa-icon" />
-              </button>
+        {isModalOpen && (
+          <div className="modal">
+            <div className="modal-content">
+              <span className="close" onClick={handleCloseModal}>&times;</span>
+              <h2>Share</h2>
+              <div className="share-options">
+                <a href={`https://wa.me/?text=${encodeURIComponent(window.location.href)}`} target="_blank" rel="noopener noreferrer">
+                  <FontAwesomeIcon icon={faWhatsapp} size="2x" className="fa-icon" />
+                </a>
+                <a href={`https://www.instagram.com/`} target="_blank" rel="noopener noreferrer">
+                  <FontAwesomeIcon icon={faInstagram} size="2x" className="fa-icon" />
+                </a>
+                <button onClick={handleCopyLink}>
+                  <FontAwesomeIcon icon={faCopy} size="2x" className="fa-icon" />
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
+      </form>
         <form>
           <div className="images-container">
             <div className="image-box">

@@ -21,7 +21,6 @@ import Bestseller from "./components/Bestseller"
 import Bestseller1 from './components/Bestseller1';
 import Flagadvantages from './components/Flagadvantages';
 import Schedule from './components/Schedule';
-import GoogleMap from './components/GoogleMap';
 import Advantages from './components/Advantages';
 import Superior1 from './components/Superior1';
 import Aminitiesf from './components/Aminitiesf';
@@ -36,6 +35,18 @@ import Faq from './components/Faq';
 import Radvantages from './components/Radvantages';
 import Book from './components/Book';
 import Club from './components/Club';
+// import AuthContext from "./components/AuthContext"
+import ProtectedRoute from './components/ProctedRoute';
+import AppContext from "./components/AppContext";
+import PropertyCard from './components/PropertyCard';
+import BestSeller0 from './components/BestSeller0';
+import Bestseller2 from './components/Bestseller2';
+import Tsuperior from './components/Tsuperior';
+import Taminities from './components/Taminities';
+import Adayar from './components/Adayar';
+import Adayarr from './components/Adayarr';
+import Maple from './components/Maple';
+import Alwarpet from './components/Alwarpet';
 
 
 const App = () => {
@@ -48,7 +59,7 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/features" element={<Features />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/favourite" element={<Favorites/>} />  
+        <Route path="/Favorites" element={<Favorites/>} />  
         <Route path="/Cart"element={<Cart/>} />
         <Route path="/bestseller" element={<Bestseller/>}/>
         <Route path="/bestseller1" element={<Bestseller1/>}/>
@@ -58,7 +69,6 @@ const App = () => {
         <Route path="/Medora" element={<Medora/>}/>
         <Route path="/Flagadvantages" element={<Flagadvantages/>}/>
         <Route path="/Flagship" element={<Flagship/>}/>
-        <Route path="/GoogleMap" element={<GoogleMap/>}/>
         <Route path="/Superior1" element={<Superior1/>}/>
         <Route path="/Advantages" element={<Advantages/>}/>
         <Route path="/Radvantages" element={<Radvantages/>}/>
@@ -77,7 +87,33 @@ const App = () => {
         <Route path="/Statistics" element={<Statistics/>} />  
         <Route path="/Book" element={<Book/>} /> 
         <Route path="/Club" element={<Club/>} />  
- 
+        <Route path="/AppContext" element={<AppContext/>} />  
+        <Route path="/" element={<PropertyCard />} />
+        <Route path="bestSeller0" element={<BestSeller0 />} />
+        <Route path="BestSeller2" element={<Bestseller2 />} />
+        <Route path="/Tsuperior" element={<Tsuperior/>} />
+        <Route path="/Taminities" element={<Taminities/>} />  
+        <Route path="/Adayar" element={<Adayar/>} />  
+        <Route path="/Adayarr" element={<Adayarr/>} />  
+        <Route path="/Maple" element={<Maple/>} />  
+        <Route path="/Alwarpet" element={<Alwarpet/>} />  
+
+
+
+
+
+
+
+
+
+
+
+
+        {/* <Route path="/AuthContext" element={<AuthContext/>} />   */}
+        <Route path="/ProctedRoute" element={<ProtectedRoute/>} />  
+
+
+        
 
         <Route path="/Faq" element={<Faq/>} />  
 

@@ -18,12 +18,7 @@
   margin-right: 10px;
 }
 
-.search-input {
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-}
+
 
 /* Section styles */
 .section {
@@ -68,13 +63,16 @@
 }
 
 /* Share icon styles */
-.share {
+/* .share {
   position: absolute;
-  top: 10px;
   right: 10px;
   cursor: pointer;
   z-index: 1;
-}
+} */
+ .share{
+  position: absolute;
+  cursor:  pointer ;
+ }
 
 .share-icon {
   width: 24px;
@@ -150,7 +148,6 @@ form:hover {
 .searchbar {
   color: blue;
   width: 300px;
-  margin-left: 450px;
   margin-top: 20px;
   position: relative;
   animation: moveLeft 2s alternate;
@@ -162,39 +159,6 @@ form:hover {
   }
 }
 
-/* Stats styles */
-.stats {
-  background-color: #f9f9f9;
-  border: 2px solid #e0e0e0;
-  border-radius: 8px;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 20px 0;
-  transition: transform 0.3s ease;
-}
-
-.stats:hover {
-  transform: scale(1.05);
-}
-
-.stats h3 {
-  margin: 0;
-  font-size: 1.5em;
-  color: #333;
-}
-
-.stats a {
-  color: #007bff;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-.stats a:hover {
-  color: #0056b3;
-  text-decoration: underline;
-}
 
 /* Modal background */
 .modal {
@@ -209,16 +173,15 @@ form:hover {
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.7); /* Slightly darker background for better focus */
-  margin-left: 0; /* Ensuring no extra margin */
 }
 
 /* Modal content */
 .modal-content {
   background-color: #fff;
   margin: auto;
-  padding: 20px;
+  padding: 50px;
   border-radius: 10px; /* Rounded corners */
-  width: 80%;
+  width: 20%;
   max-width: 400px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
   animation: slide-down 0.3s ease-out; /* Slide down animation */
@@ -239,10 +202,12 @@ form:hover {
 
 /* Close button */
 .close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
+  color: black;
   font-weight: bold;
+  position: absolute; /* Positioning to ensure it doesn't cause layout shifts */
+  right: 20px; /* Adjusted to be closer to the modal content */
+  top: 20px; /* Adjusted to be closer to the modal content */
+  font-size: 28px;
   cursor: pointer;
 }
 
@@ -252,17 +217,18 @@ form:hover {
   text-decoration: none;
 }
 
-/* Share options */   
+/* Share options */
 .share-options {
-  display: grid;
-  align-items: center;
-  height: 100px;
+  display: flex; 
+  justify-content: center;
+  padding: 2px;
 }
 
 .share-options a, .share-options button {
   background: none;
   border: none;
   cursor: pointer;
+  padding: 10px;
   color: #333;
   transition: transform 0.2s, color 0.2s;
 }
@@ -291,6 +257,83 @@ form:hover {
   display: flex;
   gap: 10px;
 }
-.share{
+
+.share {
   height: 30px;
+}
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.button-container button {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+
+
+.location-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 20px;
+  padding: 0;
+  font-weight: bolder;
+}
+.location-list li {
+  margin: 0;
+}
+.location-list a {
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color:#973131;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+.location-list a:hover {
+  background-color: #973131;
+}
+
+.click{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: x-large;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.des {
+  background-color: #ffffff; /* Clean white background */
+  padding: 30px; /* Generous padding for space */
+  border-radius: 15px; /* Smooth rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  max-width: 800px; /* Comfortable max-width for readability */
+  margin: 40px auto; /* Center align with top/bottom margin */
+  font-family: 'Arial', sans-serif; /* Modern and clean font */
+  text-align: center; /* Center align text */
+  border: 1px solid #e6e6e6; /* Light border for subtle definition */
+  opacity: 0; /* Initial state for animation */
+  animation: fadeIn 1s ease-in-out forwards; /* Animation settings */
+}
+
+.des h4 {
+  color: #333333; /* Dark gray color for readability */
+  font-size: 1.5em; /* Larger font size for emphasis */
+  line-height: 1.8; /* Good line height for readability */
+  margin: 0; /* Remove default margin */
+}
+
+.des h4 span {
+  color: #007BFF; /* Blue color for highlights */
+  font-weight: bold; /* Bold for emphasis */
 }
