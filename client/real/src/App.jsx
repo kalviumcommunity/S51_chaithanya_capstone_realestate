@@ -47,6 +47,7 @@ import Adayar from './components/Adayar';
 import Adayarr from './components/Adayarr';
 import Maple from './components/Maple';
 import Alwarpet from './components/Alwarpet';
+import Lakshmi from './components/Lakshmi';
 
 
 const App = () => {
@@ -97,6 +98,8 @@ const App = () => {
         <Route path="/Adayarr" element={<Adayarr/>} />  
         <Route path="/Maple" element={<Maple/>} />  
         <Route path="/Alwarpet" element={<Alwarpet/>} />  
+        <Route path="/Lakshmi" element={<Lakshmi/>} />  
+
 
 
 

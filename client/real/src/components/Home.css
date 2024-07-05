@@ -158,7 +158,11 @@ form:hover {
     transform: translateX(-100%);
   }
 }
-
+.search-heading{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight:bold;
+  animation: moveLeft 2s alternate;
+}
 
 /* Modal background */
 .modal {

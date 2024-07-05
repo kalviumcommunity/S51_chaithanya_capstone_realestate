@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import './Navbar.css';
 import p from "../asserts/p.png";
-import circle from "../asserts/circle.avif";
+import logo from "../asserts/logo new.avif"
 import LogoutConfirmationModal from './LogoutConfirmationModal';
 
 const Navbar = () => {
@@ -19,9 +19,9 @@ const Navbar = () => {
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      {/* <div className='logo'>
-        <img src={circle} alt='logo' />
-      </div> */}
+      <div className='logo'>
+        <img src={logo} alt='logo' />
+      </div>
       <div className="collapse navbar-collapse" id="navbarNav">
         <div className="navbar-nav ml-auto">
           <NavLink className="nav-link btn" to="/">Home</NavLink>
