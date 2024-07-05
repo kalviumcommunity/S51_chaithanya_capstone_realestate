@@ -1,5 +1,5 @@
 const express =  require('express');
-const  Favourite = require('../models/Favourite');
+const  Favourite = require('../Models/Favourite');
 const FavouriteRouter = express.Router();
 const Joi = require('joi')
 const schema = Joi.object({
