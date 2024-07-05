@@ -5,7 +5,7 @@ const Joi = require('joi')
 const schema = Joi.object({
     name:Joi.string().required(),
     number:Joi.string().required(),
-    features:Joi.string().required(),
+    features:Joi.string().required(), 
     construction:Joi.string().required(),
     price:Joi.string().required(),
   });
