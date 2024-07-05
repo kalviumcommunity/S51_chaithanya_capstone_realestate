@@ -1,5 +1,5 @@
 const express =  require('express');
-const  Cart = require('../models/Cart');
+const  Cart = require('../Models/Cart');
 const CartRouter = express.Router();
 const Joi = require('joi')
 const schema = Joi.object({
