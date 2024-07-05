@@ -1,5 +1,5 @@
 const express =  require('express');
-const  Feedback  = require('../models/feedback.model');
+const  Feedback  = require('../Models/Feedback.model');
 const FeedbackRouter = express.Router();
 const Joi = require('joi')
 const schema = Joi.object({
