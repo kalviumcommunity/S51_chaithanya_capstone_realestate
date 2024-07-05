@@ -226,6 +226,19 @@ const galleryRef = useRef(null)
             <img src={l6} alt="Gallery 6" className="gallery-image" />
           </div>
         </div>
+      <h1>KNOW YOUR COMMUNITY </h1>
+      <div className="map-container" style={{ width: '100%', height: '400px', position: 'relative', borderRadius: '8px', overflow: 'hidden', boxShadow: '0 4px 8px rgba(0,0,0,0.1)' }}>
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3925.2229774734963!2d80.25191987515147!3d13.040044090821428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267b2727b3aaf%3A0x591c0a6c2f019a74!2sAdayar%2C%20Chennai%2C%20Tamil%20Nadu%20600020%2C%20India!5e0!3m2!1sen!2sus!4v1686853715091!5m2!1sen!2sus"
+        width="100%"
+        height="100%"
+        style={{ border: 'none' }}
+        allowFullScreen=""
+        loading="lazy"
+        title="Google Map"
+    ></iframe>
+</div>
+
       </div>
 
 

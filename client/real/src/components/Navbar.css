@@ -2,13 +2,29 @@
 .navbar {
     background-color: black; /* Black background */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for subtle elevation */
-    height: auto; /* Auto height */
+    height:70px; /* Auto height */
     width: 100%; /* Use full width */
     display: flex; /* Use flexbox for alignment */
     flex-direction: column; /* Align children in a column */
-    padding: 20px; /* Add padding */
+    padding: 20px; /* Add padding F*/
 }
-
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 100%; 
+    height: 50px;
+    padding: 10px; 
+    box-sizing: border-box; 
+  }
+  
+  .logo img {
+    max-width: 100px; /* Ensure the logo image is responsive */
+    height: 60px; /* Maintain the aspect ratio */
+    margin-bottom: 12px;
+    margin-right: 1200px;
+  }
+  
 /* Navbar brand */
 .navbar-brand {
     color: #ffffff; /* White text color */
