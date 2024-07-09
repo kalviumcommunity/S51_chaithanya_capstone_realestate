@@ -1,43 +1,74 @@
-const express =  require('express');
-const  Cart = require('../Models/Cart');
+const express = require('express');
+const Cart = require('../Models/Cart');
 const CartRouter = express.Router();
-const Joi = require('joi')
+const Joi = require('joi');
+
 const schema = Joi.object({
-    name:Joi.string().required(),
-    number:Joi.string().required(),
-    features:Joi.string().required(), 
-    construction:Joi.string().required(),
-    price:Joi.string().required(),
-  });
-CartRouter.post('/api/cart', async(req, res) =>{
-    const {error,value} = schema.validate(req.body,{abortEarly:false}); 
-    try{
+    name: Joi.string().required(),
+    number: Joi.string().required(),
+    features: Joi.string().required(), 
+    construction: Joi.string().required(),
+    price: Joi.string().required(),
+});
+
+CartRouter.post('/api/cart', async (req, res) => {
+    const { error, value } = schema.validate(req.body, { abortEarly: false }); 
+    try {
         if (!error) {
-        let{name,number,features,construction,price} = req.body;
-        const formData = await Cart.create({name,number,features,construction,price});
-        res.status(201).json(formData);}
-        else {
+            let { name, number, features, construction, price } = req.body;
+            const formData = await Cart.create({ name, number, features, construction, price });
+            res.status(201).json(formData);
+        } else { 
             return res.status(400).send({
-            message: `Bad request ${error}`
-            })
-            console.error(error)
+                message: `Bad request ${error}`
+            });
+            console.error(error);
         }
-    } catch(err){
+    } catch (err) {
         console.log(err);
         return res.status(500).send({
             message: "Internal server error"
-        })
+        });
     }
-})
-CartRouter.get('/api/Cart', async (req, res) => {
+});
+
+CartRouter.get('/api/cart', async (req, res) => {
     try {
-      const blogs = await Cart.find();
-      res.json(blogs);
+        const items = await Cart.find();
+        res.json(items);
     } catch (err) {
-      console.error(err);
-      res.status(500).json({ message: 'Error fetching blogs' });
+        console.error(err);
+        res.status(500).json({ message: 'Error fetching items' });
     }
-  });
-  
-  
-module.exports=CartRouter;
+});
+
+CartRouter.patch('/api/cart/:id', async (req, res) => {
+    const { error, value } = schema.validate(req.body, { abortEarly: false });
+    if (error) {
+        return res.status(400).send({
+            message: `Bad request ${error}`
+        });
+    }
+
+    try {
+        const { id } = req.params;
+        const { name, number, features, construction, price } = req.body;
+        const updatedItem = await Cart.findByIdAndUpdate(
+            id, 
+            { name, number, features, construction, price }, 
+            { new: true }
+        );
+ 
+        if (!updatedItem) {
+            return res.status(404).json({ message: 'Item not found' });
+        }
+
+        res.json(updatedItem);
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ message: 'Internal server error' });
+    }
+});
+
+module.exports = CartRouter;
+ 
