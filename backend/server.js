@@ -8,7 +8,7 @@ const { startDatabase, isConnected } = require('./db');
 const FeedbackRouter = require("./Routes/Feedback.route");
 const FavouriteRouter = require("./Routes/Favourite.route");
 const CartRouter = require("./Routes/Cart.route");
-
+const EnquireRouter = require("./Routes/Enquire.route");
 // Load environment variables
 dotenv.config();
 
@@ -30,6 +30,7 @@ app.get('/', (req, res) => {
 app.use('/api/feedback', FeedbackRouter);
 app.use('/api/favourite', FavouriteRouter);
 app.use('/api/cart', CartRouter);
+app.use(EnquireRouter)
 
 // Nodemailer setup
 const transporter = nodemailer.createTransport({
