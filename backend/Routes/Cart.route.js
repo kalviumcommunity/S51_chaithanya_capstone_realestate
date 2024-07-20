@@ -41,8 +41,7 @@ CartRouter.get('/api/cart', async (req, res) => {
         res.status(500).json({ message: 'Error fetching items' });
     }
 });
-
-CartRouter.patch('/api/cart/:id', async (req, res) => {
+CartRouter.put('/api/cart/:id', async (req, res) => {
     const { error, value } = schema.validate(req.body, { abortEarly: false });
     if (error) {
         return res.status(400).send({
@@ -69,6 +68,7 @@ CartRouter.patch('/api/cart/:id', async (req, res) => {
         res.status(500).json({ message: 'Internal server error' });
     }
 });
+
 
 module.exports = CartRouter;
  
