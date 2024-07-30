@@ -388,3 +388,7 @@ p{
 .new button{
   margin-left: 20px;
 }
+h1{
+  font-size:larger;
+  font-weight: bold;
+}

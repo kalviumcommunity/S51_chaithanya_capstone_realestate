@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
+import auth from './Firebase.config'
 import './SignUp.css';
 
 const SignUp = () => {
@@ -31,11 +33,25 @@ const SignUp = () => {
     setStep(step + 1);
   };
 
-  const handleSignUp = (e) => {
+  const handleSignUp = async(e) => {
     e.preventDefault();
-    console.log('Signing up...');
-    // Perform signup logic here, such as sending the form data to the server
-    navigate('/');
+        if (password !== confirmPassword) {
+          alert('Passwords do not match');
+          return;
+        }
+    
+        try {
+          const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+          const user = userCredential.user;
+          // Additional logic here if needed, e.g., saving user data to Firestore
+    
+          // Redirect or navigate to home after successful signup
+          navigate('/Home');
+        } catch (error) {
+          console.error('Error during signup:', error.message);
+          alert(`Signup failed:${error.message}`);
+        }
+    
   };
 
   const handlePreviousStep = (e) => {

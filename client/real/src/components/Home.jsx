@@ -31,12 +31,19 @@ import { BiFirstPage } from 'react-icons/bi';
 import Crisp from './Crisp';
 import share from "../asserts/share.png"
 import Favorites from './Favorites';
+import broad from "../asserts/broad.jpg"
 import axios from 'axios'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart, faShoppingCart, faCopy } from '@fortawesome/free-solid-svg-icons';
 import { faWhatsapp, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import AppContext from "../components/AppContext";
-
+import Navbar from './Navbar';
+import park from "../asserts/park.jpg"
+import altezza from "../asserts/altezza.jpg"
+import clubs from "../asserts/club.jpg"
+import cloverr from "../asserts/cloverr.jpg"
+import haridaa from "../asserts/haridaa.jpg"
+import arcuss from "../asserts/arcuss.jpg"
 
 
 
@@ -86,53 +93,20 @@ const Home = () => {
     <>
    
       <div>
+        <Navbar/>
       <div className="container">
-        <h1>WELCOME TO DREAMHOUSE REALITY</h1>
-      <div className='des'>
-        <h4>Welcome to DreamHouse, your ultimate destination for finding the perfect home! Our user-friendly website offers a seamless experience for buyers, sellers, and renters. With an extensive listing of stunning properties, detailed virtual tours, and expert advice, DreamHouse makes your real estate journey enjoyable and stress-free. Explore your dream home today!</h4>
-      </div>
-        <div className='searchbar'>
-        <input
-          type="text"
-          placeholder="Search Your property"
-          className="search-input"
-        />
-       
-      </div>
-        <div className='book'>
-          <h3>Book appointmets for further details <Link to="/Book">Click here</Link></h3>
-        </div>
-      <div className='click'>CLICK ON PLACES TO GET THE AMAZING PROPERTY</div>
-        <ul class="location-list">
-  <li><a href="Adayar">Adayar</a></li>
-  <li><a href="Alwarpet">Alwarpet</a></li>
-  <li><a href="ambattur">Ambattur</a></li>
-  <li><a href="anna-nagar">Anna Nagar</a></li>
-  <li><a href="besant-nagar">Besant Nagar</a></li>
-  <li><a href="guindy">Guindy</a></li>
-  <li><a href="kodambakkam">Kodambakkam</a></li>
-  <li><a href="injambakkam">Injambakkam</a></li>
-  <li><a href="koyambedu">Koyambedu</a></li>
-  <li><a href="madipakkam">Madipakkam</a></li>
-  <li><a href="maduravoyal">Maduravoyal</a></li>
-  <li><a href="medavakkam">Medavakkam</a></li>
-</ul>
+<div className='head'>
+<h1>WELCOME TO DREAM HOUSE REALITY</h1>
+</div>
         
         
 
-        <div className='post'>
+        {/* <div className='post'>
           <h1>Post your property</h1>
           <Link to="/Post">
             <img src={plus} alt='post' />
           </Link>
-        </div>
-        <div className="search-heading">
-          Most Searched Areas : <span>Omr</span> | <span>Tambaram</span> | <span>Mogappair</span> | <span>Pallikaranai</span>
-          <br />
-          Closer to IT corridors in Sholinganallur : <span>FirstCity</span> | <span>Cloud9</span> | <span>Flagship</span>
-          <br />
-          Ready to move in : <span>Crescendo</span> | <span>Supremus</span> | <span>Smart Town</span> | <span>Esquire</span>
-        </div>
+        </div> */}
         <h1>BEST SELLERS </h1>
         <div className='gridContainer'>
           
@@ -141,20 +115,11 @@ const Home = () => {
                 <div className="image-box">
                   <div className="image-wrapper">
                     <img src={linore} alt="Home 1" className="home-image" />
-                    <div className='share' onClick={handleShareClick}>
-          <img src={share} alt="share" className='share' />
-        </div>
+                   
                   </div>
                 </div>
               </div>
-              {/* {showShareOptions && (
-                <div className="share-options">
-                  <ul>
-                    <li><a href='https://www.facebook.com/sharer/sharer.php?u=your-url' target='_blank' rel='noopener noreferrer'>FACEBOOK</a></li>
-              
-                  </ul>
-                </div>
-              )} */}
+             
               <div className="form-container">
                 <div className="form-group">
                   <label htmlFor="selectedImage">Casagrand Linore</label>
@@ -169,12 +134,7 @@ const Home = () => {
                   { /* Potential Conflict: Additional form groups */}
                 </div>
                 <div className="button-group">
-                  <button className="fav-btn" onClick={() => { handleAddToFavorites() }}>
-                    <i className="fas fa-heart"></i>
-                  </button>
-                  <button className="cart-btn" onClick={handleAddToCart}>
-                    <i className="fas fa-shopping-cart"></i>
-                  </button>
+                 
                   <Link to="/Linore">
                     <button type="button">View More</button>
                   </Link>
@@ -209,9 +169,9 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className='share' onClick={handleShareClick}>
+        {/* <div className='share' onClick={handleShareClick}>
           <img src={share} alt="share" className='share' />
-        </div>
+        </div> */}
         <div className="form-container">
           <div className="form-group">
             <label htmlFor="selectedImage">Casagrand Flagship</label>
@@ -221,13 +181,15 @@ const Home = () => {
             {/* Additional form groups */}
           </div>
           <div className="button-group">
-            <button className="fav-btn" onClick={handleAddToFavorites}>
+            {/* <button className="fav-btn" onClick={handleAddToFavorites}>
               <FontAwesomeIcon icon={faHeart} />
             </button>
             <button className="cart-btn" onClick={handleAddToCart}>
               <FontAwesomeIcon icon={faShoppingCart} />
-            </button>
+            </button> */}
+          <Link to="/Flagship">
             <button type="button" onClick={handleViewMore}>View More</button>
+          </Link>
           </div>
         </div>
         {isModalOpen && (
@@ -258,9 +220,9 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className='share' onClick={handleShareClick}>
+          {/* <div className='share' onClick={handleShareClick}>
           <img src={share} alt="share" className='share' />
-        </div>
+        </div> */}
           <div className="form-container">
             <div className="form-group">
               <label htmlFor="selectedImage">Casagrand Medora</label>
@@ -271,12 +233,12 @@ const Home = () => {
             </div>
 
             <div className="button-group">
-              <button className="fav-btn" onClick={handleAddToFavorites}>
+              {/* <button className="fav-btn" onClick={handleAddToFavorites}>
                 <i className="fas fa-heart"></i>
               </button>
               <button className="cart-btn" onClick={handleAddToCart}>
                 <i className="fas fa-shopping-cart"></i>
-              </button>
+              </button> */}
               <Link to="/Medora">
                 <button type="button">View More</button>
               </Link>
@@ -291,25 +253,25 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className='share' onClick={handleShareClick}>
+          {/* <div className='share' onClick={handleShareClick}>
           <img src={share} alt="share" className='share' />
-        </div>
+        </div> */}
           <div className="form-container">
             <div className="form-group">
               <label htmlFor="selectedImage">Casagrand Royale</label>
-              <p className="details">Best seller villa in Shollinganallur<br />2,3 and 4 BHK Apts<br />Starting from 67 Lakhs*<br /> Nearing Completion, Ready to Occupy</p>
+              <p className="details">Best seller in Shollinganallur<br />2,3 and 4 BHK Apts<br />Starting from 67 Lakhs*<br /> Ready to Occupy</p>
             </div>
             <div className="form-group">
               {/* Additional form groups */}
             </div>
 
             <div className="button-group">
-              <button className="fav-btn" onClick={handleAddToFavorites}>
+              {/* <button className="fav-btn" onClick={handleAddToFavorites}>
                 <i className="fas fa-heart"></i>
               </button>
               <button className="cart-btn" onClick={handleAddToCart}>
                 <i className="fas fa-shopping-cart"></i>
-              </button>
+              </button> */}
               <Link to="/Royale">
                 <button type="button">View More</button>
               </Link>
@@ -324,26 +286,26 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className='share' onClick={handleShareClick}>
+          {/* <div className='share' onClick={handleShareClick}>
           <img src={share} alt="share" className='share' />
-        </div>
+        </div> */}
 
           <div className="form-container">
             <div className="form-group">
               <label htmlFor="selectedImage">Casagrand Holachennai </label>
-              <p className="details">Sholinganallur, Chennai<br />2, 3 & 4 BHK Apartments, 5 BHK Floor Villas & 4 BHK Villas<br />55 Lakhs Onwards**<br /> New Launch</p>
+              <p className="details">Sholinganallur, Chennai<br />2,3,4&5 BHK Apartments<br />55 Lakhs Onwards**<br /> New Launch</p>
             </div>
             <div className="form-group">
               {/* Additional form groups */}
             </div>
 
             <div className="button-group">
-              <button className="fav-btn" onClick={handleAddToFavorites}>
+              {/* <button className="fav-btn" onClick={handleAddToFavorites}>
                 <i className="fas fa-heart"></i>
               </button>
               <button className="cart-btn" onClick={handleAddToCart}>
                 <i className="fas fa-shopping-cart"></i>
-              </button>
+              </button> */}
               <Link to="/Holachennai">
                 <button type="button">View More</button>
               </Link>
@@ -358,26 +320,26 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className='share' onClick={handleShareClick}>
+          {/* <div className='share' onClick={handleShareClick}>
           <img src={share} alt="share" className='share' />
-        </div>
+        </div> */}
           <div className="form-container">
             <div className="form-group">
               <label htmlFor="selectedImage">Casagrand Palm Springs</label>
-              <p className="details">East Tambaram, Chennai <br />2 , 3BHK Apts<br />Starting from 51lakhs*<br />Under construction</p>
+              <p className="details">East Tambaram,Chennai <br />2,3BHK Apts<br />Starting from 51lakhs*<br />Under construction</p>
             </div>
             <div className="form-group">
               {/* Additional form groups */}
             </div>
 
             <div className="button-group">
-              <button className="fav-btn" onClick={handleAddToFavorites}>
+              {/* <button className="fav-btn" onClick={handleAddToFavorites}>
                 <i className="fas fa-heart"></i>
               </button>
               <button className="cart-btn" onClick={handleAddToCart}>
                 <i className="fas fa-shopping-cart"></i>
-              </button>
-              <Link to="/Linore">
+              </button> */}
+              <Link to="/Palm">
                 <button type="button">View More</button>
               </Link>
             </div>
@@ -391,32 +353,258 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className='share' onClick={handleShareClick}>
+          {/* <div className='share' onClick={handleShareClick}>
           <img src={share} alt="share" className='share' />
-        </div>
+        </div> */}
           <div className="form-container">
             <div className="form-group">
               <label htmlFor="selectedImage">Casagrand Suncity</label>
-              <p className="details">Kelambakkam - Vandalur Main Road, Chennai <br />2, 3 & 4 BHK Apts<br />Starting from 48lakhs*<br />New launch and under construction</p>
+              <p className="details">Vandalur-Chennai <br />2,3&4 BHK Apts<br />Starting from 48lakhs*<br />New launch and under construction</p>
             </div>
             <div className="form-group">
               {/* Additional form groups */}
             </div>
 
             <div className="button-group">
-              <button className="fav-btn" onClick={handleAddToFavorites}>
+              {/* <button className="fav-btn" onClick={handleAddToFavorites}>
                 <i className="fas fa-heart"></i>
               </button>
               <button className="cart-btn" onClick={handleAddToCart}>
                 <i className="fas fa-shopping-cart"></i>
-              </button>
-              <Link to="/Linore">
+              </button> */}
+              <Link to="/Suncity">
                 <button type="button">View More</button>
               </Link>
             </div>
           </div>
         </form>
+       
+        </div>
+    
+        <h1>APPASWAMY REALESTATE</h1>
+
+        <div className='gridContainer'>
+          
         <form>
+          <div className='images-container'>
+            <div className='image-box'>
+              <div className='image-wrapper'>
+                <img src={park} alt="home 1" className='home-image' />
+              </div>
+            </div>
+          </div>
+        <div className='form-container'>
+          <div className='form-group'>
+            <label htmlFor="selectedImage"> Parkhouse Mews</label>
+            <p className='details'>guindy,Chennai <br />
+            3 & 4 BHK Apts<br/>
+            3.01 Cr. Onwards*<br/>
+            New launch and under construction</p>
+          <div className='button-group'>
+          <Link to="/Parkhouse">
+            <button type='button'> View More</button>
+          </Link>
+          </div>
+          </div>
+        </div>
+    
+        </form>
+      <form>
+      <div className='images-container'>
+            <div className='image-box'>
+              <div className='image-wrapper'>
+                <img src={broad} alt="home 1" className='home-image' />
+              </div>
+            </div>
+          </div>
+        <div className='form-container'>
+          <div className='form-group'>
+            <label htmlFor="selectedImage"> The Broadstone</label>
+            <p className='details'>Ramapuram,Chennai <br />
+            3 & 4 BHK Apts<br/>
+            1.92 Cr. Onwards*<br/>
+            New launch and under construction</p>
+          <div className='button-group'>
+          <Link to="/Broad">
+            <button type='button'> View More</button>
+            </Link>
+          </div>
+          </div>
+        </div>
+      </form>
+      
+      
+      <form>
+      <div className='images-container'>
+            <div className='image-box'>
+              <div className='image-wrapper'>
+                <img src={park} alt="home 1" className='home-image' />
+              </div>
+            </div>
+          </div>
+        <div className='form-container'>
+          <div className='form-group'>
+            <label htmlFor="selectedImage"> Wingfield</label>
+            <p className='details'>OMR,Chennai <br />
+            3 & 4 BHK Apts<br/>
+            1.96 Cr. Onwards*<br/>
+            New launch and under construction</p>
+          <div className='button-group'>
+          <Link to="/Wing">
+            <button type='button'> View More</button>
+            </Link>
+          </div>
+          </div>
+        </div>
+      </form>
+      
+      <form>
+      <div className='images-container'>
+            <div className='image-box'>
+              <div className='image-wrapper'>
+                <img src={altezza} alt="home 1" className='home-image' />
+              </div>
+            </div>
+          </div>
+        <div className='form-container'>
+          <div className='form-group'>
+            <label htmlFor="selectedImage"> Altezza</label>
+            <p className='details'>Kotivakkam,Chennai <br />
+            2,2.4,3 & 4 BHK Apts<br/>
+            1.42 Cr. Onwards*<br/>
+          Handing over soon</p>
+          <div className='button-group'>
+        <Link to="/Alteza">
+            <button type='button'> View More</button>
+            </Link>
+          </div>
+          </div>
+        </div>
+      </form>
+      <form>
+      <div className='images-container'>
+            <div className='image-box'>
+              <div className='image-wrapper'>
+                <img src={clubs} alt="home 1" className='home-image' />
+              </div>
+            </div>
+          </div>
+        <div className='form-container'>
+          <div className='form-group'>
+            <label htmlFor="selectedImage"> Club 1</label>
+            <p className='details'>Boat club,Chennai <br />
+            3BHK Apts<br/>
+            12.4Cr. Onwards*<br/>
+            Handing over soon</p>
+          <div className='button-group'>
+          <Link to="/Club">
+            <button type='button'> View More</button>
+            </Link>
+          </div>
+          </div>
+        </div>
+      </form>
+      <form>
+      <div className='images-container'>
+            <div className='image-box'>
+              <div className='image-wrapper'>
+                <img src={cloverr} alt="home 1" className='home-image' />
+              </div>
+            </div>
+          </div>
+        <div className='form-container'>
+          <div className='form-group'>
+            <label htmlFor="selectedImage"> Clover by the river</label>
+            <p className='details'>Kotturpuram,Chennai <br />
+            2,3 & 4 BHK Apts<br/>
+            2.28 Cr. Onwards*<br/>
+            Ready to move</p>
+          <div className='button-group'>
+        <Link to="/Clover">
+            <button type='button'> View More</button>
+        </Link>
+          </div>
+          </div>
+        </div>
+      </form>
+      <form>
+      <div className='images-container'>
+            <div className='image-box'>
+              <div className='image-wrapper'>
+                <img src={haridaa} alt="home 1" className='home-image' />
+              </div>
+            </div>
+          </div>
+        <div className='form-container'>
+          <div className='form-group'>
+            <label htmlFor="selectedImage"> Harida</label>
+            <p className='details'>Mylapore,Chennai <br />
+            2 & 3 BHK Apts<br/>
+            2.44 Cr. Onwards*<br/>
+          Handing over soon</p>
+          <div className='button-group'>
+        <Link to="/Harida">
+            <button type='button'> View More</button>
+        </Link>
+          </div>
+          </div>
+        </div>
+      </form>
+      <form>
+      <div className='images-container'>
+            <div className='image-box'>
+              <div className='image-wrapper'>
+                <img src={arcuss} alt="home 1" className='home-image' />
+              </div>
+            </div>
+          </div>
+        <div className='form-container'>
+          <div className='form-group'>
+            <label htmlFor="selectedImage"> Arcus</label>
+            <p className='details'>T.nagar,Chennai <br />
+            3 & 4 BHK Apts<br/>
+            3.76 Cr. Onwards*<br/>
+          Handing over soon</p>
+          <div className='button-group'>
+        <Link to="/Arcus">
+            <button type='button'> View More</button>
+        </Link>
+          </div>
+          </div>
+        </div>
+      </form>
+      <form>
+      <div className='images-container'>
+            <div className='image-box'>
+              <div className='image-wrapper'>
+                <img src={park} alt="home 1" className='home-image' />
+              </div>
+            </div>
+          </div>
+        <div className='form-container'>
+          <div className='form-group'>
+            <label htmlFor="selectedImage"> Navasuja</label>
+            <p className='details'>RA puram ,Chennai <br />
+            3 & 4 BHK Apts<br/>
+            4.04 Cr. Onwards*<br/>
+          Handing over soon</p>
+          <div className='button-group'>
+      <Link to="/Navasuja">
+            <button type='button'> View More</button>
+      </Link>
+          </div>
+          </div>
+        </div>
+      </form>
+
+
+        </div>
+
+      </div>
+     
+      {/* <h1>Chennai Properties</h1>
+        <div className='gridContainer'>
+          <form>
           <div className="images-container">
             <div className="image-box">
               <div className="image-wrapper">
@@ -424,466 +612,53 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className='share' onClick={handleShareClick}>
-          <img src={share} alt="share" className='share' />
-        </div>
+          
           <div className="form-container">
             <div className="form-group">
               <label htmlFor="selectedImage">Casagrand Mercury</label>
               <p className="details">Kilpauk,Chennai <br />2, 3 BHK and 4 BHK Floor Villas with Maid Room<br />Apts 91 Lakhs and Floor Villa 3.16 Cr Onwards*<br />New launch and under construction</p>
             </div>
             <div className="form-group">
-              {/* Additional form groups */}
             </div>
 
             <div className="button-group">
-              <button className="fav-btn" onClick={handleAddToFavorites}>
-                <i className="fas fa-heart"></i>
-              </button>
-              <button className="cart-btn" onClick={handleAddToCart}>
-                <i className="fas fa-shopping-cart"></i>
-              </button>
+            
               <Link to="/Linore">
                 <button type="button">View More</button>
               </Link>
             </div>
           </div>
-        </form>
-        <form>
+
+          </form>
+
+          <form>
           <div className="images-container">
             <div className="image-box">
               <div className="image-wrapper">
-                <img src={laurel} alt="family" className="home-image" />
+                <img src={mercury} alt="family" className="home-image" />
               </div>
             </div>
           </div>
-          <div className='share' onClick={handleShareClick}>
-          <img src={share} alt="share" className='share' />
-        </div>
+        
           <div className="form-container">
             <div className="form-group">
-              <label htmlFor="selectedImage">Casagrand Laurels</label>
-              <p className="details">Navalur,Chennai <br />5 BHK Floor Villa<br />1.70 Cr onwards*<br />under construction</p>
+              <label htmlFor="selectedImage">Casagrand Mercury</label>
+              <p className="details">Kilpauk,Chennai <br />2, 3 BHK and 4 BHK Floor Villas with Maid Room<br />Apts 91 Lakhs and Floor Villa 3.16 Cr Onwards*<br />New launch and under construction</p>
             </div>
             <div className="form-group">
-              {/* Additional form groups */}
             </div>
 
             <div className="button-group">
-              <button className="fav-btn" onClick={handleAddToFavorites}>
-                <i className="fas fa-heart"></i>
-              </button>
-              <button className="cart-btn" onClick={handleAddToCart}>
-                <i className="fas fa-shopping-cart"></i>
-              </button>
+             
               <Link to="/Linore">
                 <button type="button">View More</button>
               </Link>
             </div>
           </div>
-        </form>
-        <form>
-          <div className="images-container">
-            <div className="image-box">
-              <div className="image-wrapper">
-                <img src={cloud} alt="family" className="home-image" />
-              </div>
-            </div>
-          </div>
-          <div className='share' onClick={handleShareClick}>
-          <img src={share} alt="share" className='share' />
+          </form> */}
+    {/* </div > */}
         </div>
-          <div className="form-container">
-            <div className="form-group">
-              <label htmlFor="selectedImage">Casagrand Cloud9</label>
-              <p className="details">Sholinganallur, OMR<br />2, 3 & 4 BHK Apts | 4 BHK Floor Villa|2, 3 & 4 BHK Apts - 90 Lakhs <br /> 4 BHK Floor Villa - Rs. 2.34 Cr Onwards**<br />under construction</p>
-            </div>
-            <div className="form-group">
-              {/* Additional form groups */}
-            </div>
-
-            <div className="button-group">
-              <button className="fav-btn" onClick={handleAddToFavorites}>
-                <i className="fas fa-heart"></i>
-              </button>
-              <button className="cart-btn" onClick={handleAddToCart}>
-                <i className="fas fa-shopping-cart"></i>
-              </button>
-              <Link to="/Linore">
-                <button type="button">View More</button>
-              </Link>
-            </div>
-          </div>
-        </form>
-        <form>
-          <div className="images-container">
-            <div className="image-box">
-              <div className="image-wrapper">
-                <img src={cloud} alt="family" className="home-image" />
-              </div>
-            </div>
-          </div>
-          <div className='share' onClick={handleShareClick}>
-          <img src={share} alt="share" className='share' />
-        </div>
-          <div className="form-container">
-            <div className="form-group">
-              <label htmlFor="selectedImage">Casagrand Dior</label>
-              <p className="details">Kilpauk, Chennai<br />3 & 4 BHK Apts  <br />Rs. 2.53 Cr Onwards*<br />under construction</p>
-            </div>
-            <div className="form-group">
-              {/* Additional form groups */}
-            </div>
-
-            <div className="button-group">
-              <button className="fav-btn" onClick={handleAddToFavorites}>
-                <i className="fas fa-heart"></i>
-              </button>
-              <button className="cart-btn" onClick={handleAddToCart}>
-                <i className="fas fa-shopping-cart"></i>
-              </button>
-              <Link to="/Linore">
-                <button type="button">View More</button>
-              </Link>
-            </div>
-          </div>
-        </form>
-        <form>
-          <div className="images-container">
-            <div className="image-box">
-              <div className="image-wrapper">
-                <img src={cloud} alt="family" className="home-image" />
-              </div>
-            </div>
-          </div>
-          <div className='share' onClick={handleShareClick}>
-          <img src={share} alt="share" className='share' />
-        </div>
-          <div className="form-container">
-            <div className="form-group">
-              <label htmlFor="selectedImage">Casagrand Majestica</label>
-              <p className="details">Manapakkam<br />3 & 4 BHK Apts  <br />Rs. 1 Cr Onwards*<br />under construction</p>
-            </div>
-            <div className="form-group">
-              {/* Additional form groups */}
-            </div>
-
-            <div className="button-group">
-              <button className="fav-btn" onClick={handleAddToFavorites}>
-                <i className="fas fa-heart"></i>
-              </button>
-              <button className="cart-btn" onClick={handleAddToCart}>
-                <i className="fas fa-shopping-cart"></i>
-              </button>
-              <Link to="/Linore">
-                <button type="button">View More</button>
-              </Link>
-            </div>
-          </div>
-        </form>
-
-        <form>
-          <div className="images-container">
-            <div className="image-box">
-              <div className="image-wrapper">
-                <img src={elinore} alt="family" className="home-image" />
-              </div>
-            </div>
-          </div>
-          <div className='share' onClick={handleShareClick}>
-          <img src={share} alt="share" className='share' />
-        </div>
-          <div className="form-container">
-            <div className="form-group">
-              <label htmlFor="selectedImage">Casagrand Elinor</label>
-              <p className="details">Navalur<br />2 & 3 BHK Apts  <br />Rs. 45 Lakhs Onwards*<br />under construction</p>
-            </div>
-            <div className="form-group">
-              {/* Additional form groups */}
-            </div>
-
-            <div className="button-group">
-              <button className="fav-btn" onClick={handleAddToFavorites}>
-                <i className="fas fa-heart"></i>
-              </button>
-              <button className="cart-btn" onClick={handleAddToCart}>
-                <i className="fas fa-shopping-cart"></i>
-              </button>
-              <Link to="/Linore">
-                <button type="button">View More</button>
-              </Link>
-            </div>
-          </div>
-        </form>
-
-        <form>
-          <div className="images-container">
-            <div className="image-box">
-              <div className="image-wrapper">
-                <img src={Millenia} alt="family" className="home-image" />
-              </div>
-            </div>
-          </div>
-                  <div className='share' onClick={handleShareClick}>
-          <img src={share} alt="share" className='share' />
-        </div>
-          <div className="form-container">
-            <div className="form-group">
-              <label htmlFor="selectedImage">Casagrand Millenia</label>
-              <p className="details">Mogappair<br />3 BHK Apts  <br />SOLD OUT<br />Ready to occupy</p>
-            </div>
-            <div className="form-group">
-              {/* Additional form groups */}
-            </div>
-
-            <div className="button-group">
-              <button className="fav-btn" onClick={handleAddToFavorites}>
-                <i className="fas fa-heart"></i>
-              </button>
-              <button className="cart-btn" onClick={handleAddToCart}>
-                <i className="fas fa-shopping-cart"></i>
-              </button>
-              <Link to="/Linore">
-                <button type="button">View More</button>
-              </Link>
-            </div>
-          </div>
-        </form>
-
-        <form>
-          <div className="images-container">
-            <div className="image-box">
-              <div className="image-wrapper">
-                <img src={uto} alt="family" className="home-image" />
-              </div>
-            </div>
-          </div>
-          <div className='share' onClick={handleShareClick}>
-          <img src={share} alt="share" className='share' />
-        </div>
-          <div className="form-container">
-            <div className="form-group">
-              <label htmlFor="selectedImage">Casagrand Utopia</label>
-              <p className="details">Manapakkam<br />2,3 & 4 BHK Apartments <br />Rs.75 Lakhs onwards<br />Nearing Completion, Ready to Occupy</p>
-            </div>
-            <div className="form-group">
-              {/* Additional form groups */}
-            </div>
-
-            <div className="button-group">
-              <button className="fav-btn" onClick={handleAddToFavorites}>
-                <i className="fas fa-heart"></i>
-              </button>
-              <button className="cart-btn" onClick={handleAddToCart}>
-                <i className="fas fa-shopping-cart"></i>
-              </button>
-              <Link to="/Linore">
-                <button type="button">View More</button>
-              </Link>
-            </div>
-          </div>
-        </form>
-
-        <form>
-          <div className="images-container">
-            <div className="image-box">
-              <div className="image-wrapper">
-                <img src={uto} alt="family" className="home-image" />
-              </div>
-            </div>
-          </div>
-          <div className='share' onClick={handleShareClick}>
-          <img src={share} alt="share" className='share' />
-        </div>
-          <div className="form-container">
-            <div className="form-group">
-              <label htmlFor="selectedImage">Casagrand Tudor</label>
-              <p className="details">Mogappair<br />2 BHK Apartments <br />Rs.80 Lakhs onwards*<br />Nearing Completion, Ready to Occupy</p>
-            </div>
-            <div className="form-group">
-              {/* Additional form groups */}
-            </div>
-
-            <div className="button-group">
-              <button className="fav-btn" onClick={handleAddToFavorites}>
-                <i className="fas fa-heart"></i>
-              </button>
-              <button className="cart-btn" onClick={handleAddToCart}>
-                <i className="fas fa-shopping-cart"></i>
-              </button>
-              <Link to="/Linore">
-                <button type="button">View More</button>
-              </Link>
-            </div>
-          </div>
-        </form>
-        <form>
-          <div className="images-container">
-            <div className="image-box">
-              <div className="image-wrapper">
-                <img src={zenith} alt="family" className="home-image" />
-              </div>
-            </div>
-          </div>
-          <div className='share' onClick={handleShareClick}>
-          <img src={share} alt="share" className='share' />
-        </div>
-          <div className="form-container">
-            <div className="form-group">
-              <label htmlFor="selectedImage">Casagrand Zenith</label>
-              <p className="details">Medavakkam<br />2 & 3 BHK Apartments <br />Rs.86 Lakhs onwards<br />Nearing Completion, Ready to Occupy, Under Construction</p>
-            </div>
-            <div className="form-group">
-              {/* Additional form groups */}
-            </div>
-
-
-            <div className="button-group">
-              <button className="fav-btn" onClick={handleAddToFavorites}>
-                <i className="fas fa-heart"></i>
-              </button>
-              <button className="cart-btn" onClick={handleAddToCart}>
-                <i className="fas fa-shopping-cart"></i>
-              </button>
-              <Link to="/Linore">
-                <button type="button">View More</button>
-              </Link>
-
-            </div>
-          </div>
-        </form>
-        <form>
-          <div className="images-container">
-            <div className="image-box">
-              <div className="image-wrapper">
-                <img src={athens} alt="family" className="home-image" />
-              </div>
-            </div>
-          </div>
-          <div className='share' onClick={handleShareClick}>
-          <img src={share} alt="share" className='share' />
-        </div>
-          <div className="form-container">
-            <div className="form-group">
-              <label htmlFor="selectedImage">Casagrand Athens</label>
-              <p className="details">Mogappair<br />2 BHK Apartments <br />Rs.68 Lakhs onwards<br />Nearing Completion,Under Construction</p>
-            </div>
-            <div className="form-group">
-              {/* Additional form groups */}
-            </div>
-
-            <div className="button-group">
-              <button className="fav-btn" onClick={handleAddToFavorites}>
-                <i className="fas fa-heart"></i>
-              </button>
-              <button className="cart-btn" onClick={handleAddToCart}>
-                <i className="fas fa-shopping-cart"></i>
-              </button>
-              <Link to="/Linore">
-                <button type="button">View More</button>
-              </Link>
-
-            </div>
-          </div>
-        </form>
-        <form>
-          <div className="images-container">
-            <div className="image-box">
-              <div className="image-wrapper">
-                <img src={first} alt="family" className="home-image" />
-              </div>
-            </div>
-          </div>
-          <div className='share' onClick={handleShareClick}>
-          <img src={share} alt="share" className='share' />
-        </div>
-          <div className="form-container">
-            <div className="form-group">
-              <label htmlFor="selectedImage">Casagrand FirstCity</label>
-              <p className="details">Sholinganallur<br />2 BHK Premium Apartments<br />Rs.55 Lakhs onwards<br />Nearing Completion,Under Construction</p>
-            </div>
-
-            <div className="form-group">
-
-              {/* Additional form groups */}
-            </div>
-
-
-          </div>
-        </form>
-        <form>
-          <div className="images-container">
-            <div className="image-box">
-              <div className="image-wrapper">
-                <img src={aria} alt="family" className="home-image" />
-              </div>
-            </div>
-          </div>
-          <div className='share' onClick={handleShareClick}>
-          <img src={share} alt="share" className='share' />
-        </div>
-          <div className="form-container">
-            <div className="form-group">
-              <label htmlFor="selectedImage">Casagrand Aria</label>
-              <p className="details">Tambaram<br />2 BHK Apartments<br />Rs.43 Lakhs onwards<br />Under Construction</p>
-            </div>
-            <div className="form-group">
-              {/* Additional form groups */}
-            </div>
-
-          </div>
-        </form>
-        <form>
-          <div className="images-container">
-            <div className="image-box">
-              <div className="image-wrapper">
-                <img src={south} alt="family" className="home-image" />
-              </div>
-            </div>
-          </div>
-          <div className='share'>
-            <img src={share} alt="share" className='share' />
-          </div>
-          <div className="form-container">
-            <div className="form-group">
-              <label htmlFor="selectedImage">Casagrand Southbrooke</label>
-              <p className="details">Kelambakkam<br />2 BHK Apartments<br />Rs.31 Lakhs onwards<br />Nearing completion</p>
-            </div>
-            <div className="form-group">
-              {/* Additional form groups */}
-            </div>
-
-          </div>
-        </form>
-        <form>
-          <div className="images-container">
-            <div className="image-box">
-              <div className="image-wrapper">
-                <img src={aspires} alt="family" className="home-image" />
-              </div>
-            </div>
-          </div>
-          <div className='share' onClick={handleShareClick}>
-          <img src={share} alt="share" className='share' />
-        </div>
-          <div className="form-container">
-            <div className="form-group">
-              <label htmlFor="selectedImage">Casagrand Aspires</label>
-              <p className="details">Navalur<br />2 & 3 BHK Apartments<br />Rs.39 Lakhs onwards<br />Under construction</p>
-            </div>
-            <div className="form-group">
-              {/* Additional form groups */}
-            </div>
-
-          </div>
-        </form>
-        </div>
-
-
-       
-      </div>
       <Crisp />
-    </div >
     
 
       <Footer />

@@ -1,14 +1,17 @@
 import React from 'react';
-import './LogoutConfirmationModal.css';
+import { useNavigate } from 'react-router-dom';
 
-const LogoutConfirmationModal = ({ handleLogout, navigateToHome }) => {
+const LogoutConfirmationModal = ({ handleLogout, closeModal }) => {
+  const navigate = useNavigate();
+
   const handleLogoutClick = () => {
     handleLogout();
-    navigateToHome(); // Call the callback function to navigate to Home
+    closeModal();
+    navigate('/Home'); // Navigate to Home
   };
 
   const handleCloseClick = () => {
-    // Close the modal
+    closeModal(); // Close the modal
   };
 
   return (
@@ -16,7 +19,6 @@ const LogoutConfirmationModal = ({ handleLogout, navigateToHome }) => {
       <div className="modal-content">
         <p>Are you sure you want to logout?</p>
         <div className="modal-buttons">
-          {/* Call handleLogoutClick directly */}
           <button onClick={handleLogoutClick}>Logout</button>
           <button onClick={handleCloseClick}>Cancel</button>
         </div>

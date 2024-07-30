@@ -4,6 +4,23 @@ import { Link } from "react-router-dom";
 
 
 function Holachennai() {
+  const [name, setName] = useState();
+  const [number,setNumber]=useState()
+const handlesubmit=(e)=>{
+  e.preventDefault();
+  axios
+      .post('http://localhost:3000/api/enquire', {
+        name: name,
+        number: number
+      })
+      .then((response) => {
+        console.log(response);
+        alert("Submitted successfully")
+      })
+      .catch((error) => {
+        console.error('Error submitting feedback:', error);
+      });
+}
     const galleryRef = useRef(null)
       return (
         <div>
@@ -28,17 +45,17 @@ function Holachennai() {
             {/* Enquire Now Section */}
             <div className="enquire-now">
               <h2>Enquire Now</h2>
-              <form>
-                <div className="input-group">
-                  <label htmlFor="name">Name:</label><br />
-                  <input type="text" id="name" name="name" />
-                </div>
-                <div className="input-group">
-                  <label htmlFor="phone">Phone Number:</label><br />
-                  <input type="text" id="phone" name="phone" />
-                </div>
-                <button type="submit">Submit</button>
-              </form>
+              <form onSubmit={handlesubmit}>
+            <div className="input-group">
+              <label htmlFor="name">Name:</label><br />
+              <input type="text" onChange={(e)=>{setName(e.target.value)}} id="name" name="name" />
+            </div>
+            <div className="input-group">
+              <label htmlFor="phone">Phone Number:</label><br />
+              <input type="text" onChange={(e)=>{setNumber(e.target.value)}} id="phone" name="phone" />
+            </div>
+            <button type="submit">Submit</button>
+          </form>
             </div>
           </div>
         <div className='new'>
@@ -237,6 +254,17 @@ function Holachennai() {
               </div>
             </div>
           </div>
+        <h1>KNOW YOUR COMMUNITY</h1>
+        <iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.481278418105!2d80.2173273157601!3d12.89058909096467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266489b0bd78f%3A0x3d622f0413b6f6f3!2s12.890589%2C%2080.218527!5e0!3m2!1sen!2sus!4v1689270528597!5m2!1sen!2sus"
+  width="100%"
+  height="450"
+  style={{ border: '0' }}
+  allowFullScreen=""
+  loading="lazy"
+  title="Google Map"
+></iframe>
+
     
     
     

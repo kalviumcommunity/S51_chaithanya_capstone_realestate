@@ -1,63 +1,64 @@
 /* Resource.css */
 
 .resource-container {
-  max-width: 800px;
+  max-width: 400px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 60px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-  font-size: 2.5rem;
-  color: #333;
-  text-align: center;
+.resource-container h1 {
+  font-size: 24px;
   margin-bottom: 20px;
-  animation: fadeInUp 1s ease-in-out; /* Add animation */
-}
-
-p {
-  font-size: 1.2rem;
-  color: #555;
-  line-height: 1.6;
   text-align: center;
-  margin-bottom: 40px;
-  animation: fadeInUp 1s ease-in-out; /* Add animation */
+  color: #333;
 }
 
-h2 {
-  font-size: 2rem;
-  color: #333;
+.resource-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.resource-container label {
   margin-bottom: 10px;
-  animation: fadeInLeft 1s ease-in-out; /* Add animation */
-  text-align: center; /* Center align */
+  font-size: 16px;
+  color: #555;
 }
 
-p {
-  font-size: 1.1rem;
-  color: #666;
-  line-height: 1.6;
-  margin-bottom: 20px;
-  animation: fadeInLeft 1s ease-in-out; /* Add animation */
+.resource-container input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
-/* Animation keyframes */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.resource-container button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-@keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+.resource-container button:hover {
+  background-color: #0056b3;
+}
+
+.resource-container p {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
 }

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import "./Post.css"
 
 function Post() {
   const [propertyDetails, setPropertyDetails] = useState({
@@ -41,10 +42,8 @@ function Post() {
     // Reset form after submission
     setPropertyDetails({
       type: '',
-      size: '',
       location: '',
-      bedrooms: '',
-      bathrooms: '',
+      BHK:'',
       price: '',
       availability: '',
       contactName: '',
@@ -92,7 +91,7 @@ function Post() {
           <input type="text" name="contactName" value={propertyDetails.contactName} onChange={handleChange} />
         </label>
         <label>
-          Email:
+          Email:  
           <input type="email" name="email" value={propertyDetails.email} onChange={handleChange} />
         </label>
         <label>

@@ -36,7 +36,6 @@ function Adayar() {
   return (
     <>
     <div>
-      <h1>BEST SELLERS IN ADAYAR</h1>
       <div className="horizontal-containers">
         <div className="gridContainer">
           <form>
