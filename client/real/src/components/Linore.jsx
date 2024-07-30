@@ -9,9 +9,27 @@ import l4 from "../asserts/l4.webp";
 import l5 from "../asserts/l5.webp";
 import l6 from "../asserts/l6.webp";
 import "./Linore.css";
+import axios from 'axios';
 
 function Linore() {
-const galleryRef = useRef(null)
+  const [name, setName] = useState();
+  const [number,setNumber]=useState()
+  const galleryRef = useRef()
+const handlesubmit=(e)=>{
+  e.preventDefault();
+  axios
+      .post('http://localhost:3000/api/enquire', {
+        name: name,
+        number: number
+      })
+      .then((response) => {
+        console.log(response);
+        alert("Submitted successfully")
+      })
+      .catch((error) => {
+        console.error('Error submitting feedback:', error);
+      });
+}
   return (
     <div>
       <div className="linore-container">
@@ -34,14 +52,14 @@ const galleryRef = useRef(null)
         {/* Enquire Now Section */}
         <div className="enquire-now">
           <h2>Enquire Now</h2>
-          <form>
+          <form onSubmit={handlesubmit}>
             <div className="input-group">
               <label htmlFor="name">Name:</label><br />
-              <input type="text" id="name" name="name" />
+              <input type="text" onChange={(e)=>{setName(e.target.value)}} id="name" name="name" />
             </div>
             <div className="input-group">
               <label htmlFor="phone">Phone Number:</label><br />
-              <input type="text" id="phone" name="phone" />
+              <input type="text" onChange={(e)=>{setNumber(e.target.value)}} id="phone" name="phone" />
             </div>
             <button type="submit">Submit</button>
           </form>

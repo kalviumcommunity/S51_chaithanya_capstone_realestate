@@ -9,7 +9,23 @@ import share from "../asserts/share.png"
 
 function Alwarpet() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-
+  const [name, setName] = useState();
+  const [number,setNumber]=useState()
+const handlesubmit=(e)=>{
+  e.preventDefault();
+  axios
+      .post('http://localhost:3000/api/enquire', {
+        name: name,
+        number: number
+      })
+      .then((response) => {
+        console.log(response);
+        alert("Submitted successfully")
+      })
+      .catch((error) => {
+        console.error('Error submitting feedback:', error);
+      });
+}
   const handleShareClick = () => {
     setIsModalOpen(true);
   };
@@ -100,7 +116,7 @@ function Alwarpet() {
                 <button className="cart-btn" type="button" onClick={handleAddToCart}>
                   <i className="fas fa-shopping-cart"></i>
                 </button>
-                <Link to="/TrinityDetails">
+                <Link to="/Palacio">
                   <button type="button">View More</button>
                 </Link>
               </div>

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import './Navbar.css';
 import p from "../asserts/p.png";
-import logo from "../asserts/logo new.avif"
+import dreamm from "../asserts/dreamm.png"
 import LogoutConfirmationModal from './LogoutConfirmationModal';
 
 const Navbar = () => {
@@ -20,32 +20,23 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className='logo'>
-        <img src={logo} alt='logo' />
-      </div>
-      <div className="collapse navbar-collapse" id="navbarNav">
-        <div className="navbar-nav ml-auto">
-          <NavLink className="nav-link btn" to="/">Home</NavLink>
-          <NavLink className="nav-link btn" to="/about">About</NavLink>
-          <NavLink className="nav-link btn" to="/features">Property</NavLink>
-          <NavLink className="nav-link btn" to="/contact">Contact</NavLink>
-          <NavLink className="nav-link btn" to="/resource">Resource</NavLink>
-          {isLoggedIn ? (
-            <button className="nav-link btn btn-primary" onClick={handleLogout}>Logout</button>
-          ) : (
-            <NavLink className="nav-link btn" to="/signin" onClick={handleSignIn}>Signin</NavLink>
-          )}
-         {/* Favorite button */}
-<NavLink to="/Favorites" className="nav-link btn" style={{ marginLeft: '10px' }}>
-  <i className="fas fa-heart"></i> {/* Assuming you're using Font Awesome for icons */}
-</NavLink>
-{/* Cart button */}
-<NavLink to="/cart" className="nav-link btn" style={{ marginLeft: '10px' }}>
-  <i className="fas fa-shopping-cart"></i> {/* Assuming you're using Font Awesome for icons */}
-</NavLink>
+        <img src={dreamm} alt='logo' />
+        <div className="" id="navbarNav">
+          <div className="navbar-nav ml-auto">
+            <NavLink className="nav-link btn" to="/">Home</NavLink>
+            <NavLink className="nav-link btn" to="/about">About</NavLink>
+            <NavLink className="nav-link btn" to="/contact">Contact</NavLink>
+            <NavLink className="nav-link btn" to="/resource">Calculator</NavLink>
+            <NavLink className="nav-link btn" to="/">Logout</NavLink>
 
+            
+           
+           
+
+          </div>
         </div>
+        {showModal && <LogoutConfirmationModal handleLogout={handleLogout} handleClose={() => setShowModal(false)} />}
       </div>
-      {showModal && <LogoutConfirmationModal handleLogout={handleLogout} handleClose={() => setShowModal(false)} />}
     </nav>
   );
 };

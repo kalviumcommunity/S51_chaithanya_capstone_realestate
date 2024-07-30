@@ -7,6 +7,7 @@ import Features from './components/Features';
 import Contact from './components/Contact';
 import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
+import Parent from './Parent';
 import Footer from './components/Footer';
 import Superior from './components/Superior';
 import Linoremore from './components/Linoremore';
@@ -34,7 +35,7 @@ import Statistics from './components/Statistics';
 import Faq from './components/Faq';
 import Radvantages from './components/Radvantages';
 import Book from './components/Book';
-import Club from './components/Club';
+import palm from "./components/Palm"
 // import AuthContext from "./components/AuthContext"
 import ProtectedRoute from './components/ProctedRoute';
 import AppContext from "./components/AppContext";
@@ -48,15 +49,29 @@ import Adayarr from './components/Adayarr';
 import Maple from './components/Maple';
 import Alwarpet from './components/Alwarpet';
 import Lakshmi from './components/Lakshmi';
+import Palm from './components/Palm';
+import Palacio from './components/Palacio';
+import Ambattur from './components/Arumbakkam';
+import Suncity from './components/Suncity';
+import Landingpage from './components/Landingpage';
+import Parkhouse from './components/Parkhouse';
+import Broad from './components/Broad';
+import Wing from './components/Wing';
+import Atleza from './components/Atleza';
+import Club from './components/Club';
+import Clover from './components/Clover';
+import Harida from './components/Harida';
+import Arcus from './components/Arcus';
+import Navasuja from './components/Navasuja';
 
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   return (
     <Router>
-      <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
+      <Route path="/" element={<Landingpage/>} />
+        <Route path="/Home" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/features" element={<Features />} />
         <Route path="/contact" element={<Contact />} />
@@ -87,7 +102,6 @@ const App = () => {
         <Route path="/Crisp" element={<Crisp/>} />  
         <Route path="/Statistics" element={<Statistics/>} />  
         <Route path="/Book" element={<Book/>} /> 
-        <Route path="/Club" element={<Club/>} />  
         <Route path="/AppContext" element={<AppContext/>} />  
         <Route path="/" element={<PropertyCard />} />
         <Route path="bestSeller0" element={<BestSeller0 />} />
@@ -98,21 +112,26 @@ const App = () => {
         <Route path="/Adayarr" element={<Adayarr/>} />  
         <Route path="/Maple" element={<Maple/>} />  
         <Route path="/Alwarpet" element={<Alwarpet/>} />  
-        <Route path="/Lakshmi" element={<Lakshmi/>} />  
+        <Route path="/Lakshmi" element={<Lakshmi/>} />
+        <Route path="/Palm" element={<Palm/>} /> 
+        <Route path="/Suncity" element={<Suncity/>} />  
+        <Route path="/parent" element={<Parent/>} /> 
+        <Route path="/Palacio" element={<Palacio/>} />  
+        <Route path="/Ambattur" element={<Ambattur/>} />  
+        <Route path="/Parkhouse" element={<Parkhouse/>} />  
+        <Route path="/Broad" element={<Broad/>} />  
+        <Route path="/Wing" element={<Wing/>} />
+        <Route path="/Alteza" element={<Atleza/>} /> 
+        <Route path="/Club" element={<Club/>} /> 
+        <Route path="/Clover" element={<Clover/>} /> 
+        <Route path="/Harida" element={<Harida/>} /> 
+        <Route path="/Arcus" element={<Arcus/>} /> 
+        <Route path="/Navasuja" element={<Navasuja/>} /> 
 
 
 
 
-
-
-
-
-
-
-
-
-
-        {/* <Route path="/AuthContext" element={<AuthContext/>} />   */}
+ 
         <Route path="/ProctedRoute" element={<ProtectedRoute/>} />  
 
 

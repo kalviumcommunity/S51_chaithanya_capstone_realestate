@@ -11,7 +11,23 @@ import project from "../asserts/project.webp";
 
 function Flagship() {
   const galleryRef = useRef(null);
-
+  const [name, setName] = useState();
+  const [number,setNumber]=useState()
+const handlesubmit=(e)=>{
+  e.preventDefault();
+  axios
+      .post('http://localhost:3000/api/enquire', {
+        name: name,
+        number: number
+      })
+      .then((response) => {
+        console.log(response);
+        alert("Submitted successfully")
+      })
+      .catch((error) => {
+        console.error('Error submitting feedback:', error);
+      });
+}
   return (
     <div>
       <div className="linore-container">
@@ -42,14 +58,14 @@ function Flagship() {
       
         <div className="enquire-now">
           <h2>Enquire Now</h2>
-          <form>
+          <form onSubmit={handlesubmit}>
             <div className="input-group">
               <label htmlFor="name">Name:</label><br />
-              <input type="text" id="name" name="name" />
+              <input type="text" onChange={(e)=>{setName(e.target.value)}} id="name" name="name" />
             </div>
             <div className="input-group">
               <label htmlFor="phone">Phone Number:</label><br />
-              <input type="text" id="phone" name="phone" />
+              <input type="text" onChange={(e)=>{setNumber(e.target.value)}} id="phone" name="phone" />
             </div>
             <button type="submit">Submit</button>
           </form>
@@ -259,6 +275,16 @@ Designed impeccably with stunning aesthetics, these Tudor-styled homes impart an
           </div>
         </div>
       </div>
+    <h1>KNOW YOUR COMMUNITY</h1>
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3924.2139700030316!2d80.2084076!3d12.9196031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267b2727b3aaf%3A0x591c0a6c2f019a74!2sAdayar%2C%20Chennai%2C%20Tamil%20Nadu%20600020%2C%20India!5e0!3m2!1sen!2sus!4v1686853715091!5m2!1sen!2sus"
+        width="100%"
+        height="200%"
+        style={{ border: 'none' }}
+        allowFullScreen=""
+        loading="lazy"
+        title="Google Map"
+    ></iframe>
     </div>
   );
 }

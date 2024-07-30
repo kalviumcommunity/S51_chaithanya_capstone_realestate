@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-import auth from './Firebase.config'
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import auth from './Firebase.config';
 import './SignIn.css';
-import { useLocation } from 'react-router-dom';
-import googleimg from "../asserts/google.png"
+import googleimg from "../asserts/google.png";
 
 const SignIn = ({ setIsLoggedIn }) => {
-  const { login } = useAuth();
-  const location = useLocation();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
@@ -16,14 +14,18 @@ const SignIn = ({ setIsLoggedIn }) => {
   const [isForgotPassword, setIsForgotPassword] = useState(false);
   const navigate = useNavigate();
 
-  const handleSignIn = (e) => {
+  const handleSignIn = async(e) => {
     e.preventDefault();
-    console.log('Signing in...');
-    if (email.trim() === '' || password.trim() === '') {
-      alert('Please enter your email and password.');
-    } else {
-      setIsLoggedIn(true);
-      navigate('/');
+    try {
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      const user = userCredential.user;
+      // Additional logic here if needed
+
+      // Redirect or navigate to home after successful sign in
+      navigate('/Home');
+    } catch (error) {
+      console.error('Error during signin:', error.message);
+      alert(`Signup failed:${error.message}`);
     }
   };
 
@@ -35,9 +37,7 @@ const SignIn = ({ setIsLoggedIn }) => {
     if (phoneNumber.trim() === '') {
       alert('Please enter your phone number.');
     } else {
-      // Here, you would send the OTP to the provided phone number
       console.log('Sending OTP to:', phoneNumber);
-      // For simplicity, let's assume the OTP is sent successfully
       alert('OTP sent successfully. Check your phone.');
     }
   };
@@ -46,11 +46,9 @@ const SignIn = ({ setIsLoggedIn }) => {
     if (otp.trim() === '') {
       alert('Please enter the OTP.');
     } else {
-      // Here, you would verify the entered OTP with the one sent
       console.log('Verifying OTP:', otp);
-      // For simplicity, let's assume the OTP is correct
       setIsLoggedIn(true);
-      navigate('/');
+      navigate('/Home');
     }
   };
 
@@ -60,14 +58,14 @@ const SignIn = ({ setIsLoggedIn }) => {
       let date = new Date();
       date.setTime(date.getTime() + daysToExpire * 24 * 60 * 60 * 1000);
       document.cookie = name + '=' + value + ';expires=' + date.toUTCString() + ';path=/';
-  }
+    }
     try {
       const result = await signInWithPopup(auth, provider);
       console.log(result);
-      setCookie('logedin',true,365)
-      setCookie("username",result.user.displayName,365);
-      setCookie('token', result.user.accessToken,365);
-      navigate('/'); 
+      setCookie('logedin', true, 365);
+      setCookie("username", result.user.displayName, 365);
+      setCookie('token', result.user.accessToken, 365);
+      navigate('/Home');
       setIsLoggedIn(true);
     } catch (error) {
       console.error(error.message);
@@ -132,11 +130,10 @@ const SignIn = ({ setIsLoggedIn }) => {
         ) : (
           <>
             <button type="submit" className="signin-submit">Sign In</button>
-          
             <p className="forgot-password-link" onClick={handleForgotPassword}>Forgot Password?</p>
-          <div>
-          <img className='g_icon' src={googleimg} onClick={google} alt="google icon" />
-          </div>
+            <div>
+              <img className='g_icon' src={googleimg} onClick={google} alt="google icon" />
+            </div>
           </>
         )}
       </form>

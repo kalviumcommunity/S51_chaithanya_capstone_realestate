@@ -1,90 +1,88 @@
-/* Navbar container */
+/* Navbar.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif; /* Example: Use your preferred font */
+}
+
 .navbar {
-    background-color: black; /* Black background */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for subtle elevation */
-    height:70px; /* Auto height */
-    width: 100%; /* Use full width */
-    display: flex; /* Use flexbox for alignment */
-    flex-direction: column; /* Align children in a column */
-    padding: 20px; /* Add padding F*/
-}
-.logo {
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    width: 100%; 
-    height: 50px;
-    padding: 10px; 
-    box-sizing: border-box; 
-  }
-  
-  .logo img {
-    max-width: 100px; /* Ensure the logo image is responsive */
-    height: 60px; /* Maintain the aspect ratio */
-    margin-bottom: 12px;
-    margin-right: 1200px;
-  }
-  
-/* Navbar brand */
-.navbar-brand {
-    color: #ffffff; /* White text color */
-    font-weight: bold; /* Bold font */
-    font-size: 24px; /* Adjust font size */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px; /* Adjusted padding for better spacing */
+  background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width:500%;
 }
 
-/* Navbar links */
-.navbar-nav {
-    display: flex; /* Use flexbox for alignment */
-    justify-content: center; /* Center items horizontally */
-    margin-bottom: 20px; /* Add margin to separate from buttons */
+.navbar .logo img {
+  width: 50px;
+  height: auto;
 }
 
-.navbar-nav .nav-link {
-    font-weight: bold; /* Bold font */
-    color: white; /* White text color */
-    text-decoration: none; /* Remove underline */
-    font-size: 18px; /* Adjust font size */
-    margin: 0 20px; /* Margin between links */
-    height: 30px;
-    width: 200px;
+/*   */
+
+.nav-link {
+  color: #fff;
+  text-transform: uppercase;
+  padding: 10px; 
+  margin: 0 10px;
+  margin-left: 100px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  border-radius: 5px;
 }
 
-/* Navbar buttons */
-.navbar-buttons {
-    display: flex; /* Use flexbox for alignment */
-    align-self: flex-start; /* Align buttons to the left */
+.nav-link:hover,
+.nav-link.active {
+  background: rgba(255, 255, 255, 0.2);
 }
 
-.navbar-buttons .btn {
-    color: white; /* White text color */
-    background-color: black; /* Button background color */
-    padding: 8px 16px; /* Adjust padding */
-    font-size: 16px; /* Adjust font size */
-    border: none; /* Remove border */
-    border-radius: 4px; /* Add border radius */
-    cursor: pointer; /* Add cursor pointer */
-    margin-right: 10px; /* Margin between buttons */
+.btn-primary {
+  background: #ff5f6d;
+  border: none;
+  color: #fff;
+  padding: 10px 15px; /* Adjusted padding for better button size */
+  border-radius: 5px;
+  transition: background 0.3s ease;
 }
 
-/* Navbar icons container */
-.navbar-icons-container {
-    display: flex; /* Use flexbox for alignment */
-    align-items: center; /* Center vertically */
+.btn-primary:hover {
+  background: #ff3d4e;
 }
 
-/* Navbar icon */
-.navbar-icon {
-    width: 30px; /* Adjust icon width */
-    height: auto; /* Maintain aspect ratio */
-    margin-right: 10px; /* Adjust margin */
+.nav-link i {
+  margin-right: 5px;
 }
 
-/* Align icons to the right */
-.navbar-nav-right {
-    margin-left: auto; /* Push icons to the right */
+/* Optional: Adjust specific styles for Favorites and Cart links */
+.nav-link.favorites {
+  margin-left: 10px; /* Example: Adjust margin for specific links */
 }
 
-.flex-holder{
-    display: flex;
+.nav-link.cart {
+  margin-left: 10px; /* Example: Adjust margin for specific links */
+}
+.logout {
+  background-color: #ff4b5c;
+  color: white; 
+  border: none; 
+  padding: 0px 0px; 
+  font-size: 16px; 
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s; 
 }
 
+.logout:hover {
+  background-color: #ff1e34; /* Darker red on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.logout:active {
+  background-color: #e6001f; /* Even darker red on click */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Smaller shadow on click */
+}

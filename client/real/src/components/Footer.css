@@ -1,124 +1,129 @@
 .footer-container {
-  background-color: #333; /* Change the background color as needed */
-  color: #fff; /* Change the text color as needed */
-  padding: 10px; /* Adjust the padding as needed */
-  margin-top: 700px; /* Adjust the margin from the top as needed */
-  width: 1290px;
+  background-color: #282c34;
+  color: #ffffff;
+  padding: 40px 0;
+  font-family: Arial, sans-serif;
 }
-
 
 .footer-content {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.footer-info,
-.footer-links,
-.footer-contact,
-.footer-buy-sell,
-.footer-faq,
-.footer-newsletter {
-  flex: 1 1 200px; /* Adjust the width of each section */
-  margin-bottom: 20px; /* Adjust the spacing between sections */
+.footer-content div {
+  flex: 1;
+  margin: 20px;
+  min-width: 200px;
 }
 
-.footer-info h3,
-.footer-links h3,
-.footer-contact h3,
-.footer-buy-sell h3,
-.footer-faq h3,
-.footer-newsletter h3 {
-  color: #fff;
+.footer-info, .footer-links, .footer-contact, .footer-buy-sell, .footer-faq, .footer-social {
+  padding: 20px;
+  background-color:peachpuff;
+  border-radius: 8px;
+}
+
+.footer-info h3, .footer-links h3, .footer-contact h3, .footer-buy-sell h3, .footer-faq h3, .footer-social h3 {
   font-size: 18px;
-  margin-bottom: 20px;
-  margin-left: 10px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid black;
+  padding-bottom: 5px;
 }
 
-.footer-info p,
-.footer-contact p,
-.footer-buy-sell p,
-.footer-faq p,
-.footer-newsletter p {
-  color: #ccc;
+.footer-info p, .footer-contact p, .footer-buy-sell p, .footer-faq p {
   font-size: 14px;
+  line-height: 1.6;
 }
 
-.footer-links ul {
-  list-style: none;
+.footer-nav-list, .footer-faq-list, .social-icons {
+  list-style-type: none;
   padding: 0;
 }
 
-.footer-links ul li {
+.footer-nav-list li, .footer-faq-list li {
   margin-bottom: 10px;
 }
 
-.footer-links ul li a {
-  color: #ccc;
+.footer-nav-list li a, .footer-faq-list li a {
+  color: black;
   text-decoration: none;
-  font-size: 14px;
+  transition: color 0.3s ease;
 }
 
-.footer-links ul li a:hover {
-  color: #fff;
+.footer-nav-list li a:hover, .footer-faq-list li a:hover {
+  color:steelblue ;
 }
 
-.footer-newsletter form {
+/* .social-icons {
   display: flex;
+  gap: 15px;
+} */
+
+/* .social-icons li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-size: 60px;
+  margin-right: 20px;
+
+  transition: transform 0.3s ease;
+} */
+
+/* .social-icons li a:hover {
+  transform: scale(1.2);
+  color: black;
+} */
+
+.footer-bottom {
+  text-align: center;
+  padding: 20px;
+  background-color: #222;
+  border-top: 1px solid #444;
+  margin-top: 40px;
 }
 
-.footer-newsletter input[type="email"],
-.footer-newsletter button[type="submit"] {
-  padding: 10px;
+.footer-bottom p {
+  margin: 0;
   font-size: 14px;
-  border: none;
-  border-radius: 5px;
+  color: #bbbbbb;
 }
-
-.footer-newsletter input[type="email"] {
-  flex: 1;
-  margin-right: 10px;
-}
-
-.footer-newsletter button[type="submit"] {
-  background-color: #4caf50; /* Change the button background color as needed */
-  color: #fff;
-  cursor: pointer;
-}
-
-.footer-newsletter button[type="submit"]:hover {
-  background-color: #45a049; /* Change the button hover color as needed */
-}
-
 .footer-social {
-  flex: 1 1 100%; /* Take full width of the footer */
-  text-align: center; /* Center-align the social icons */
+  text-align: center;
 }
 
-.social-icons {
+.footer-social h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.footer-social-list {
   list-style: none;
   padding: 0;
-  margin: 0;
   display: flex;
-  justify-content: center; /* Center-align the social icons horizontally */
+  justify-content: center;
+  gap: 15px;
 }
 
-.social-icons li {
-  margin-right: 10px;
+.footer-social-list li {
+  display: inline;
 }
 
-.social-icons li:last-child {
-  margin-right: 0;
-}
-
-.social-icons li a {
-  color: #ccc;
-  font-size: 24px;
+.footer-social-list a {
   text-decoration: none;
+  color: #333;
+  font-size: 24px; /* Adjust size as needed */
+  transition: color 0.3s ease;
 }
 
-.social-icons li a:hover {
-  color: #fff;
+.footer-social-list a:hover {
+  color: #007bff; /* Color on hover */
 }
-a{
-  color: black;
+
+.footer-social-list i {
+  display: inline-block;
+  vertical-align: middle;
 }
